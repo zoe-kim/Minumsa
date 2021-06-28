@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="images/common/favicon.ico">
   <link rel="icon" href="images/common/favicon.ico">
   <link rel="stylesheet" href="css/xeicon.css">
+
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 
@@ -23,11 +24,10 @@
 </head>
 <body>
   <div id="skip">
-      <a href="#">본문 바로가기</a>
+      <a href="#cnt2">본문 바로가기</a>
   </div>
   <div id="wrap">
-      <header>
-          <div class="pc_head">
+          <div id="pc_head" class="header">
             <h1 class="logo">
                 <a href="#"><span class="blind">민음사</span></a>
             </h1>
@@ -36,7 +36,7 @@
                     <span class="blind">검색창 열기</span>
                 </button>
             </div>
-            <nav id="pcGnb">
+            <nav class="pcGnb">
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li><a href="#">소개</a></li>
@@ -48,7 +48,7 @@
                 </ul>
             </nav>    
           </div>
-          <div class="m_head">
+          <div id="m_head" class="header">
             <h1 class="logo">
                 <a href="#"><span class="blind">민음사</span></a>
             </h1>
@@ -66,7 +66,7 @@
                             <img src="images/common/close_btn.png" alt="전체메뉴 닫기">
                         </button>
                     </div>
-                    <nav id="mGnb">
+                    <nav class="mGnb">
                         <ul>
                             <li><a href="#">홈</a></li>
                             <li><a href="#">소개</a></li>
@@ -80,7 +80,6 @@
                 </div>    
             </div>    
           </div>
-      </header>
       <div id="fullpage">
           <section class="section" id="cnt1">
               <h2 class="blind">메인 배너</h2>
@@ -351,8 +350,7 @@
                 </div>
               </div>
               <!-- 푸터는 마지막 섹션 안에 -->
-              <footer>
-                  <div class="pc_foot">
+                  <div id="pc_foot" class="footer">
                       <img src="images/common/footer_logo.png" alt="민음사">
                       <div class="copyright_txt">
                         <p>(주)민음북스 | 대표이사: 박상준 | 사업자등록번호: 211-88-41803 | 통신판매업 신고번호: 제2010-서울강남-00971호</p>
@@ -371,7 +369,7 @@
                         <a href="#">트위터</a>
                       </div>
                   </div>
-                  <div class="m_foot">
+                  <div id="m_foot" class="footer">
                     <img src="images/common/footer_logo.png" alt="민음사">
                     <div class="link_txt">
                       <a href="#">회원약관</a>
@@ -395,7 +393,6 @@
                         <p>Copyright © Minumsa Publishing Group</p>
                       </div>
                     </div>
-              </footer>
           </section>
       </div>
   </div>
