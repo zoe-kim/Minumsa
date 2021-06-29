@@ -109,17 +109,7 @@ body{
         }
     }
 }
-#m_head{
-    @include flex;
-    visibility: hidden;max-height: 0;overflow: hidden;
-    .util{
-        @include flex;
-        @include align-items;
-    }
-    .mGnb_open_btn{
-        margin-left: 24px;
-    }
-}
+#m_head{visibility: hidden;height: 0;overflow: hidden;}
 
 // footer
 
@@ -128,28 +118,54 @@ body{
 @media screen and (max-width: 1520px) {
   .max1440{max-width: 100%;padding: 0 22px;}
 }
+
+// 작은 pc
 @media screen and (max-width: 1440px) {
     // header
-    #pc_head{
-        .pcGnb{
-            > ul{
+        
+    // footer
+}
+
+// 태블릿
+@media screen and (max-width: 1152px) {
+    .max1440{padding: 0 90px;margin: 0;}
+
+    // header
+    // pc_head는 태블릿에서 보이지 않게 숨긴다
+    #pc_head{display: none;}
+
+    .header{
+        padding: 0 90px;
+        .util{top: 22px;right: 90px;}
+    }
+    #m_head{
+        visibility: visible;height: 74px;overflow: visible;
+
+        .mGnb_open_btn{width: 24px;height: 24px;background: url("../images/common/mGnb_open_btn_w.png") no-repeat center / cover;margin: 3px 0;margin-left: 24px;}
+        &.on .mGnb_open_btn{background-image: url("../images/common/mGnb_open_btn.png");}
+        .mGnb_dim{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,.6);}
+        .mGnb_wrap{
+            position: fixed;top: 0;left: -100%;width: 100%;height: 100vh;background: $white;padding: 0 90px;visibility:hidden;
+            .mGnb_top{
                 @include flex;
-                > li{
-                    > a{display: block;line-height: 27px;border-bottom: 3px solid transparent;margin: 0 24px;font-weight: 700;color: $white;}
-                    &:hover > a, > a:focus, &.on > a{border-bottom-color: $green;color: $green;}
+                @include justify-content(space-between); // 내부 요소들을 양 끝에 배치
+                padding: 22px 0px;            
+                > a > img{width: 64px;height: 30px;}
+                .mGnb_close_btn img{width: 24px; height: 24px;}
+            }
+            .mGnb{
+                ul li{
+                    a {display: block;padding: 18px 0;font-size: 18px;font-weight: 700;color: $gray;border-bottom: 1px solid #eee;line-height: 1.3;}
+                    &:hover > a, > a:focus{color: $black;}
                 }
             }
         }
     }
-        
+    
     // footer
 }
-@media screen and (max-width: 1152px) {
-  .max1440{padding: 0 90px;margin: 0;}
-    // header
 
-    // footer
-}
+// 모바일
 @media screen and (max-width: 690px) {
     // header
 
