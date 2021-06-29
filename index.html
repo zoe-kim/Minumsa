@@ -9,11 +9,12 @@
   <link rel="shortcut icon" href="images/common/favicon.ico">
   <link rel="icon" href="images/common/favicon.ico">
   <link rel="stylesheet" href="css/xeicon.css">
-
+  <link rel="stylesheet" href="css/swiper-bundle.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 
   <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/gsap.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
@@ -85,11 +86,12 @@
           </div>
       <div id="fullpage">
           <section class="section" id="cnt1">
-              <h2 class="blind">메인 배너</h2>
-              <div class="swiper-container">
+            <h2 class="blind">메인 배너</h2>
+            <div class="swiper-container">
+                <!-- 슬라이더 컨텐츠 그룹 -->
                 <div class="swiper-wrapper">
                   <div class="swiper-slide slide1">
-                    <img src="images/main/slide_img01.jpeg" alt="">
+                    <img src="images/main/m_cnt1_img01.png" alt="" class="m_img">
                     <div class="cnt_box">
                       <h3>
                           가즈오 이시구로 <br>
@@ -102,7 +104,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide slide2">
-                    <img src="images/main/slide_img02.jpeg" alt="">
+                    <img src="images/main/m_cnt1_img02.png" alt="" class="m_img">
                     <div class="cnt_box">
                         <h3>
                             책을 일상으로, <br>
@@ -115,7 +117,7 @@
                         </div>
                   </div>
                   <div class="swiper-slide slide3">
-                    <img src="images/main/slide_img03.jpeg" alt="">
+                    <img src="images/main/m_cnt1_img03.png" alt="" class="m_img">
                     <div class="cnt_box">
                         <h3>
                             제 44회 오늘의 작가상 <br>
@@ -127,7 +129,8 @@
                         </a>
                         </div>
                   </div>
-                <!-- 제어버튼 그룹 -->
+                </div>
+                <!-- swiper 제어 버튼 그룹 -->
                 <div class="controller">
                   <div class="swiper-pagination"></div>
 
@@ -136,7 +139,7 @@
                     <div class="swiper-button-next"></div>
                   </div>
                 </div>
-              </div>
+            </div>
           </section>
           <section class="section" id="cnt2">
               <h2 class="blind">소개하는 말</h2>
@@ -397,7 +400,7 @@
                       </div>
                     </div>
           </section>
-      </div>
+      
   </div>
 </body>
 </html>

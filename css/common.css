@@ -109,8 +109,7 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(24, 144, 102, 0.5);
-  z-index: 800; }
+  background: rgba(24, 144, 102, 0.5); }
 
 .header {
   display: -webkit-box;
@@ -207,8 +206,7 @@ body {
       width: 24px;
       height: 24px;
       background: url("../images/common/mGnb_open_btn_w.png") no-repeat center/cover;
-      margin: 3px 0;
-      margin-left: 24px; }
+      margin: 3px 0 3px 24px; }
     #m_head.on .mGnb_open_btn {
       background-image: url("../images/common/mGnb_open_btn.png"); }
     #m_head .mGnb_dim {
@@ -259,5 +257,15 @@ body {
         #m_head .mGnb_wrap .mGnb_close_btn img {
           width: 32px;
           height: 32px; } }
+@media screen and (max-width: 690px) {
+  .header {
+    padding: 0 24px; }
+    .header .util {
+      right: 24px; }
+
+  #m_head .mGnb_wrap {
+    padding: 0 24px; }
+    #m_head .mGnb_wrap .mGnb_close_btn {
+      right: 24px; } }
 
 /*# sourceMappingURL=common.css.map */
