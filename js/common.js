@@ -32,8 +32,8 @@ $(document).ready(function() {
     const $last =  $mGnbwrap.find('.last');
     const $openBtn = $(this);
 
-    // .mGnb_dim 생성 후 fadeIn으로 서서히 나타내기
-    $openBtn.after('<div class="mGnb_dim"></div>').next().stop().fadeIn(3000);
+    // .mGnb_dim 생성 후 fadeTo로 서서히 나타내기
+    $openBtn.after('<div class="mGnb_dim"></div>').next().stop().fadeTo('fast', 0.6);
     $mgnbWrap.css('visibility', 'visible').stop().animate({left: 0}, 300, function () {
       $first.focus();  //포커스 아웃라인 안보인다
       $('html').css({overflowY: 'hidden', height: '100%'});
