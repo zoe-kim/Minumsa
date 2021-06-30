@@ -1,9 +1,8 @@
 $(document).ready(function() {
   // 마우스 커서 따라다니는 원 이벤트 - pc 버전의 본문에서만!(#fullpage가 .fullpage-wrapper를 가질 때)
-  $('#fullpage.fullpage-wrapper').on('mousemove', function (e) {
+  $('#fullpage').on('mousemove', function (e) {
     const mouseX = e.pageX;
     const mouseY = e.pageY;
-    console.log(mouseX, mouseY);
     gsap.to('#circle', {left: mouseX-28, top: mouseY-26, duration: 0.2});
 });
 

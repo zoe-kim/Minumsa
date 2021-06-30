@@ -155,7 +155,8 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(24, 144, 102, 0.5); }
+  background: rgba(24, 144, 102, 0.5);
+  z-index: 300; }
 
 .header {
   display: -webkit-box;
@@ -193,7 +194,7 @@ body {
       margin: 3px 0; }
 
 .header.on {
-  background: #F9F9F9; }
+  background: #fff; }
   .header.on .logo a {
     background-image: url("../images/common/header_logo.png"); }
   .header.on .util .search_btn {
@@ -213,7 +214,9 @@ body {
       border-bottom: 3px solid transparent;
       margin: 0 24px;
       font-weight: 700;
-      color: #F9F9F9; }
+      color: #F9F9F9;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
     #pc_head .pcGnb > ul > li:hover > a, #pc_head .pcGnb > ul > li > a:focus, #pc_head .pcGnb > ul > li.on > a {
       border-bottom-color: #189066;
       color: #189066; }
