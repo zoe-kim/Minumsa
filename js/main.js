@@ -13,7 +13,7 @@ $(document).ready(function () {
         prevEl: '.swiper-button-prev',
       },
       autoplay: {
-        delay: 4000,  // 자동 실행 시간(4초)
+        delay: 5000,  // 자동 실행 시간(5초)
       },
       a11y: {
         prevSlideMessage: '이전 슬라이드 보기',

@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+
+// pc
+#cnt1{
+  .swiper-container{height: 100vh;color: $white;}
+  .swiper-slide{
+    background: no-repeat 50% / cover;  // 50% = 가운데 배치
+    &.slide1{background-image: url("../images/main/cnt1_img01.jpeg");}
+    &.slide2{background-image: url("../images/main/cnt1_img02.jpeg");}
+    &.slide3{background-image: url("../images/main/cnt1_img03.jpeg");}
+  }  
+  .m_img{display: none;}
+  .cnt_box{
+    @include translateY-50;
+    position: absolute;top: 50%;left: 150px;text-shadow: 1px 1px 4px rgba(0,0,0,.2);
+    h3{font-size: 48px;margin-bottom: 30px;line-height: 68px;letter-spacing: -1px;font-weight: 700;}
+  }
+  .controller{
+    @include flex;
+    position: absolute;bottom: 80px;left: 150px;width: 184px;height: 48px;z-index: 700;
+    .swiper-pagination, .swiper-button-prev, .swiper-button-next{position: static;} // position 속성을 제거할 경우 position: static;
+    .swiper-button-wrap{@include flex;}
+    .swiper-button-prev, .swiper-button-next{
+      @include transition(all 0.3s);
+      margin-top: 0;width: 48px;height: 48px;background: no-repeat 50% / cover;margin-right: 24px;
+      &::after{display: none;} // 기본 파란색 버튼 없애기
+    }
+    .swiper-button-prev{
+      background-image: url("../images/main/slide_prev_btn_w.png");
+      &:hover, &:focus{background-image: url("../images/main/slide_prev_btn.png");}
+    }
+    .swiper-button-next{
+      background-image: url("../images/main/slide_next_btn_w.png");
+      &:hover, &:focus{background-image: url("../images/main/slide_next_btn.png");}
+    }
+    .swiper-pagination{
+      @include flex;
+      @include justify-content(space-between);
+      font-size: 16px;line-height: 48px;color: rgba(255, 255, 255, 0.2);
+      .swiper-pagination-current, .swiper-pagination-total{font-weight: 500;color: rgba(255, 255, 255, 1);}
+    }
+  }
+}

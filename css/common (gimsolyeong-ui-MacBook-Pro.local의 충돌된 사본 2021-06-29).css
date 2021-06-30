@@ -76,52 +76,6 @@ header, nav, section, footer {
   max-width: 1440px;
   margin: 0 auto; }
 
-.slide_link_btn {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  text-align: center;
-  width: auto;
-  height: 54px;
-  line-height: 50px;
-  border-radius: 100px;
-  font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 15px;
-  padding: 0 55px 0 36px;
-  position: relative; }
-  .slide_link_btn::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: url("../images/main/slide_link_btn.png") no-repeat 50%/cover;
-    position: absolute;
-    top: 42%;
-    right: 26px; }
-  .slide_link_btn:hover, .slide_link_btn:focus {
-    border: 1px solid white; }
-
-.link_btn {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  text-align: center;
-  width: auto;
-  height: 54px;
-  line-height: 50px;
-  border-radius: 100px;
-  font-weight: 700;
-  font-size: 15px;
-  padding: 0 40px;
-  background: #1E1E1E;
-  color: #F9F9F9 !important; }
-  .link_btn.transparent {
-    border: 1px solid #fff;
-    background: transparent; }
-  .link_btn:hover, .link_btn:focus {
-    background: #189066;
-    border-color: #189066; }
-
 body {
   font-family: NotoSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;
   font-size: 16px;
@@ -167,8 +121,6 @@ body {
   justify-content: space-between;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   position: fixed;
   top: 0;
   left: 0;

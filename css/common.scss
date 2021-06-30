@@ -53,6 +53,20 @@ header, nav, section, footer{display: block;}
 .blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 .max1440{width: 100%;max-width: 1440px;margin: 0 auto;}
 
+// 버튼
+.slide_link_btn{
+    @include transition(all 0.3s);
+    display: inline-block;text-align: center;width: auto;height: 54px;line-height: 50px;border-radius: 100px;font-weight: 700;border: 1px solid rgba(255,255,255,0.2);font-size: 15px;padding: 0 55px 0 36px;position: relative;
+    &::after{content: "";width: 10px;height: 10px;background: url("../images/main/slide_link_btn.png") no-repeat 50% / cover;position: absolute;top: 42%;right: 26px;}
+    &:hover, &:focus{border: 1px solid rgba(255,255,255,1);}
+}
+.link_btn{
+    @include transition(all 0.3s);
+    display: inline-block;text-align: center;width: auto;height: 54px;line-height: 50px;border-radius: 100px;font-weight: 700;font-size: 15px;padding: 0 40px;background: $black;color: $white !important;
+    &.transparent{border: 1px solid #fff;background: transparent;}
+    &:hover, &:focus{background: $green;border-color: $green;}
+}
+
 // body
 body{
     font-family: NotoSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;word-break: keep-all;letter-spacing: -0.035em;
@@ -68,11 +82,12 @@ body{
 // 마우스 커서 이벤트
 #circle{position: absolute;top: -74px; left: -74px;width: 64px;height: 64px;border-radius: 50%;background: rgba(24, 144, 102, 0.5);}
 
-// header
+// pc
 .header{
     @include flex;
     @include justify-content(space-between); // 내부 요소들을 양 끝에 배치
     @include align-items;
+    @include transition(all 0.3s);
     position: fixed;top: 0;left: 0;width: 100%;height: 90px;padding: 0 150px;z-index: 900;
     .logo{
         a{display: block;width: 64px;height: 30px;background: url("../images/common/header_logo_w.png") no-repeat center / cover;}
