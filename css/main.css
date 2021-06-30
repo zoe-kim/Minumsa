@@ -106,9 +106,21 @@
     font-size: 42px;
     line-height: 60px;
     letter-spacing: -1px;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    color: #aaa; }
     #cnt2 h3 strong {
-      color: #aaa; }
+      color: #1E1E1E; }
+
+#cnt3 {
+  background: #f9f9f9; }
+  #cnt3 h3 {
+    font-size: 42px;
+    line-height: 60px;
+    letter-spacing: -1px;
+    margin-bottom: 48px;
+    color: #aaa; }
+    #cnt3 h3 strong {
+      color: #1E1E1E; }
 
 @media screen and (max-width: 1440px) {
   #cnt1 .cnt_box {

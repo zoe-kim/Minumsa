@@ -51,8 +51,15 @@
   text-align: center;padding: 142px 150px 152px;background: #fff;
   p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
   h3{
-    font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;
-    strong{color: $gray;}
+    font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
+    strong{color: $black;}
+  }
+}
+#cnt3{
+  background: #f9f9f9;
+  h3{
+    font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
+    strong{color: $black;}
   }
 }
 

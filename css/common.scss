@@ -3,7 +3,7 @@
 // 지원 브라우저 ie 11+
 
 // web font
-@font-face {
+/* @font-face {
   font-family: NotoSansKR;
   font-style: normal;
   font-weight: 400;
@@ -33,7 +33,7 @@
      url("../fonts/NotoSansKR-Bold.otf") format("opentype"),
      url("../fonts/NotoSansKR-Bold.svg#NotoSansKR") format('svg');
 }
-
+ */
 // tag reset
 body, h1, h2, h3, h4, p, ul, button{margin: 0;padding: 0;}
 h1, h2, h3, h4{font-size: 100%;}
@@ -56,13 +56,13 @@ header, nav, section, footer{display: block;}
 // 버튼
 .slide_link_btn{
     @include transition(all 0.3s);
-    display: inline-block;text-align: center;width: auto;height: 54px;line-height: 50px;border-radius: 100px;font-weight: 700;border: 1px solid rgba(255,255,255,0.2);font-size: 15px;padding: 0 55px 0 36px;position: relative;
+    display: inline-block;text-align: center;width: auto;height: 54px;line-height: 54px;border-radius: 100px;font-weight: 700;border: 1px solid rgba(255,255,255,0.2);font-size: 15px;padding: 0 55px 0 36px;position: relative;
     &::after{content: "";width: 10px;height: 10px;background: url("../images/main/slide_link_btn.png") no-repeat 50% / cover;position: absolute;top: 42%;right: 26px;}
     &:hover, &:focus{border: 1px solid rgba(255,255,255,1);}
 }
 .link_btn{
     @include transition(all 0.3s);
-    display: inline-block;text-align: center;width: auto;height: 54px;line-height: 50px;border-radius: 100px;font-weight: 700;font-size: 15px;padding: 0 40px;background: $black;color: $white !important;
+    display: inline-block;text-align: center;width: auto;height: 54px;line-height: 54px;border-radius: 100px;font-weight: 700;font-size: 15px;padding: 0 40px;background: $black;color: $white !important;
     &.transparent{border: 1px solid #fff;background: transparent;}
     &:hover, &:focus{background: $green;border-color: $green;}
 }

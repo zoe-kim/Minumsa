@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 민음사 </title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:regular,500,700" rel="stylesheet">
     <link rel="apple-touch-icon" href="images/common/favicon.ico">
     <link rel="shortcut icon" href="images/common/favicon.ico">
     <link rel="icon" href="images/common/favicon.ico">
@@ -44,7 +45,6 @@
 
             function createFullpage() {
                 $('#fullpage').fullpage({
-                    sectionsColor: ['transparent', 'white', 'aqua', 'coral', 'green', 'yellow', 'gray'],
                     onLeave: function (origin, destination, direction) {
                         //본문2(index1)를 떠난 후 본문1(index0)로 도착, up 방향키를 누른 경우
                         if (origin.index === 1 && destination.index === 0 && direction === 'up') {
@@ -181,9 +181,9 @@
                 <h2 class="blind">소개하는 말</h2>
                 <p>민음사는</p>
                 <h3>
-                    <strong>시대의 흐름에 앞서가는 <br>
-                    젊은 감각과 열린 사고를 가진 <br></strong>
-                    21세기 출판의 선도자입니다.
+                    시대의 흐름에 앞서가는 <br>
+                    젊은 감각과 열린 사고를 가진 <br>
+                    <strong>21세기 출판의 선도자입니다.</strong>
                 </h3>
                 <a href="#" class="link_btn">소개 바로가기</a>
             </section>
