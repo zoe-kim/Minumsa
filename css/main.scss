@@ -5,7 +5,7 @@
 #cnt1{
   .swiper-container{height: 100vh;color: $white;}
   .swiper-slide{
-    background: no-repeat 50% / cover;  // 50% = 가운데 배치
+    background: no-repeat center / cover;
     &.slide1{background-image: url("../images/main/cnt1_img01.jpeg");}
     &.slide2{background-image: url("../images/main/cnt1_img02.jpeg");}
     &.slide3{background-image: url("../images/main/cnt1_img03.jpeg");}
@@ -37,8 +37,42 @@
     .swiper-pagination{
       @include flex;
       @include justify-content(space-between);
-      font-size: 16px;line-height: 48px;color: rgba(255, 255, 255, 0.2);
+      font-size: 16px;line-height: 48px;color: rgba(255, 255, 255, 0.4);
       .swiper-pagination-current, .swiper-pagination-total{font-weight: 500;color: rgba(255, 255, 255, 1);}
     }
   }
+}
+
+// 작은 pc
+@media screen and (max-width: 1440px) {
+  #cnt1{
+    .cnt_box{left: 90px;}
+    .controller{left: 90px;}
+  }
+}
+
+// 태블릿
+@media screen and (max-width: 1152px) {
+  #cnt1{
+    .swiper-container{height: 90vh;}
+    .swiper-slide{background: none;}  
+    .m_img{display: block;width: 100%;}
+  }
+}
+
+// 모바일
+@media screen and (max-width: 690px) {
+  #cnt1{
+    .cnt_box{
+      left: 24px;
+      h3{font-size: 32px;margin-bottom: 24px;line-height: 1.5;}
+    }
+    .swiper-container{height: 100%;}
+    .controller{
+      left: 24px;width: 160px;height: 36px;bottom: 24px;
+      .swiper-button-prev, .swiper-button-next{width: 36px;height: 36px;}
+      .swiper-pagination{line-height: 36px;}
+    }
+  }
+  .slide_link_btn{padding: 0 45px 0 26px;font-size: 14px;}
 }

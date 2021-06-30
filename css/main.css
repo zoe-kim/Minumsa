@@ -2,7 +2,7 @@
   height: 100vh;
   color: #F9F9F9; }
 #cnt1 .swiper-slide {
-  background: no-repeat 50% / cover; }
+  background: no-repeat center / cover; }
   #cnt1 .swiper-slide.slide1 {
     background-image: url("../images/main/cnt1_img01.jpeg"); }
   #cnt1 .swiper-slide.slide2 {
@@ -73,9 +73,46 @@
     justify-content: space-between;
     font-size: 16px;
     line-height: 48px;
-    color: rgba(255, 255, 255, 0.2); }
+    color: rgba(255, 255, 255, 0.4); }
     #cnt1 .controller .swiper-pagination .swiper-pagination-current, #cnt1 .controller .swiper-pagination .swiper-pagination-total {
       font-weight: 500;
       color: white; }
+
+@media screen and (max-width: 1440px) {
+  #cnt1 .cnt_box {
+    left: 90px; }
+  #cnt1 .controller {
+    left: 90px; } }
+@media screen and (max-width: 1152px) {
+  #cnt1 .swiper-container {
+    height: 90vh; }
+  #cnt1 .swiper-slide {
+    background: none; }
+  #cnt1 .m_img {
+    display: block;
+    width: 100%; } }
+@media screen and (max-width: 690px) {
+  #cnt1 .cnt_box {
+    left: 24px; }
+    #cnt1 .cnt_box h3 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      line-height: 1.5; }
+  #cnt1 .swiper-container {
+    height: 100%; }
+  #cnt1 .controller {
+    left: 24px;
+    width: 160px;
+    height: 36px;
+    bottom: 24px; }
+    #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next {
+      width: 36px;
+      height: 36px; }
+    #cnt1 .controller .swiper-pagination {
+      line-height: 36px; }
+
+  .slide_link_btn {
+    padding: 0 45px 0 26px;
+    font-size: 14px; } }
 
 /*# sourceMappingURL=main.css.map */
