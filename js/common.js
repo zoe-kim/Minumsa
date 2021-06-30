@@ -1,11 +1,4 @@
 $(document).ready(function() {
-  // 마우스 커서 따라다니는 원 이벤트 - pc 버전의 본문에서만!(#fullpage가 .fullpage-wrapper를 가질 때)
-  $('#fullpage').on('mousemove', function (e) {
-    const mouseX = e.pageX;
-    const mouseY = e.pageY;
-    gsap.to('#circle', {left: mouseX-28, top: mouseY-26, duration: 0.2});
-});
-
   // #pc_head에 마우스 진입 시 .on을 가지도록
   $('#pc_head').on({
     'mouseenter focusin': function () {
