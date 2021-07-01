@@ -22,40 +22,16 @@ $(document).ready(function () {
       }
   });
 
-  // #book_list li a에 마우스와 포커스가 진입하거나 빠져 나가는 이벤트
+  // #book_list li a에 마우스와 포커스가 진입하거나 빠져 나갈 때
   const $listEle = $('#book_list li a');
   $listEle.on({
     'mouseenter focus': function () {
-      $(this).addClass('on');
-      $(this).children('.hover_book').stop().slieDown();
-    
+      $(this).addClass('on').children('.hover_book').stop().slideDown();
     },
     'mouseleave blur': function () {
-      $(this).removeClass('on');
-      $(this).children('.hover_book').stop().slieUp();
+      $(this).removeClass('on').children('.hover_book').stop().slideUp();
     }
   });
-  /* $listEle.on({
-    // 마우스와 포커스가 진입하면, .book_dim 생성하고 fadeTo로 서서히 나타내기
-    'mouseenter focusin': function () {
-      $(this).after('<div class="book_dim"></div>').next().stop().fadeTo('fast', 0.7);
-      // 하단에서 등장 애니메이션
-      //$('.hover_book').css('visibility', 'visible').stop().animate({height: '100%'}, 300);
-    },
-    // 다시 빠져나가면, fadeTo로 .book_dim 서서히 없앤 뒤 완전히 제거
-    'mouseleave focusout': function () {
-      $('.book_dim').stop().fadeTo('slow', 0, function () {
-        $(this).remove();
-      });
-      // 하단으로 다시 사라지는 애니메이션
-      $('.hover_book').stop().animate({height: 0}, 300, function () {
-        $(this).css('visibility', 'hidden');
-      });
-    }
-  }); */
-
-
-
 
   
 });

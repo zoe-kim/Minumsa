@@ -128,10 +128,10 @@ body {
   color: #1E1E1E;
   line-height: 1;
   font-weight: 400;
-  word-break: keep-all;
   letter-spacing: -0.035em; }
   body * {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    vertical-align: top; }
 
 #skip a {
   position: absolute;
