@@ -93,34 +93,78 @@
     transition: .3s; }
 
 #cnt2 {
-  text-align: center;
-  padding: 142px 150px 152px;
+  width: 100%;
   background: #fff; }
-  #cnt2 p {
-    font-size: 18px;
-    line-height: 20px;
-    letter-spacing: -0.3px;
-    margin-bottom: 36px;
-    font-weight: 700; }
-  #cnt2 h3 {
-    font-size: 42px;
-    line-height: 60px;
-    letter-spacing: -1px;
-    margin-bottom: 48px;
-    color: #aaa; }
-    #cnt2 h3 strong {
-      color: #1E1E1E; }
+  #cnt2 #cnt_wrap {
+    text-align: center;
+    padding: 142px 90px 152px;
+    margin: 0 auto;
+    max-width: 1440px; }
+    #cnt2 #cnt_wrap p {
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: -0.3px;
+      margin-bottom: 36px;
+      font-weight: 700; }
+    #cnt2 #cnt_wrap h3 {
+      font-size: 42px;
+      line-height: 60px;
+      letter-spacing: -1px;
+      margin-bottom: 48px;
+      color: #aaa; }
+      #cnt2 #cnt_wrap h3 strong {
+        color: #1E1E1E; }
 
 #cnt3 {
+  width: 100%;
   background: #f9f9f9; }
-  #cnt3 h3 {
-    font-size: 42px;
-    line-height: 60px;
-    letter-spacing: -1px;
-    margin-bottom: 48px;
-    color: #aaa; }
-    #cnt3 h3 strong {
-      color: #1E1E1E; }
+  #cnt3 #cnt_wrap {
+    padding: 202px 90px 120px;
+    margin: 0 auto;
+    max-width: 1440px;
+    text-align: center; }
+    #cnt3 #cnt_wrap h3 {
+      font-size: 42px;
+      line-height: 60px;
+      letter-spacing: -1px;
+      margin-bottom: 48px;
+      color: #aaa;
+      text-align: left; }
+      #cnt3 #cnt_wrap h3 strong {
+        color: #1E1E1E; }
+    #cnt3 #cnt_wrap #book_list {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      margin-bottom: 48px; }
+      #cnt3 #cnt_wrap #book_list a {
+        position: relative;
+        display: block; }
+        #cnt3 #cnt_wrap #book_list a .hover_book {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: #189066;
+          color: #F9F9F9;
+          padding: 120px 24px 20px;
+          text-align: left;
+          height: 100%;
+          display: none; }
+        #cnt3 #cnt_wrap #book_list a img {
+          width: auto;
+          max-height: 304px; }
+      #cnt3 #cnt_wrap #book_list .book_dim {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1E1E1E;
+        opacity: 0; }
 
 @media screen and (max-width: 1440px) {
   #cnt1 .cnt_box {

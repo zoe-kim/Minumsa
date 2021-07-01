@@ -1,35 +1,19 @@
 @charset "UTF-8";
-/* @font-face {
+@font-face {
   font-family: NotoSansKR;
   font-style: normal;
   font-weight: 400;
-  src: local("Noto Sans KR"),
-     url("../fonts/NotoSansKR-Regular.woff2") format("woff2"),
-     url("../fonts/NotoSansKR-Regular.woff") format("woff"),
-     url("../fonts/NotoSansKR-Regular.otf") format("opentype"),
-     url("../fonts/NotoSansKR-Regular.svg#NotoSansKR") format('svg');
-}
+  src: local("Noto Sans KR"), url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.otf") format("opentype"), url("../fonts/NotoSansKR-Regular.svg#NotoSansKR") format("svg"); }
 @font-face {
   font-family: NotoSansKR;
   font-style: normal;
   font-weight: 500;
-  src: local("Noto Sans KR"),
-     url("../fonts/NotoSansKR-Medium.woff2") format("woff2"),
-     url("../fonts/NotoSansKR-Medium.woff") format("woff"),
-     url("../fonts/NotoSansKR-Medium.otf") format("opentype"),
-     url("../fonts/NotoSansKR-Medium.svg#NotoSansKR") format('svg');
-}
+  src: local("Noto Sans KR"), url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.otf") format("opentype"), url("../fonts/NotoSansKR-Medium.svg#NotoSansKR") format("svg"); }
 @font-face {
   font-family: NotoSansKR;
   font-style: normal;
   font-weight: 700;
-  src: local("Noto Sans KR"),
-     url("../fonts/NotoSansKR-Bold.woff2") format("woff2"),
-     url("../fonts/NotoSansKR-Bold.woff") format("woff"),
-     url("../fonts/NotoSansKR-Bold.otf") format("opentype"),
-     url("../fonts/NotoSansKR-Bold.svg#NotoSansKR") format('svg');
-}
- */
+  src: local("Noto Sans KR"), url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.otf") format("opentype"), url("../fonts/NotoSansKR-Bold.svg#NotoSansKR") format("svg"); }
 body, h1, h2, h3, h4, p, ul, button {
   margin: 0;
   padding: 0; }

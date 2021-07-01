@@ -3,7 +3,7 @@
 // 지원 브라우저 ie 11+
 
 // web font
-/* @font-face {
+@font-face {
   font-family: NotoSansKR;
   font-style: normal;
   font-weight: 400;
@@ -33,7 +33,7 @@
      url("../fonts/NotoSansKR-Bold.otf") format("opentype"),
      url("../fonts/NotoSansKR-Bold.svg#NotoSansKR") format('svg');
 }
- */
+
 // tag reset
 body, h1, h2, h3, h4, p, ul, button{margin: 0;padding: 0;}
 h1, h2, h3, h4{font-size: 100%;}
