@@ -260,8 +260,12 @@
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
+    z-index: 600;
     position: absolute;
-    top: 50%; }
+    top: 50%;
+    left: 90px;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); }
     #cnt5 #cnt_wrap .left_box p {
       font-size: 18px;
       line-height: 20px;
@@ -272,10 +276,7 @@
       font-size: 42px;
       line-height: 60px;
       letter-spacing: -1px;
-      margin-bottom: 48px;
-      color: #aaa; }
-      #cnt5 #cnt_wrap .left_box h3 strong {
-        color: #1E1E1E; }
+      margin-bottom: 48px; }
   #cnt5 #cnt_wrap .video_bg {
     position: relative;
     width: 100%;

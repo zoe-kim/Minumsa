@@ -38,6 +38,7 @@
 body, h1, h2, h3, h4, p, ul, button{margin: 0;padding: 0;}
 h1, h2, h3, h4{font-size: 100%;}
 ul{list-style: none;}
+address{font-style: normal;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 img{vertical-align: top;}
 img, video{max-width: 100%;}
@@ -69,7 +70,7 @@ header, nav, section, footer{display: block;}
 
 // body
 body{
-    font-family: NotoSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;letter-spacing: -0.035em;
+    font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;letter-spacing: -0.035em;
     *{box-sizing: border-box;vertical-align: top;}
 }
 
@@ -124,7 +125,34 @@ body{
 #m_head{visibility: hidden;height: 0;overflow: hidden;}
 
 // footer
-
+#pc_foot{
+    background: #f9f9f9;padding: 50px 0 50px 90px;
+    img{height: 18px;margin-bottom: 30px;}
+    .copyright_txt{
+        font-weight: 500;line-height: 20px;color: $gray;
+        address{margin-bottom: 6px;font-size: 12px;}
+        p{margin-bottom: 20px;font-size: 14px;}
+    }
+    .btm_link{
+        @include flex;
+        font-size: 14px;font-weight: 700;
+        .link_txt{
+            color: #999;
+            a{
+                margin-right: 24px;
+                &:hover, &:focus{color: $green;@include transition(all 0.3s);}
+            }
+        }
+        .link_social{
+            color: #ccc;
+            a{
+                margin-left: 24px;
+                &:hover, &:focus{color: $green;@include transition(all 0.3s);}
+            }
+        }
+    }
+}
+#m_foot{visibility: hidden;height: 0;overflow: hidden;}
 
 // Media Query
 @media screen and (max-width: 1520px) {
@@ -193,4 +221,27 @@ body{
         }
     }
     // footer
+    #pc_foot{display: none;}
+    #m_foot{
+        visibility: visible;height: 100%;overflow: visible;
+        background: #f9f9f9;padding: 35px 24px 35px 24px;
+        img{height: 18px;margin-bottom: 16px;}
+        .copyright_txt{
+            font-weight: 500;line-height: 20px;color: $gray;
+            address{margin-bottom: 4px;font-size: 12px;}
+            p{font-size: 14px;margin-bottom: 20px;}
+        }
+        .btm_link{
+            @include flex;
+            font-size: 14px;font-weight: 700;
+            .link_txt{
+                color: #999;
+                a{margin-right: 8px;}
+            }
+            .link_social{
+                color: #ccc;
+                a{margin-left: 8px;}
+            }
+        }    
+    }
 }

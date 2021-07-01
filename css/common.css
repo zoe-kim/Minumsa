@@ -24,6 +24,9 @@ h1, h2, h3, h4 {
 ul {
   list-style: none; }
 
+address {
+  font-style: normal; }
+
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
   color: inherit; }
@@ -123,7 +126,7 @@ header, nav, section, footer {
     border-color: #189066; }
 
 body {
-  font-family: NotoSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;
   font-size: 16px;
   color: #1E1E1E;
   line-height: 1;
@@ -221,6 +224,52 @@ body {
   height: 0;
   overflow: hidden; }
 
+#pc_foot {
+  background: #f9f9f9;
+  padding: 50px 0 50px 90px; }
+  #pc_foot img {
+    height: 18px;
+    margin-bottom: 30px; }
+  #pc_foot .copyright_txt {
+    font-weight: 500;
+    line-height: 20px;
+    color: #aaa; }
+    #pc_foot .copyright_txt address {
+      margin-bottom: 6px;
+      font-size: 12px; }
+    #pc_foot .copyright_txt p {
+      margin-bottom: 20px;
+      font-size: 14px; }
+  #pc_foot .btm_link {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700; }
+    #pc_foot .btm_link .link_txt {
+      color: #999; }
+      #pc_foot .btm_link .link_txt a {
+        margin-right: 24px; }
+        #pc_foot .btm_link .link_txt a:hover, #pc_foot .btm_link .link_txt a:focus {
+          color: #189066;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+    #pc_foot .btm_link .link_social {
+      color: #ccc; }
+      #pc_foot .btm_link .link_social a {
+        margin-left: 24px; }
+        #pc_foot .btm_link .link_social a:hover, #pc_foot .btm_link .link_social a:focus {
+          color: #189066;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+
+#m_foot {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden; }
+
 @media screen and (max-width: 1520px) {
   .max1440 {
     max-width: 100%;
@@ -309,6 +358,45 @@ body {
   #m_head .mGnb_wrap {
     padding: 0 24px; }
     #m_head .mGnb_wrap .mGnb_close_btn {
-      right: 24px; } }
+      right: 24px; }
+
+  #pc_foot {
+    display: none; }
+
+  #m_foot {
+    visibility: visible;
+    height: 100%;
+    overflow: visible;
+    background: #f9f9f9;
+    padding: 35px 24px 35px 24px; }
+    #m_foot img {
+      height: 18px;
+      margin-bottom: 16px; }
+    #m_foot .copyright_txt {
+      font-weight: 500;
+      line-height: 20px;
+      color: #aaa; }
+      #m_foot .copyright_txt address {
+        margin-bottom: 4px;
+        font-size: 12px; }
+      #m_foot .copyright_txt p {
+        font-size: 14px;
+        margin-bottom: 20px; }
+    #m_foot .btm_link {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      font-size: 14px;
+      font-weight: 700; }
+      #m_foot .btm_link .link_txt {
+        color: #999; }
+        #m_foot .btm_link .link_txt a {
+          margin-right: 8px; }
+      #m_foot .btm_link .link_social {
+        color: #ccc; }
+        #m_foot .btm_link .link_social a {
+          margin-left: 8px; } }
 
 /*# sourceMappingURL=common.css.map */
