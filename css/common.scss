@@ -52,7 +52,6 @@ header, nav, section, footer{display: block;}
 .p_a{position: absolute;}
 .clearfix::after{content: "";display: block;clear: both;}
 .blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
-.max1440{width: 100%;max-width: 1440px;margin: 0 auto;}
 
 // 버튼
 .slide_link_btn{
@@ -80,7 +79,7 @@ body{
     &:focus{left: 0;width: 100%;height: 50px;line-height: 50px;color: $white; font-weight: 700;background: $green;text-align: center;}
 }
 
-// pc
+// pc (1920px)
 .header{
     @include flex;
     @include justify-content(space-between); // 내부 요소들을 양 끝에 배치
@@ -123,7 +122,6 @@ body{
     }
 }
 #m_head{visibility: hidden;height: 0;overflow: hidden;}
-
 // footer
 #pc_foot{
     background: #f9f9f9;padding: 50px 0 50px 90px;
@@ -154,33 +152,23 @@ body{
 }
 #m_foot{visibility: hidden;height: 0;overflow: hidden;}
 
-// Media Query
-@media screen and (max-width: 1520px) {
-  .max1440{max-width: 100%;padding: 0 22px;}
-}
-
-// 작은 pc
+// 작은 pc (1440px)
 @media screen and (max-width: 1440px) {
-    // header
-        
-    // footer
+    .header{
+        max-width: 1440px;padding: 0 90px;margin: 0 auto;
+    }
 }
 
-// 태블릿
+// 태블릿 (1152px)
 @media screen and (max-width: 1152px) {
-    .max1440{padding: 0 90px;margin: 0;}
-
-    // header
     // pc_head는 태블릿에서 보이지 않게 숨긴다
     #pc_head{display: none;}
-
     .header{
         padding: 0 90px;
         .util{top: 22px;right: 90px;}
     }
     #m_head{
         visibility: visible;height: 74px;overflow: visible;
-
         .mGnb_open_btn{width: 24px;height: 24px;background: url("../images/common/mGnb_open_btn_w.png") no-repeat center / cover;margin: 3px 0 3px 24px;}
         &.on .mGnb_open_btn{background-image: url("../images/common/mGnb_open_btn.png");}
         .mGnb_dim{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: $black;opacity: 0;}
@@ -204,12 +192,10 @@ body{
             }
         }
     }
-    // footer
 }
 
-// 모바일
+// 모바일 (690px)
 @media screen and (max-width: 690px) {
-    // header
     .header{
         padding: 0 24px;
         .util{right: 24px;}
@@ -220,7 +206,6 @@ body{
             .mGnb_close_btn{right: 24px;}
         }
     }
-    // footer
     #pc_foot{display: none;}
     #m_foot{
         visibility: visible;height: 100%;overflow: visible;

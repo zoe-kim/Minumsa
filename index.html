@@ -64,8 +64,6 @@
         <a href="#cnt2">본문 바로가기</a>
     </div>
     <div id="wrap">
-        <div id="circle"></div> <!-- 마우스 커서 따라다니는 원 -->
-
         <div id="pc_head" class="header">
             <h1 class="logo">
                 <a href="#"><span class="blind">민음사</span></a>
@@ -171,259 +169,274 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="bottom_btn">
+                <div class="bottom_btn" id="pc_bottom_btn">
+                    <button type="button">
+                        <span class="blind">스크롤 다운</span>
+                    </button>
+                </div>
+                <div class="bottom_btn" id="m_bottom_btn">
                     <button type="button">
                         <span class="blind">스크롤 다운</span>
                     </button>
                 </div>
             </section>
             <section class="section fp-auto-height" id="cnt2">
-                <div id="cnt_wrap">
-                    <h2 class="blind">소개하는 말</h2>
-                    <p>민음사는</p>
-                    <h3>
-                        시대의 흐름에 앞서가는 <br>
-                        젊은 감각과 열린 사고를 가진 <br>
-                        <strong>21세기 출판의 선도자입니다.</strong>
-                    </h3>
-                    <a href="#" class="link_btn">소개 바로가기</a>
+                <div class="wide_section">
+                    <div id="cnt_wrap">
+                        <h2 class="blind">소개하는 말</h2>
+                        <p>민음사는</p>
+                        <h3>
+                            시대의 흐름에 앞서가는 <br>
+                            젊은 감각과 열린 사고를 가진 <br>
+                            <strong>21세기 출판의 선도자입니다.</strong>
+                        </h3>
+                        <a href="#" class="link_btn">소개 바로가기</a>
+                    </div>
                 </div>
             </section>
             <section class="section" id="cnt3">
-                <div id="cnt_wrap">
-                    <h2 class="blind">신간 추천</h2>
-                    <h3>
-                        민음사의 <br>
-                        <strong>신간</strong>을 만나보세요
-                    </h3>
-                    <ul id="book_list">
-                        <li>
-                            <a href="#">
-                                <div class="hover_book">
-                                    <strong>남아 있는 나날</strong>
-                                    <p><b>글 |</b> 가즈오 이시구로 <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>젊은 날의 사랑은 지나갔지만 남아 있는 날들에도 희망은 있다. 인생의 황혼 녘에 비로소 깨달은 삶의 가치와 잃어버린 사랑 그 허망함과 애잔함을 내밀하게 그려 낸…</span>
-                                </div>
-                                <img src="images/main/cnt3_img01.jpg" alt="남아 있는 나날">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="hover_book">
-                                    <strong>나를 보내지 마</strong>
-                                    <p><b>글 |</b> 가즈오 이시구로 <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>“나한테 영혼이 없다고 생각하는 사람도 있나요?” 복제 인간을 소재로 인간의 존엄성을 진지하게 성찰한 소설. 인간의 장기 이식을 목적으로 한 복제 인간의 운명을…</span>
-                                </div>
-                                <img src="images/main/cnt3_img02.jpg" alt="나를 보내지 마">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="hover_book">
-                                    <strong>녹턴</strong>
-                                    <p><b>글 |</b> 가즈오 이시구로 <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>재즈 가수가 부르는 세레나데부터 할리우드 호텔방에 울려 퍼지는 색소폰, 베네치아 광장을 메운 첼로까지 음악이 흐르는, 사랑과 세월에 관한 이야기. 노벨 문학상 수상…</span>
-                                </div>
-                                <img src="images/main/cnt3_img03.jpg" alt="녹턴">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="hover_book">
-                                    <strong>고독사를 피하는 법</strong>
-                                    <p><b>글 |</b> 리처드 로퍼 <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>“때로는 소중한 무언가를 찾기 위해 모든 것을 버려야 할 때가 있다.” 첫 면접 자리에서 긴장하고 당황한 나머지 아내와 자녀 둘이 있다고 거짓말을 한 앤드루는 무심코…</span>
-                                </div>
-                                <img src="images/main/cnt3_img04.jpg" alt="고독사를 피하는 법">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="hover_book">
-                                    <strong>책 만드는 일</strong>
-                                    <p><b>글 |</b> 박혜진, 이영준, 박경… <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>출판업이 불황이라는 말이 오래되었다. 웹으로, 동영상으로 끝없이 독자가 이탈하고 있다. 한편 화제의 콘텐츠는 반드시 책으로 나오고, 화제의 인물은 마침내 책으로…</span>
-                                </div>
-                                <img src="images/main/cnt3_img05.jpg" alt="책 만드는 일">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul id="m_book_list">
-                        <li>
-                            <a href="#">
-                                <img src="images/main/cnt3_img01.jpg" alt="남아 있는 나날">
-                                <div class="txt_box">
-                                    <strong>남아 있는 나날</strong>
-                                    <p><b>글 |</b> 가즈오 이시구로 <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>젊은 날의 사랑은 지나갔지만 남아 있는 날들에도 희망은 있다. 인생의 황혼 녘에 비로소 깨달은 삶의 가치와 잃어버린 사랑 그 허망함과 애잔함을 내밀하게 그려 낸 가즈오 이시구로의 『남아 있는 나날』(송은경 번역)이 민음사에서 전면적 번역 개정을 거쳐 새로운 디자인과 판형으로 출간되었다. 2017년 노벨문학상을 수상하며 일본계 영국 작가로 현대 세계 문학을 대표하는 거장이 된 가즈오 이시구로의 『남아 있는 나날』은…</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/main/cnt3_img02.jpg" alt="나를 보내지 마">
-                                <div class="txt_box">
-                                    <strong>나를 보내지 마</strong>
-                                    <p><b>글 |</b> 가즈오 이시구로 <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>2017년 노벨 문학상 수상자이자 현대 영미권 문학을 이끌어 가는 거장 가즈오 이시구로의 대표작, 『나를 보내지 마』(김남주 번역)가 민음사에서 전면적 번역 개정을 거쳐 새로운 디자인과 판형으로 출간되었다. 여느 시골 학교와도 같이 평온해 보이지만 외부와의 접촉이 일절 차단된 ‘헤일셤’. 어느 날 루스 선생님은 학생들에게, 그들의 운명이 이미 정해져 있다는 사실을 알려준다. 선생님의 충격적인 발언으로 아이들은 자신들의 존재성에 대해 진지하게 생각하게 되는데…</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/main/cnt3_img03.jpg" alt="녹턴">
-                                <div class="txt_box">
-                                    <strong>녹턴</strong>
-                                    <p><b>글 |</b> 가즈오 이시구로 <br>
-                                    <b>출판사 |</b> 민음사</p>
-                                    <span>음악을 문학 속으로 끌어들여 절묘하게 녹여 낸 이 작품은, 크루너 가수가 부르는 나직한 세레나데부터 할리우드의 호텔 방에 울려 퍼지는 색소폰, 베네치아의 광장을 메운 첼로의 「대부」 테마곡까지 음악이 흐르는, 사랑과 세월에 관한 다섯 편의 이야기를 담고 있다. “마치 다섯 악장으로 이루어진 음악 작품처럼 통합적으로 구상”(《옵서버》)된 이 작품은 무엇보다 음악이 절정에 달하는 순간, 인생에 대한 성찰이 빛을 발한다. 젊은 시절 한때 싱어송라이터를 꿈꾸었던 이시구로의…</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="#" class="link_btn">신간 더보기</a>
+                <div class="wide_section">
+                    <div id="cnt_wrap">
+                        <h2 class="blind">신간 추천</h2>
+                        <h3>
+                            민음사의 <br>
+                            <strong>신간</strong>을 만나보세요
+                        </h3>
+                        <ul id="book_list">
+                            <li>
+                                <a href="#">
+                                    <div class="hover_book">
+                                        <strong>남아 있는 나날</strong>
+                                        <p><b>글 |</b> 가즈오 이시구로 <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>젊은 날의 사랑은 지나갔지만 남아 있는 날들에도 희망은 있다. 인생의 황혼 녘에 비로소 깨달은 삶의 가치와 잃어버린 사랑 그 허망함과 애잔함을 내밀하게 그려 낸…</span>
+                                    </div>
+                                    <img src="images/main/cnt3_img01.jpg" alt="남아 있는 나날">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="hover_book">
+                                        <strong>나를 보내지 마</strong>
+                                        <p><b>글 |</b> 가즈오 이시구로 <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>“나한테 영혼이 없다고 생각하는 사람도 있나요?” 복제 인간을 소재로 인간의 존엄성을 진지하게 성찰한 소설. 인간의 장기 이식을 목적으로 한 복제 인간의 운명을…</span>
+                                    </div>
+                                    <img src="images/main/cnt3_img02.jpg" alt="나를 보내지 마">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="hover_book">
+                                        <strong>녹턴</strong>
+                                        <p><b>글 |</b> 가즈오 이시구로 <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>재즈 가수가 부르는 세레나데부터 할리우드 호텔방에 울려 퍼지는 색소폰, 베네치아 광장을 메운 첼로까지 음악이 흐르는, 사랑과 세월에 관한 이야기. 노벨 문학상 수상…</span>
+                                    </div>
+                                    <img src="images/main/cnt3_img03.jpg" alt="녹턴">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="hover_book">
+                                        <strong>고독사를 피하는 법</strong>
+                                        <p><b>글 |</b> 리처드 로퍼 <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>“때로는 소중한 무언가를 찾기 위해 모든 것을 버려야 할 때가 있다.” 첫 면접 자리에서 긴장하고 당황한 나머지 아내와 자녀 둘이 있다고 거짓말을 한 앤드루는 무심코…</span>
+                                    </div>
+                                    <img src="images/main/cnt3_img04.jpg" alt="고독사를 피하는 법">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="hover_book">
+                                        <strong>책 만드는 일</strong>
+                                        <p><b>글 |</b> 박혜진, 이영준, 박경… <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>출판업이 불황이라는 말이 오래되었다. 웹으로, 동영상으로 끝없이 독자가 이탈하고 있다. 한편 화제의 콘텐츠는 반드시 책으로 나오고, 화제의 인물은 마침내 책으로…</span>
+                                    </div>
+                                    <img src="images/main/cnt3_img05.jpg" alt="책 만드는 일">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul id="m_book_list">
+                            <li>
+                                <a href="#">
+                                    <img src="images/main/cnt3_img01.jpg" alt="남아 있는 나날">
+                                    <div class="txt_box">
+                                        <strong>남아 있는 나날</strong>
+                                        <p><b>글 |</b> 가즈오 이시구로 <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>젊은 날의 사랑은 지나갔지만 남아 있는 날들에도 희망은 있다. 인생의 황혼 녘에 비로소 깨달은 삶의 가치와 잃어버린 사랑 그 허망함과 애잔함을 내밀하게 그려 낸 가즈오 이시구로의 『남아 있는 나날』(송은경 번역)이 민음사에서 전면적 번역 개정을 거쳐 새로운 디자인과 판형으로 출간되었다. 2017년 노벨문학상을 수상하며 일본계 영국 작가로 현대 세계 문학을 대표하는 거장이 된 가즈오 이시구로의 『남아 있는 나날』은…</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/main/cnt3_img02.jpg" alt="나를 보내지 마">
+                                    <div class="txt_box">
+                                        <strong>나를 보내지 마</strong>
+                                        <p><b>글 |</b> 가즈오 이시구로 <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>2017년 노벨 문학상 수상자이자 현대 영미권 문학을 이끌어 가는 거장 가즈오 이시구로의 대표작, 『나를 보내지 마』(김남주 번역)가 민음사에서 전면적 번역 개정을 거쳐 새로운 디자인과 판형으로 출간되었다. 여느 시골 학교와도 같이 평온해 보이지만 외부와의 접촉이 일절 차단된 ‘헤일셤’. 어느 날 루스 선생님은 학생들에게, 그들의 운명이 이미 정해져 있다는 사실을 알려준다. 선생님의 충격적인 발언으로 아이들은 자신들의 존재성에 대해 진지하게 생각하게 되는데…</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="images/main/cnt3_img03.jpg" alt="녹턴">
+                                    <div class="txt_box">
+                                        <strong>녹턴</strong>
+                                        <p><b>글 |</b> 가즈오 이시구로 <br>
+                                        <b>출판사 |</b> 민음사</p>
+                                        <span>음악을 문학 속으로 끌어들여 절묘하게 녹여 낸 이 작품은, 크루너 가수가 부르는 나직한 세레나데부터 할리우드의 호텔 방에 울려 퍼지는 색소폰, 베네치아의 광장을 메운 첼로의 「대부」 테마곡까지 음악이 흐르는, 사랑과 세월에 관한 다섯 편의 이야기를 담고 있다. “마치 다섯 악장으로 이루어진 음악 작품처럼 통합적으로 구상”(《옵서버》)된 이 작품은 무엇보다 음악이 절정에 달하는 순간, 인생에 대한 성찰이 빛을 발한다. 젊은 시절 한때 싱어송라이터를 꿈꾸었던 이시구로의…</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="link_btn">신간 더보기</a>
+                    </div>
                 </div>
             </section>
             <section class="section" id="cnt4">
-                <div id="cnt_wrap">
-                    <h2 class="blind">민음사 멤버십</h2>
-                    <div class="left_box">
-                        <p>민음사는</p>
-                        <h3>
-                            <strong>새로운 문학과 <br>
-                            참된 지성의 세계</strong>를 <br>
-                            끝없이 탐색합니다.
-                        </h3>
-                        <a href="#" class="link_btn">멤버십 바로가기</a>
-                    </div>
-                    <div class="right_box">
-                        <ul class="first">
-                            <li><img src="images/main/cnt4_img01.png" alt=""><span>민음 북클럽</span></li>
-                            <li><img src="images/main/cnt4_img02.png" alt=""><span>아카데미 / 북토크</span></li>
-                            <li><img src="images/main/cnt4_img03.png" alt=""><span>독서모임 캘린더</span></li>
-                            <li><img src="images/main/cnt4_img04.png" alt=""><span>민음사 패밀리데이</span></li>
-                            <li><img src="images/main/cnt4_img05.png" alt=""><span>e - 스탬프</span></li>
-                        </ul>
-                        <ul class="second">
-                            <li><img src="images/main/cnt4_img06.png" alt=""><span>소셜 리딩 프로그램</span></li>
-                            <li><img src="images/main/cnt4_img07.png" alt=""><span>민음사 X 동네서점</span></li>
-                            <li><img src="images/main/cnt4_img08.png" alt=""><span>민음 북샵</span></li>
-                            <li><img src="images/main/cnt4_img09.png" alt=""><span>한편 정기구독</span></li>
-                            <li><img src="images/main/cnt4_img10.png" alt=""><span>릿터 정기구독</span></li>
-                        </ul>
+                <div class="wide_section">
+                    <div id="cnt_wrap">
+                        <h2 class="blind">민음사 멤버십</h2>
+                        <div class="left_box">
+                            <p>민음사는</p>
+                            <h3>
+                                <strong>새로운 문학과 <br>
+                                참된 지성의 세계</strong>를 <br>
+                                끝없이 탐색합니다.
+                            </h3>
+                            <a href="#" class="link_btn">멤버십 바로가기</a>
+                        </div>
+                        <div class="right_box">
+                            <ul class="first">
+                                <li><img src="images/main/cnt4_img01.png" alt=""><span>민음 북클럽</span></li>
+                                <li><img src="images/main/cnt4_img02.png" alt=""><span>아카데미 / 북토크</span></li>
+                                <li><img src="images/main/cnt4_img03.png" alt=""><span>독서모임 캘린더</span></li>
+                                <li><img src="images/main/cnt4_img04.png" alt=""><span>민음사 패밀리데이</span></li>
+                                <li><img src="images/main/cnt4_img05.png" alt=""><span>e - 스탬프</span></li>
+                            </ul>
+                            <ul class="second">
+                                <li><img src="images/main/cnt4_img06.png" alt=""><span>소셜 리딩 프로그램</span></li>
+                                <li><img src="images/main/cnt4_img07.png" alt=""><span>민음사 X 동네서점</span></li>
+                                <li><img src="images/main/cnt4_img08.png" alt=""><span>민음 북샵</span></li>
+                                <li><img src="images/main/cnt4_img09.png" alt=""><span>한편 정기구독</span></li>
+                                <li><img src="images/main/cnt4_img10.png" alt=""><span>릿터 정기구독</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="section" id="cnt5">
-                <div id="cnt_wrap">
-                    <h2 class="blind">문학상</h2>
-                    <div class="left_box">
-                        <p>오늘의 작가상이</p>
-                        <h3>
-                            젊은 작가에게는 <strong>따뜻한 격려</strong>가, <br>
-                            오늘의 독자에게는 <strong>겸허한 안내자</strong>가 <br>
-                            될 것이라 기대합니다.
-                        </h3>
-                        <a href="#" class="link_btn transparent">문학상 바로가기</a>
-                    </div>
-                    <div class="video_bg">
-                        <video poster="images/main/cnt5_video_poster.png" autoplay muted playsinline preload="auto" loop data-autoplay>
-                            <source src="video/cnt5_video_bg.mp4" type="video/mp4">
-                        </video>
+                <div class="wide_section">
+                    <div id="cnt_wrap">
+                        <h2 class="blind">문학상</h2>
+                        <div class="left_box">
+                            <p>오늘의 작가상이</p>
+                            <h3>
+                                젊은 작가에게는 <strong>따뜻한 격려</strong>가, <br>
+                                오늘의 독자에게는 <strong>겸허한 안내자</strong>가 <br>
+                                될 것이라 기대합니다.
+                            </h3>
+                            <a href="#" class="link_btn transparent">문학상 바로가기</a>
+                        </div>
+                        <div class="video_bg">
+                            <video poster="images/main/cnt5_video_poster.png" autoplay muted playsinline preload="auto" loop data-autoplay>
+                                <source src="video/cnt5_video_bg.mp4" type="video/mp4">
+                            </video>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="section" id="cnt6">
-                <div id="cnt_wrap">
-                    <h2 class="blind">민음사 관련 소식 및 이벤트</h2>
-                    <div class="link_box">
-                        <ul>
-                            <li>
-                                <!-- 이미지 배경으로 처리 -->
-                                <a href="#">
-                                    <strong>event</strong>
-                                    <h4>
-                                        진행중인 이벤트
-                                    </h4>
-                                    <span class="link_btn transparent">이벤트 바로가기</span>
-                                </a>
-                            </li>
-                            <li>
-                                <!-- 이미지 배경으로 처리 -->
-                                <a href="#">
-                                    <strong>sms</strong>
-                                    <h4>
-                                        세계문학전집 공동구매 <br>
-                                        문자 알림 서비스
-                                    </h4>
-                                    <span class="link_btn transparent">알림 바로가기</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="notice_box">
-                        <h3>
-                            민음사의 <br>
-                            <strong>새로운 소식</strong>을 확인하세요
-                        </h3>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <div class="thumb_box">
-                                        <div class="dim_thumbnail"></div>
-                                        <img src="images/main/cnt6_img01.png" alt="">
-                                    </div>
-                                    <div class="txt_box">
-                                        <p>‘길 잃은 세대’를 대표하는 작가 ─ 『디 에센셜 헤밍웨이』</p>
-                                        <span>2021.06.24</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="thumb_box">
-                                        <div class="dim_thumbnail"></div>
-                                        <img src="images/main/cnt6_img02.png" alt="">
-                                    </div>
-                                    <div class="txt_box">
-                                        <p>2021 상반기 온라인 패밀리데이 (6/24 오전 10시 OPEN)</p>
-                                        <span>2021.06.20</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="thumb_box">
-                                        <div class="dim_thumbnail"></div>
-                                        <img src="images/main/cnt6_img03.png" alt="">
-                                    </div>
-                                    <div class="txt_box">
-                                        <p>책과 향 - 1회 : 위로의 감각-글쓰기로 향을 말한다면 (6/15 오후 3시 OPEN)</p>
-                                        <span>2021.06.08</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="thumb_box">
-                                        <div class="dim_thumbnail"></div>
-                                        <img src="images/main/cnt6_img04.png" alt="">
-                                    </div>
-                                    <div class="txt_box">
-                                        <p>가즈오 이시구로 리커버 개정판 <북램프> 이벤트</p>
-                                        <span>2021.06.03</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <a href="#" class="link_btn">소식 더보기</a>
+                <div class="wide_section">
+                    <div id="cnt_wrap">
+                        <h2 class="blind">민음사 관련 소식 및 이벤트</h2>
+                        <div class="link_box">
+                            <ul>
+                                <li class="link_event">
+                                    <!-- 이미지 배경으로 처리 -->
+                                    <a href="#">
+                                        <strong>event</strong>
+                                        <h4>
+                                            진행중인 이벤트
+                                        </h4>
+                                        <span class="link_btn transparent">이벤트 바로가기</span>
+                                    </a>
+                                </li>
+                                <li class="link_sms">
+                                    <!-- 이미지 배경으로 처리 -->
+                                    <a href="#">
+                                        <strong>sms</strong>
+                                        <h4>
+                                            세계문학전집 공동구매 <br>
+                                            문자 알림 서비스
+                                        </h4>
+                                        <span class="link_btn transparent">알림 바로가기</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="notice_box">
+                            <h3>
+                                민음사의 <br>
+                                <strong>새로운 소식</strong>을 확인하세요
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb_box">
+                                            <div class="dim_thumbnail"></div>
+                                            <img src="images/main/cnt6_img01.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <p>‘길 잃은 세대’를 대표하는 작가 - 『디 에센셜 헤밍웨이』</p>
+                                            <span>2021.06.24</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb_box">
+                                            <div class="dim_thumbnail"></div>
+                                            <img src="images/main/cnt6_img02.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <p>2021 상반기 온라인 패밀리데이 (6/24 오전 10시 OPEN)</p>
+                                            <span>2021.06.20</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb_box">
+                                            <div class="dim_thumbnail"></div>
+                                            <img src="images/main/cnt6_img03.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <p>책과 향 - 1회 : 위로의 감각 - 글쓰기로 향을 말한다면 (6/15 오후 3시 OPEN)</p>
+                                            <span>2021.06.08</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb_box">
+                                            <div class="dim_thumbnail"></div>
+                                            <img src="images/main/cnt6_img04.png" alt="">
+                                        </div>
+                                        <div class="txt_box">
+                                            <p>가즈오 이시구로 리커버 개정판 - 북램프 증정 이벤트</p>
+                                            <span>2021.06.03</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="link_btn">소식 더보기</a>
+                        </div>
                     </div>
                 </div>
             </section>

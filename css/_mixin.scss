@@ -55,3 +55,22 @@
     -webkit-transition: $value;
     transition: $value;
 }
+
+@mixin keyframes($aniName) {
+    @-webkit-keyframes #{$aniName} {@content;}
+    @-moz-keyframes #{$aniName} {@content;}
+    @keyframes #{$aniName} {@content;}
+}
+
+@mixin animation($value...) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    animation: $value;
+}
+
+@mixin animation-delay($value) {
+    -webkit-animation-delay: $value;
+    -moz-animation-delay: $value;
+    animation-delay: $value;
+}
+  

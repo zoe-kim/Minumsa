@@ -74,11 +74,6 @@ header, nav, section, footer {
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%); }
 
-.max1440 {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto; }
-
 .slide_link_btn {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -270,15 +265,12 @@ body {
   height: 0;
   overflow: hidden; }
 
-@media screen and (max-width: 1520px) {
-  .max1440 {
-    max-width: 100%;
-    padding: 0 22px; } }
-@media screen and (max-width: 1152px) {
-  .max1440 {
+@media screen and (max-width: 1440px) {
+  .header {
+    max-width: 1440px;
     padding: 0 90px;
-    margin: 0; }
-
+    margin: 0 auto; } }
+@media screen and (max-width: 1152px) {
   #pc_head {
     display: none; }
 
