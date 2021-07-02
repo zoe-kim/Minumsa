@@ -356,38 +356,6 @@
     margin: 0 auto;
     max-width: 1440px;
     text-align: center; }
-    #cnt6 #cnt_wrap .link_box ul {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      overflow: hidden; }
-      #cnt6 #cnt_wrap .link_box ul li {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        text-align-last: left;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s; }
-        #cnt6 #cnt_wrap .link_box ul li:hover, #cnt6 #cnt_wrap .link_box ul li:focus {
-          -webkit-transform: scale(1.2);
-          -moz-transform: scale(1.2);
-          transform: scale(1.2); }
-        #cnt6 #cnt_wrap .link_box ul li a {
-          position: relative;
-          display: block;
-          height: 370px;
-          margin: 180px 90px 90px 90px;
-          color: #fff; }
-          #cnt6 #cnt_wrap .link_box ul li a .link_btn {
-            position: absolute;
-            bottom: 0;
-            right: 0; }
-      #cnt6 #cnt_wrap .link_box ul .link_event {
-        background: url("../images/main/cnt6_link_img01.jpg") no-repeat center/cover; }
-      #cnt6 #cnt_wrap .link_box ul .link_sms {
-        background: url("../images/main/cnt6_link_img02.jpg") no-repeat center/cover; }
     #cnt6 #cnt_wrap .notice_box h3 {
       font-size: 42px;
       line-height: 60px;
