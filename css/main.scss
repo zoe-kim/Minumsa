@@ -203,7 +203,36 @@
     .pc_bottom_btn{display: none;}
     .m_bottom_btn{visibility: visible;height: 100%;overflow: visible;}
   }
-  #cnt6{
+  #cnt4{
+    .wide_section{
+      #cnt_wrap{
+        height: 860px;
+        .left_box{
+          padding: 190px 0;
+          h3{font-size: 38px;}
+        }
+        .right_box{
+          ul{
+            li{
+              span{font-size: 14px;}
+            }
+          }
+          .second{margin: -160px 0 0 0;}
+        }
+          }
+    }
+  }
+  #cnt5{
+    width: 100%;
+    #cnt_wrap{
+      .left_box{
+        h3{
+          font-size: 38px;
+        }
+      }
+    }
+  }
+    #cnt6{
     #cnt_wrap{
       .notice_box{
         h3{font-size: 38px;line-height: 1.5;}
@@ -282,10 +311,10 @@
   }
 
   100% {
-      -moz-transform: translateY(-1760px);
-      -ms-transform: translateY(-1760px);
-      -webkit-transform: translateY(-1760px);
-      transform: translateY(-1760px)
+      -moz-transform: translateY(-1408px);
+      -ms-transform: translateY(-1408px);
+      -webkit-transform: translateY(-1408px);
+      transform: translateY(-1408px)
   }
 }
 @keyframes horizontalscroll {
