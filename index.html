@@ -19,7 +19,6 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/fullpage.min.js"></script>
-    <script src="js/gsap.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <script>
@@ -68,12 +67,7 @@
             <h1 class="logo">
                 <a href="#"><span class="blind">민음사</span></a>
             </h1>
-            <div class="util">
-                <button class="search_btn" type="button">
-                    <span class="blind">검색창 열기</span>
-                </button>
-            </div>
-            <nav class="pcGnb">
+            <nav class="pc_nav">
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li><a href="#">소개</a></li>
@@ -83,24 +77,25 @@
                     <li><a href="#">이벤트</a></li>
                     <li><a href="#">커뮤니티</a></li>
                 </ul>
+                <button class="search" type="button">
+                    <span class="blind">검색창 열기</span>
+                </button>
             </nav>
         </div>
         <div id="m_head" class="header">
             <h1 class="logo">
                 <a href="#"><span class="blind">민음사</span></a>
             </h1>
-            <div class="util">
-                <button class="search_btn" type="button">
+            <div class="m_nav">
+                <button class="search" type="button">
                     <span class="blind">검색창 열기</span>
                 </button>
-                <button class="mGnb_open_btn" type="button">
+                <button class="menu_open" type="button">
                     <span class="blind">전체메뉴 열기</span>
                 </button>
-                <div class="mGnb_wrap">
-                    <div class="mGnb_top">
-                        <a href="#" class="first"><img src="images/common/header_logo.png" alt="민음사"></a>
-                    </div>
-                    <nav class="mGnb">
+                <div class="menu_wrap">
+                    <a href="#" class="first"><img src="images/common/header_logo.png" alt="민음사"></a>
+                    <nav class="menu">
                         <ul>
                             <li><a href="#">홈</a></li>
                             <li><a href="#">소개</a></li>
@@ -111,7 +106,7 @@
                             <li><a href="#">커뮤니티</a></li>
                         </ul>
                     </nav>
-                    <button class="mGnb_close_btn last" type="button">
+                    <button class="menu_close last" type="button">
                         <img src="images/common/close_btn.png" alt="전체메뉴 닫기">
                     </button>
                 </div>
@@ -167,6 +162,16 @@
                             <div class="swiper-button-next"></div>
                         </div>
                         <div class="swiper-pagination"></div>
+                        <div class="swiper-auto-wrap">
+                            <button class="swiper-auto-play hidden" type="button">
+                                <i class="xi-play"></i>
+                                <span class="blind">자동실행</span>
+                            </button>
+                            <button class="swiper-auto-pause" type="button">
+                                <i class="xi-pause"></i>
+                                <span class="blind">일시정지</span>
+                            </button>
+                        </div>              
                     </div>
                 </div>
                 <div class="bottom_btn" id="pc_bottom_btn">
@@ -180,7 +185,7 @@
                     </button>
                 </div>
             </section>
-            <section class="section fp-auto-height" id="cnt2">
+            <section class="section fp-auto-height ani" id="cnt2">
                 <div class="wide_section">
                     <div id="cnt_wrap">
                         <h2 class="blind">소개하는 말</h2>
@@ -194,7 +199,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section" id="cnt3">
+            <section class="section ani" id="cnt3">
                 <div class="wide_section">
                     <div id="cnt_wrap">
                         <h2 class="blind">신간 추천</h2>
@@ -298,7 +303,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section" id="cnt4">
+            <section class="section ani" id="cnt4">
                 <div class="wide_section">
                     <div id="cnt_wrap">
                         <h2 class="blind">민음사 멤버십</h2>
@@ -330,7 +335,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section" id="cnt5">
+            <section class="section ani" id="cnt5">
                 <div class="wide_section">
                     <div id="cnt_wrap">
                         <h2 class="blind">문학상</h2>
@@ -351,7 +356,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section" id="cnt6">
+            <section class="section ani" id="cnt6">
                 <div class="wide_section">
                     <div id="cnt_wrap">
                         <h2 class="blind">민음사 관련 소식 및 이벤트</h2>

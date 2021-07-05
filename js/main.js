@@ -2,6 +2,7 @@ $(document).ready(function () {
   // Swiper
   const swiper = new Swiper('#cnt1 .swiper-container', {
     direction: 'horizontal',  // 수평 방향으로 슬라이드
+    speed: 1500,  // 슬라이드 속도 (기본 300)
     loop: true,  // 무한 반복
     pagination: {
       el: '.swiper-pagination',
@@ -12,7 +13,7 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-      delay: 4000,  // 자동 실행 시간(4초)
+      delay: 3000,  // 자동 실행 시간(3초)
     },
     a11y: {
       prevSlideMessage: '이전 슬라이드 보기',
@@ -22,19 +23,38 @@ $(document).ready(function () {
       }
   });
 
-  // pc에서 .bottom_btn 클릭 시 cnt2로 이동
+  // 자동실행과 일시정지 버튼 추가
+  $('#cnt1 .swiper-auto-wrap button').on('click', function () {
+    const btnNum = $(this).index();
+    if (btnNum === 0) {         // 자동실행 0, 일시정지 1
+      swiper.autoplay.start();
+    } else {
+      swiper.autoplay.stop();
+    }
+    $(this).addClass('hidden').siblings().removeClass('hidden');
+  });
+
+  // pc에서 .bottom_btn 클릭 시 #cnt2로 이동
   $("#pc_bottom_btn").on("click", function() {
     fullpage_api.moveTo(2);
   })
 
-  // 태블릿, 모바일에서 .bottom_btn 클릭 시 cnt2로 이동
+  // 태블릿, 모바일에서 .bottom_btn 클릭 시 #cnt2로 이동
   $("#m_bottom_btn").on("click", function() {
     $('html, body').stop().animate({
         scrollTop: $('#cnt2').offset().top
     }, 600);
   })
 
-  // #book_list li a에 마우스와 포커스가 진입하거나 빠져 나갈 때
+  // #cnt2 ~ #cnt6이 .active를 가질 때 애니메이션 클래스 추가
+  $(window).on('scroll', function () {
+    const $cntAni = $('#fullpage.ani');
+    if ($cntAni.is('.active')) $cntAni.addClass('movetop');
+    else $cntAni.removeClass('movetop');
+  });
+
+
+  // #cnt3 #book_list li a에 마우스와 포커스가 진입하거나 빠져 나갈 때
   const $listEle = $('#book_list li a');
   $listEle.on({
     'mouseenter focus': function () {
@@ -45,15 +65,4 @@ $(document).ready(function () {
     }
   });
   
-  //cnt6 .thumb_box에 마우스와 포커스가 진입하거나 빠져 나갈 때(dim 등장처리는 css)
-  const $thumb = $('.thumb_box');
-  $thumb.on({
-    'mouseenter focus': function () {
-      $(this).addClass('on');
-    },
-    'mouseleave blur': function () {
-      $(this).removeClass('on');
-    }
-  });
-
 });
