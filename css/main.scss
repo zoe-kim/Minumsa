@@ -50,15 +50,18 @@
   .bottom_btn{
     @include translateX-50;
     position: absolute;bottom: 66px;left: 50%;z-index: 600;
-    button{width: 64px;height: 62px;background: url("../images/main/cnt1_bottom_btn.png") no-repeat center / contain;@include animation(arrowMove 1.6s infinite);@include animation-delay(.3s);}
+    button{
+      @include animation(arrowMove 1.6s infinite);
+      width: 64px;height: 62px;background: url("../images/main/cnt1_bottom_btn.png") no-repeat center / contain;
+    }
   }
   .m_bottom_btn{visibility: hidden;height: 0;overflow: hidden;}
 }
 #cnt2{
-  opacity: 0;
   .wide_section{
+    width: 100%;
     #cnt_wrap{
-      margin: 0 auto;padding: 142px 90px 152px;width: 100%;max-width: 1440px;text-align: center;
+      margin: 0 auto;padding: 142px 90px 152px;width: 100%;max-width: 1440px;text-align: center;opacity: 0;
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
@@ -68,41 +71,44 @@
   }
 }
 #cnt3{
-  background: #f9f9f9;
-  #cnt_wrap{
-    @include animation(movetop 1.2s ease-out forwards);
-    padding: 202px 90px 120px;margin: 0 auto;max-width: 1440px;text-align: center;height: 100vh;
-    h3{
-      font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;text-align: left;@include animation-delay(.5s);
-      strong{color: $black;}
-    }
-    #book_list{
-      @include flex;
-      @include justify-content(space-between);
-      @include animation-delay(.8s);
-      margin-bottom: 48px;
-      li{width: 18%;}
-      a{
-        position: relative; display: block;
-        &::before{
-          @include transition(all .3s);
-          content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.7);opacity: 0;
-        }
-        .hover_book{
-          position: absolute;bottom: 0;left: 0;background: $green;color: $white;text-align: left;height: 100%;width: 100%;display: none;font-size: 16px;padding: 32px 24px 0 24px;
-          .pc_txt_box{
-            strong{font-size: 20px;display:block;padding-bottom: 20px;@include ellipsis;}
-            p{line-height: 24px;@include ellipsis;}
-            span{display: block;line-height: 25px;margin-top: 10px;@include multiEllipsis(6, 150px);}
+  .wide_section{
+    position: relative;height: 100%;background: #f9f9f9;
+    #cnt_wrap{
+      @include translateY-50;
+      position: absolute;top: 50%;padding: 90px 90px 0;margin: 0 auto;max-width: 1440px;text-align: center;
+      h3{
+        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;text-align: left;opacity: 0;
+        strong{color: $black;}
+      }
+      #book_list{
+        @include flex;
+        @include justify-content(space-between);
+        @include animation-delay(.8s);
+        margin-bottom: 48px;opacity: 0;
+        li{width: 18%;}
+        a{
+          position: relative; display: block;
+          &::before{
+            @include transition(all .3s);
+            content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.7);opacity: 0;
           }
+          .hover_book{
+            position: absolute;bottom: 0;left: 0;background: $green;color: $white;text-align: left;height: 100%;width: 100%;display: none;font-size: 16px;padding: 32px 24px 0 24px;
+            .pc_txt_box{
+              strong{font-size: 20px;display:block;padding-bottom: 20px;@include ellipsis;}
+              p{line-height: 24px;@include ellipsis;}
+              span{display: block;line-height: 25px;margin-top: 10px;@include multiEllipsis(6, 150px);}
+            }
+          }
+          img{width: 100%;}
         }
-        img{width: 100%;}
+        a.on{
+          &::before{opacity: 1;}
+        }
       }
-      a.on{
-        &::before{opacity: 1;}
-      }
+      #m_book_list{visibility: hidden;height: 0;overflow: hidden;}
+      .link_btn{@include animation-delay(1.2s);opacity: 0;}
     }
-    #m_book_list{visibility: hidden;height: 0;overflow: hidden;}
   }
 }
 #cnt4{
@@ -331,7 +337,6 @@
   }
 }
 @keyframes arrowMove {
-
   0%, 100% {
       -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -373,5 +378,5 @@
   }
 }
 
-/* effect */
+/* effect class*/
 .movetop{@include animation(movetop 1.2s ease-out .5s forwards);}

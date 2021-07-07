@@ -106,28 +106,26 @@
     left: 50%;
     z-index: 600; }
     #cnt1 .bottom_btn button {
-      width: 64px;
-      height: 62px;
-      background: url("../images/main/cnt1_bottom_btn.png") no-repeat center/contain;
       -webkit-animation: arrowMove 1.6s infinite;
       -moz-animation: arrowMove 1.6s infinite;
       animation: arrowMove 1.6s infinite;
-      -webkit-animation-delay: 0.3s;
-      -moz-animation-delay: 0.3s;
-      animation-delay: 0.3s; }
+      width: 64px;
+      height: 62px;
+      background: url("../images/main/cnt1_bottom_btn.png") no-repeat center/contain; }
   #cnt1 .m_bottom_btn {
     visibility: hidden;
     height: 0;
     overflow: hidden; }
 
-#cnt2 {
-  opacity: 0; }
+#cnt2 .wide_section {
+  width: 100%; }
   #cnt2 .wide_section #cnt_wrap {
     margin: 0 auto;
     padding: 142px 90px 152px;
     width: 100%;
     max-width: 1440px;
-    text-align: center; }
+    text-align: center;
+    opacity: 0; }
     #cnt2 .wide_section #cnt_wrap p {
       font-size: 18px;
       line-height: 20px;
@@ -143,30 +141,31 @@
       #cnt2 .wide_section #cnt_wrap h3 strong {
         color: #1E1E1E; }
 
-#cnt3 {
+#cnt3 .wide_section {
+  position: relative;
+  height: 100%;
   background: #f9f9f9; }
-  #cnt3 #cnt_wrap {
-    -webkit-animation: movetop 1.2s ease-out forwards;
-    -moz-animation: movetop 1.2s ease-out forwards;
-    animation: movetop 1.2s ease-out forwards;
-    padding: 202px 90px 120px;
+  #cnt3 .wide_section #cnt_wrap {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    padding: 90px 90px 0;
     margin: 0 auto;
     max-width: 1440px;
-    text-align: center;
-    height: 100vh; }
-    #cnt3 #cnt_wrap h3 {
+    text-align: center; }
+    #cnt3 .wide_section #cnt_wrap h3 {
       font-size: 42px;
       line-height: 60px;
       letter-spacing: -1px;
       margin-bottom: 48px;
       color: #aaa;
       text-align: left;
-      -webkit-animation-delay: 0.5s;
-      -moz-animation-delay: 0.5s;
-      animation-delay: 0.5s; }
-      #cnt3 #cnt_wrap h3 strong {
+      opacity: 0; }
+      #cnt3 .wide_section #cnt_wrap h3 strong {
         color: #1E1E1E; }
-    #cnt3 #cnt_wrap #book_list {
+    #cnt3 .wide_section #cnt_wrap #book_list {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -177,13 +176,14 @@
       -webkit-animation-delay: 0.8s;
       -moz-animation-delay: 0.8s;
       animation-delay: 0.8s;
-      margin-bottom: 48px; }
-      #cnt3 #cnt_wrap #book_list li {
+      margin-bottom: 48px;
+      opacity: 0; }
+      #cnt3 .wide_section #cnt_wrap #book_list li {
         width: 18%; }
-      #cnt3 #cnt_wrap #book_list a {
+      #cnt3 .wide_section #cnt_wrap #book_list a {
         position: relative;
         display: block; }
-        #cnt3 #cnt_wrap #book_list a::before {
+        #cnt3 .wide_section #cnt_wrap #book_list a::before {
           -webkit-transition: all 0.3s;
           transition: all 0.3s;
           content: "";
@@ -194,7 +194,7 @@
           height: 100%;
           background: rgba(0, 0, 0, 0.7);
           opacity: 0; }
-        #cnt3 #cnt_wrap #book_list a .hover_book {
+        #cnt3 .wide_section #cnt_wrap #book_list a .hover_book {
           position: absolute;
           bottom: 0;
           left: 0;
@@ -206,19 +206,19 @@
           display: none;
           font-size: 16px;
           padding: 32px 24px 0 24px; }
-          #cnt3 #cnt_wrap #book_list a .hover_book .pc_txt_box strong {
+          #cnt3 .wide_section #cnt_wrap #book_list a .hover_book .pc_txt_box strong {
             font-size: 20px;
             display: block;
             padding-bottom: 20px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #cnt3 #cnt_wrap #book_list a .hover_book .pc_txt_box p {
+          #cnt3 .wide_section #cnt_wrap #book_list a .hover_book .pc_txt_box p {
             line-height: 24px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #cnt3 #cnt_wrap #book_list a .hover_book .pc_txt_box span {
+          #cnt3 .wide_section #cnt_wrap #book_list a .hover_book .pc_txt_box span {
             display: block;
             line-height: 25px;
             margin-top: 10px;
@@ -229,14 +229,19 @@
             max-height: 150px;
             text-overflow: ellipsis;
             overflow: hidden; }
-        #cnt3 #cnt_wrap #book_list a img {
+        #cnt3 .wide_section #cnt_wrap #book_list a img {
           width: 100%; }
-      #cnt3 #cnt_wrap #book_list a.on::before {
+      #cnt3 .wide_section #cnt_wrap #book_list a.on::before {
         opacity: 1; }
-    #cnt3 #cnt_wrap #m_book_list {
+    #cnt3 .wide_section #cnt_wrap #m_book_list {
       visibility: hidden;
       height: 0;
       overflow: hidden; }
+    #cnt3 .wide_section #cnt_wrap .link_btn {
+      -webkit-animation-delay: 1.2s;
+      -moz-animation-delay: 1.2s;
+      animation-delay: 1.2s;
+      opacity: 0; }
 
 #cnt4 #cnt_wrap {
   display: -webkit-box;
@@ -607,7 +612,7 @@
     -ms-transform: translateY(0);
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
-/* effect */
+/* effect class*/
 .movetop {
   -webkit-animation: movetop 1.2s ease-out 0.5s forwards;
   -moz-animation: movetop 1.2s ease-out 0.5s forwards;
