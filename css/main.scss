@@ -55,9 +55,9 @@
   .m_bottom_btn{visibility: hidden;height: 0;overflow: hidden;}
 }
 #cnt2{
+  opacity: 0;
   .wide_section{
     #cnt_wrap{
-      @include animation-delay(.5s);
       margin: 0 auto;padding: 142px 90px 152px;width: 100%;max-width: 1440px;text-align: center;
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
@@ -71,7 +71,7 @@
   background: #f9f9f9;
   #cnt_wrap{
     @include animation(movetop 1.2s ease-out forwards);
-    padding: 202px 90px 120px;margin: 0 auto;max-width: 1440px;text-align: center;
+    padding: 202px 90px 120px;margin: 0 auto;max-width: 1440px;text-align: center;height: 100vh;
     h3{
       font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;text-align: left;@include animation-delay(.5s);
       strong{color: $black;}
@@ -89,10 +89,12 @@
           content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.7);opacity: 0;
         }
         .hover_book{
-          position: absolute;bottom: 0;left: 0;background: $green;color: $white;padding: 64px 20px 12px 20px;text-align: left;height: 100%;display: none;font-size: 15px;font-weight: 400;
-          strong{font-size: 18px;display:block;padding-bottom: 20px;}
-          p{padding-bottom: 10px;line-height: 24px;}
-          span{display: block;line-height: 20px;}
+          position: absolute;bottom: 0;left: 0;background: $green;color: $white;text-align: left;height: 100%;width: 100%;display: none;font-size: 16px;padding: 32px 24px 0 24px;
+          .pc_txt_box{
+            strong{font-size: 20px;display:block;padding-bottom: 20px;@include ellipsis;}
+            p{line-height: 24px;@include ellipsis;}
+            span{display: block;line-height: 25px;margin-top: 10px;@include multiEllipsis(6, 150px);}
+          }
         }
         img{width: 100%;}
       }
@@ -173,7 +175,7 @@
               }  
             }
             .txt_box{
-              p{min-height: 48px;font-size: 18px;line-height: 24px;margin: 20px 0;letter-spacing: -0.3px;font-weight: 700;}
+              p{font-size: 18px;line-height: 24px;margin: 20px 0;letter-spacing: -0.3px;font-weight: 700;@include multiEllipsis(2, 48px);}
               span{display: block;font-size: 16px;line-height: 1;color: $gray;letter-spacing: 0;}
             }
             &:hover, &:focus{
@@ -233,7 +235,7 @@
       }
     }
   }
-    #cnt6{
+  #cnt6{
     #cnt_wrap{
       .notice_box{
         h3{font-size: 38px;line-height: 1.5;}
@@ -289,7 +291,7 @@
           padding: 24px 0;border-bottom: 1px solid #eee;
           img{width: 20%;margin-right: 36px;}
         }
-        .txt_box{
+        .m_txt_box{
           text-align: left;
           strong{display: block;font-size: 24px;padding-bottom: 24px;}
           p{padding-bottom: 24px;line-height: 28px;color: $gray;font-size: 18px;}

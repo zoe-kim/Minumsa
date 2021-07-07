@@ -46,14 +46,6 @@ $(document).ready(function () {
     }, 600);
   })
 
-  // #cnt2 ~ #cnt6이 .active를 가질 때 애니메이션 클래스 추가
-  // $(window).on('scroll', function () {
-  //   const $cntAni = $('#fullpage .ani');
-  //   if ($cntAni.is('.active')) $cntAni.addClass('movetop');
-  //   else $cntAni.removeClass('movetop');
-  // });
-
-
   // #cnt3 #book_list li a에 마우스와 포커스가 진입하거나 빠져 나갈 때
   const $listEle = $('#book_list li a');
   $listEle.on({

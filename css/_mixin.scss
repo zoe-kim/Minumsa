@@ -73,4 +73,19 @@
     -moz-animation-delay: $value;
     animation-delay: $value;
 }
-  
+ 
+@mixin multiEllipsis($line, $maxHei) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line; // 콘텐츠가 고정될 줄 수를 지정
+    -webkit-box-orient: vertical;
+    white-space: normal;  // 줄바꿈 허용
+    max-height: $maxHei;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin  ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
