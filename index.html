@@ -51,6 +51,31 @@
                         } else {
                             $('#pc_head').addClass('on active');
                         }
+
+                        if (destination.index === 1) {
+                            $('#cnt2').css({opacity: 0}).addClass('movetop').siblings().removeClass('movetop');
+                        } else if (destination.index === 2) {
+                            $('#cnt3').css({opacity: 0}).addClass('movetop').siblings().removeClass('movetop');
+                        }
+
+                    },
+                    afterLoad (origin, destination, direction) {
+                        // 구역을 불러오고 나서 스크롤이 끝나면 콜백이 실행됩니다.
+                        // console.log($(this));
+                        // if ($(this).hasClass('ani')) {
+                        //     $(this).addClass('movetop');
+                        //     console.log('if');
+                        // } else {
+                        //     $(this).removeClass('movetop');
+                        //     console.log('else');
+                        // }
+
+                        // console.log(destination); 너무 늦게 나타남
+                        // if (destination.index === 1) {
+                        //     $('#cnt2').addClass('movetop').siblings().removeClass('movetop');
+                        // } else if (destination.index === 2) {
+                        //     $('#cnt3').addClass('movetop').siblings().removeClass('movetop');
+                        // }
                     }
                 });
             }
