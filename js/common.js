@@ -62,5 +62,17 @@ $(document).ready(function() {
       });
     });
   });
+  
+  // .top_btn 클릭 시 #cnt1로 이동
+  $(".top_btn").on("click", function() {
+    if ($(window).width() > 1152) fullpage_api.moveTo(1);  // pc
+    else $('html, body').stop().animate({scrollTop: 0}, 800);  // 태블릿, 모바일
+  })
+
+
+
+
+
+
 
 });

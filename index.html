@@ -27,7 +27,6 @@
             let timer = 0;
             $(window).on('resize', function () {
                 clearTimeout(timer);
-
                 timer = setTimeout(function () {
                     // 1152px 초과인 경우, fullpage 호출(pc인 경우)
                     if ($(this).width() > 1152) {
@@ -113,6 +112,9 @@
                 </div>
             </div>
         </div>
+        <div class="top_btn">
+            <span class="blind">위로 가기</span>
+        </div>
         <div id="fullpage">
             <section class="section" id="cnt1">
                 <h2 class="blind">메인 배너</h2>
@@ -175,15 +177,10 @@
                         </div>              
                     </div>
                 </div>
-                <div class="bottom_btn" id="pc_bottom_btn">
-                    <button type="button">
-                        <span class="blind">스크롤 다운</span>
-                    </button>
-                </div>
-                <div class="bottom_btn" id="m_bottom_btn">
-                    <button type="button">
-                        <span class="blind">스크롤 다운</span>
-                    </button>
+                <div class="btm_btn">
+                        <button type="button">
+                            <span class="blind">본문으로 이동</span>
+                        </button>
                 </div>
             </section>
             <section class="section fp-auto-height" id="cnt2">
@@ -446,10 +443,10 @@
                             <a href="#">문의</a>
                         </div>
                         <div class="link_social">
-                            <a href="#">네이버 블로그</a>
-                            <a href="#">페이스북</a>
-                            <a href="#">유튜브</a>
-                            <a href="#">트위터</a>
+                            <a href="https://blog.naver.com/minumworld">네이버 블로그</a>
+                            <a href="https://www.facebook.com/MinumsaBooks">페이스북</a>
+                            <a href="https://www.youtube.com/minumsatv">유튜브</a>
+                            <a href="https://twitter.com/minumsa_books">트위터</a>
                         </div>
                     </div>
                 </div>
@@ -471,9 +468,9 @@
                                 <a href="#">개인정보처리방침</a>
                             </div>
                             <div class="link_social">
-                                <a href="#">블로그</a>
-                                <a href="#">페이스북</a>
-                                <a href="#">유튜브</a>
+                                <a href="https://blog.naver.com/minumworld">블로그</a>
+                                <a href="https://www.facebook.com/MinumsaBooks">페이스북</a>
+                                <a href="https://www.youtube.com/minumsatv">유튜브</a>
                             </div>
                         </div>
                     </div>

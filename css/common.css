@@ -158,6 +158,8 @@ body {
   justify-content: space-between;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   position: fixed;
   top: 0;
   left: 0;
@@ -271,6 +273,21 @@ body {
   visibility: hidden;
   height: 0;
   overflow: hidden; }
+
+.top_btn {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 60px;
+  height: 60px;
+  background: url("../images/common/top_btn_w.png") no-repeat center/cover;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 4px 10px 28px 1px rgba(0, 0, 0, 0.09); }
+  .top_btn:hover, .top_btn:focus {
+    background-image: url("../images/common/top_btn.png");
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
 
 @media screen and (max-width: 1440px) {
   .header {
@@ -400,6 +417,12 @@ body {
       right: 24px; }
 
   #m_foot {
-    padding: 35px 24px; } }
+    padding: 35px 24px; }
+
+  .top_btn {
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px; } }
 
 /*# sourceMappingURL=common.css.map */

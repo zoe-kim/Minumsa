@@ -97,7 +97,7 @@
       padding: 16px; }
       #cnt1 .controller .swiper-auto-wrap i:hover, #cnt1 .controller .swiper-auto-wrap i:focus {
         color: #189066; }
-  #cnt1 .bottom_btn {
+  #cnt1 .btm_btn {
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -105,25 +105,21 @@
     bottom: 66px;
     left: 50%;
     z-index: 600; }
-    #cnt1 .bottom_btn button {
+    #cnt1 .btm_btn button {
       -webkit-animation: arrowMove 1.6s infinite;
       -moz-animation: arrowMove 1.6s infinite;
       animation: arrowMove 1.6s infinite;
       width: 64px;
       height: 62px;
       background: url("../images/main/cnt1_bottom_btn.png") no-repeat center/contain; }
-  #cnt1 .m_bottom_btn {
-    visibility: hidden;
-    height: 0;
-    overflow: hidden; }
 
 #cnt2 .wide_section {
   width: 100%; }
   #cnt2 .wide_section #cnt_wrap {
+    max-width: 1440px;
     margin: 0 auto;
     padding: 142px 90px 152px;
     width: 100%;
-    max-width: 1440px;
     text-align: center;
     opacity: 0; }
     #cnt2 .wide_section #cnt_wrap p {
@@ -141,19 +137,12 @@
       #cnt2 .wide_section #cnt_wrap h3 strong {
         color: #1E1E1E; }
 
-#cnt3 .wide_section {
-  position: relative;
-  height: 100%;
+#cnt3 {
   background: #f9f9f9; }
   #cnt3 .wide_section #cnt_wrap {
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-    position: absolute;
-    top: 50%;
-    padding: 90px 90px 0;
-    margin: 0 auto;
     max-width: 1440px;
+    margin: 0 auto;
+    padding: 202px 90px 120px;
     text-align: center; }
     #cnt3 .wide_section #cnt_wrap h3 {
       font-size: 42px;
@@ -193,7 +182,8 @@
           width: 100%;
           height: 100%;
           background: rgba(0, 0, 0, 0.7);
-          opacity: 0; }
+          opacity: 0;
+          border-radius: 24px; }
         #cnt3 .wide_section #cnt_wrap #book_list a .hover_book {
           position: absolute;
           bottom: 0;
@@ -205,7 +195,8 @@
           width: 100%;
           display: none;
           font-size: 16px;
-          padding: 32px 24px 0 24px; }
+          padding: 32px 24px 0 24px;
+          border-radius: 24px; }
           #cnt3 .wide_section #cnt_wrap #book_list a .hover_book .pc_txt_box strong {
             font-size: 20px;
             display: block;
@@ -230,7 +221,9 @@
             text-overflow: ellipsis;
             overflow: hidden; }
         #cnt3 .wide_section #cnt_wrap #book_list a img {
-          width: 100%; }
+          width: 100%;
+          border-radius: 24px;
+          box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09); }
       #cnt3 .wide_section #cnt_wrap #book_list a.on::before {
         opacity: 1; }
     #cnt3 .wide_section #cnt_wrap #m_book_list {
@@ -332,7 +325,7 @@
     left: 90px;
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    z-index: 600;
+    z-index: 500;
     margin: 0 auto;
     max-width: 1440px; }
     #cnt5 #cnt_wrap .left_box p {
@@ -396,7 +389,8 @@
           position: relative;
           width: 100%;
           height: 100%;
-          border-radius: 24px; }
+          border-radius: 24px;
+          box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09); }
           #cnt6 #cnt_wrap .notice_box ul li a .thumb_box img {
             border-radius: 24px; }
           #cnt6 #cnt_wrap .notice_box ul li a .thumb_box::before {
@@ -450,12 +444,6 @@
   #cnt1 .m_img {
     display: block;
     width: 100%; }
-  #cnt1 .pc_bottom_btn {
-    display: none; }
-  #cnt1 .m_bottom_btn {
-    visibility: visible;
-    height: 100%;
-    overflow: visible; }
 
   #cnt4 .wide_section #cnt_wrap {
     height: 860px; }
@@ -509,7 +497,7 @@
     #cnt1 .controller .swiper-auto-wrap i {
       right: -36px;
       padding: 10px; }
-  #cnt1 .bottom_btn {
+  #cnt1 .btm_btn {
     display: none; }
 
   #cnt2 .wide_section #cnt_wrap {
