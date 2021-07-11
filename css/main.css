@@ -46,7 +46,7 @@
     left: 150px;
     width: 184px;
     height: 48px;
-    z-index: 700; }
+    z-index: 800; }
     #cnt1 .controller .swiper-pagination, #cnt1 .controller .swiper-button-prev, #cnt1 .controller .swiper-button-next {
       position: static; }
     #cnt1 .controller .swiper-button-wrap {
@@ -104,7 +104,7 @@
     position: absolute;
     bottom: 66px;
     left: 50%;
-    z-index: 600; }
+    z-index: 700; }
     #cnt1 .btm_btn button {
       -webkit-animation: arrowMove 1.6s infinite;
       -moz-animation: arrowMove 1.6s infinite;
@@ -325,7 +325,7 @@
     left: 90px;
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    z-index: 500;
+    z-index: 10;
     margin: 0 auto;
     max-width: 1440px; }
     #cnt5 #cnt_wrap .left_box p {

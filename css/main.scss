@@ -20,7 +20,7 @@
   }
   .controller{
     @include flex;
-    position: absolute;bottom: 80px;left: 150px;width: 184px;height: 48px;z-index: 700;
+    position: absolute;bottom: 80px;left: 150px;width: 184px;height: 48px;z-index: 800;
     .swiper-pagination, .swiper-button-prev, .swiper-button-next{position: static;} // position 속성을 제거할 경우 position: static;
     .swiper-button-wrap{@include flex;}
     .swiper-button-prev, .swiper-button-next{
@@ -49,7 +49,7 @@
   }
   .btm_btn{
     @include translateX-50;
-    position: absolute;bottom: 66px;left: 50%;z-index: 600;
+    position: absolute;bottom: 66px;left: 50%;z-index: 700;
     button{
       @include animation(arrowMove 1.6s infinite);
       width: 64px;height: 62px;background: url("../images/main/cnt1_bottom_btn.png") no-repeat center / contain;
@@ -141,7 +141,7 @@
     position: relative;
     .left_box{
       @include translateY-50;
-      position: absolute;top: 50%;left: 90px;color:#fff;text-shadow: 1px 1px 4px rgba(0,0,0,.2);z-index: 500;margin: 0 auto;max-width: 1440px;
+      position: absolute;top: 50%;left: 90px;color:#fff;text-shadow: 1px 1px 4px rgba(0,0,0,.2);z-index: 10;margin: 0 auto;max-width: 1440px;
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;
