@@ -43,11 +43,20 @@
 
             function createFullpage() {
                 $('#fullpage').fullpage({
+                    scrollingSpeed: 800,
                     onLeave: function (origin, destination, direction) {
-                        // 본문2(index1)를 떠난 후 본문1(index0)로 도착, up 방향키를 누른 경우
-                        if (origin.index === 1 && destination.index === 0 && direction === 'up') $('#pc_head').removeClass('on active');
-                        else $('#pc_head').addClass('on active');
-
+                        if (origin.index === 0 && destination.index === 1 && direction === 'down') {
+                            $('.top_btn').fadeIn();
+                            $('#pc_head').addClass('on active');
+                        }
+                        else if (destination.index === 0 && direction === 'up') {
+                            $('#pc_head').removeClass('on active');
+                            $('.top_btn').fadeOut();
+                        }
+                        else {
+                            $('#pc_head').addClass('on active');
+                        }
+                        
                         // PC - 애니메이션(풀페이지용)
                         if (destination.index === 1) $('#cnt2 #cnt_wrap').addClass('movetop');
                         else if (destination.index === 2) $('#cnt3 h3, #book_list, .link_btn').addClass('movetop');

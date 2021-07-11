@@ -10,11 +10,17 @@ $(document).ready(function() {
     }
   });
 
-  // 태블릿, 모바일에서 스크롤 내릴 시 .on을 가지도록
+  // 태블릿, 모바일에서 스크롤 내릴 시 헤더가 .on & top버튼 등장
   $(window).on('scroll', function () {
     const scrollY = $(this).scrollTop();
-    if (scrollY > 0) $('#m_head').addClass('on');
-    else $('#m_head').removeClass('on');
+    if (scrollY > 0) {
+      $('#m_head').addClass('on');
+      $('.top_btn').fadeIn();
+    }
+    else {
+      $('#m_head').removeClass('on');
+      $('.top_btn').fadeOut();
+    }
   });
 
   // .menu_wrap 열고 닫기
@@ -67,6 +73,8 @@ $(document).ready(function() {
   $(".top_btn").on("click", function() {
     if ($(window).width() > 1152) fullpage_api.moveTo(1);  // pc
     else $('html, body').stop().animate({scrollTop: 0}, 800);  // 태블릿, 모바일
+
+    //$('.logo a').focus(); // 접근성을 위해 문서의 처음으로 포커스 강제 이동
   })
 
 
