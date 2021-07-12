@@ -14,6 +14,7 @@ $(document).ready(function () {
     },
     autoplay: {
       delay: 3000,  // 자동 실행 시간(3초)
+      disableOnInteraction: false,  // 스와이프 후에 자동실행 비활성화를 차단(자동실행 유지)
     },
     a11y: {
       prevSlideMessage: '이전 슬라이드 보기',
