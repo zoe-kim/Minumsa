@@ -83,12 +83,12 @@
         @include justify-content(space-between);
         @include animation-delay(.8s);
         margin-bottom: 48px;opacity: 0;
-        li{width: 18%;}
+        li{width: 18%;border-radius: 24px;overflow: hidden;box-shadow: 4px 12px 30px 6px rgba(0,0,0,.09);}
         a{
           position: relative; display: block;
           &::before{
             @include transition(all .3s);
-            content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.7);opacity: 0;border-radius: 24px;
+            content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.7);opacity: 0;
           }
           .hover_book{
             position: absolute;bottom: 0;left: 0;background: $green;color: $white;text-align: left;height: 100%;width: 100%;display: none;font-size: 16px;padding: 32px 24px 0 24px;border-radius: 24px;
@@ -98,7 +98,7 @@
               span{display: block;line-height: 25px;margin-top: 10px;@include multiEllipsis(6, 150px);}
             }
           }
-          img{width: 100%;border-radius: 24px;box-shadow:4px 12px 30px 6px rgba(0,0,0,.09);}
+          img{width: 100%;}
         }
         a.on{
           &::before{opacity: 1;}
@@ -115,7 +115,7 @@
     @include justify-content(space-between);
     padding: 0 90px;margin: 0 auto;max-width: 1440px;height: 100vh;
     .left_box{
-      padding: 300px 0;width: 50%;@include animation(movetop 1.2s ease-out forwards);@include animation-delay(.8s);
+      padding: 300px 0;width: 50%;opacity: 0;
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
@@ -123,12 +123,15 @@
       }
     }
     .right_box{
-      width: 50%;overflow: hidden;text-align: right;@include animation(moveshow 1.2s ease-out forwards);@include animation-delay(.8s);
+      @include animation-delay(.8s);
+      @include flex;
+      @include justify-content(flex-end);
+      width: 50%;overflow: hidden;opacity: 0;
       ul{
-        display: inline-block;margin-right: 6%;width: 43%;height: calc(352px * 5);@include animation(verticalscroll 50s linear infinite);
+        display: inline-block;margin-right: 6%;width: 43%;height: calc(352px * 5);vertical-align: top;
         li{
-          position: relative;margin-top: 32px;width: 100%;
-          img{width: 100%;border-radius: 24px;}
+          position: relative;margin-top: 32px;width: 100%;border-radius: 24px;overflow: hidden;
+          img{width: 100%;}
           span{position: absolute;font-size: 18px;font-weight: 700;line-height: 18px;color: $white;top: 50%;left: 0;@include translateY-50; width: 100%;text-align: center;letter-spacing: 0;text-shadow: 1px 1px 4px rgba(0,0,0,.6);}
         }
       }
@@ -138,18 +141,20 @@
 }
 #cnt5{
   #cnt_wrap{
-    position: relative;
     .left_box{
-      @include translateY-50;
-      position: absolute;top: 50%;left: 90px;color:#fff;text-shadow: 1px 1px 4px rgba(0,0,0,.2);z-index: 10;margin: 0 auto;max-width: 1440px;
-      p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
-      h3{
-        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;
+      position: relative;margin: 0 auto;max-width: 1440px;opacity: 0;height: 100vh;overflow: hidden;z-index: 2;
+      .left_box_wrap{
+        @include translateY-50;
+        position: absolute;top: 50%;left: 90px;color: $white;text-shadow: 1px 1px 4px rgba(0,0,0,.2);z-index: 10;
+        p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
+        h3{
+          font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;
+        }
       }
     }
     .video_bg{
-      position: relative;width: 100%;height: 100vh;overflow: hidden;
-      video{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;}
+      width: 100%;height: 100%;overflow: hidden;
+      video{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;z-index: -1;}
     }
   }
 }
@@ -158,24 +163,24 @@
     padding: 90px 90px 120px 90px;margin: 0 auto;max-width: 1440px;text-align: center;
     .notice_box{
       h3{
-        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-top: 90px;margin-bottom: 48px;color:$gray;text-align: left;
+        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-top: 90px;margin-bottom: 48px;color:$gray;text-align: left;opacity: 0;
         strong{color: $black;}
       }
       ul{
         @include flex;
         @include flex-wrap;
-        margin-bottom: 48px;
+        @include animation-delay(.8s);
+        margin-bottom: 48px;opacity: 0;
         li{
            margin: 0;width: calc(25% - 24px);margin-left: 32px;
            &:first-child{margin-left: 0;}
           a{
             display: block;text-align: left;
             .thumb_box{
-              position: relative;width: 100%;height: 100%;border-radius: 24px;box-shadow:4px 12px 30px 6px rgba(0,0,0,.09);
-              img{border-radius: 24px;}
+              position: relative;width: 100%;height: 100%;border-radius: 24px;overflow: hidden;box-shadow: 4px 12px 30px 6px rgba(0,0,0,.09);
               &::before{
                 @include transition(all .3s);
-                content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.4);border-radius: 24px;opacity: 0;
+                content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.4);opacity: 0;
               }  
             }
             .txt_box{
@@ -189,6 +194,7 @@
           }
         }
       }
+      .link_btn{@include animation-delay(1.2s);opacity: 0;}
     }
   }
 }
@@ -317,10 +323,10 @@
   }
 
   100% {
-      -moz-transform: translateY(-1408px);
-      -ms-transform: translateY(-1408px);
-      -webkit-transform: translateY(-1408px);
-      transform: translateY(-1408px)
+      -moz-transform: translateY(-990px);
+      -ms-transform: translateY(-990px);
+      -webkit-transform: translateY(-990px);
+      transform: translateY(-990px)
   }
 }
 @keyframes horizontalscroll {
@@ -376,3 +382,4 @@
 
 /* effect class*/
 .movetop{@include animation(movetop 1.2s ease-out .5s forwards);}
+.verticalscroll{@include animation(verticalscroll 20s linear infinite);}
