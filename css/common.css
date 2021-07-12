@@ -305,6 +305,8 @@ body {
   #pc_head {
     display: none; }
 
+  .header .heder_wrap {
+    height: 74px; }
   .header .m_nav .search {
     width: 24px;
     height: 24px;
@@ -347,7 +349,7 @@ body {
       #m_head .menu_wrap .menu ul li a {
         display: block;
         padding: 24px 0;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
         color: #aaa;
         border-bottom: 1px solid #eee;
@@ -412,10 +414,8 @@ body {
         #m_foot .btm_link .link_social a {
           margin-left: 8px; } }
 @media screen and (max-width: 690px) {
-  .header {
+  .header .heder_wrap {
     padding: 0 24px; }
-    .header .util {
-      right: 24px; }
 
   #m_head .menu_wrap {
     padding: 0 24px; }

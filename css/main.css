@@ -249,7 +249,7 @@
   max-width: 1440px;
   height: 100vh; }
   #cnt4 #cnt_wrap .left_box {
-    padding: 300px 0;
+    margin: auto 0;
     width: 50%;
     opacity: 0; }
     #cnt4 #cnt_wrap .left_box p {
@@ -317,7 +317,7 @@
   margin: 0 auto;
   max-width: 1440px;
   opacity: 0;
-  height: 100vh;
+  height: 860px;
   overflow: hidden;
   z-index: 2; }
   #cnt5 #cnt_wrap .left_box .left_box_wrap {
@@ -328,8 +328,7 @@
     top: 50%;
     left: 90px;
     color: #F9F9F9;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    z-index: 10; }
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); }
     #cnt5 #cnt_wrap .left_box .left_box_wrap p {
       font-size: 18px;
       line-height: 20px;
@@ -344,15 +343,23 @@
 #cnt5 #cnt_wrap .video_bg {
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%); }
   #cnt5 #cnt_wrap .video_bg video {
-    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; }
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    object-fit: cover; }
 
 #cnt6 #cnt_wrap {
   padding: 90px 90px 120px 90px;

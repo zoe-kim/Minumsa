@@ -49,6 +49,9 @@
                         if (destination.index === 0) {
                             $('#cnt1').siblings().find('.movetop').removeClass('movetop');
                         }
+                        else if (destination.index === 1) {
+                            $('#cnt2').siblings().find('.movetop').removeClass('movetop');
+                        }
                         else if (destination.index === 2) {
                             $('#cnt3').siblings().find('.movetop .verticalscroll').removeClass('movetop verticalscroll');
                         }
@@ -82,17 +85,17 @@
                             $('#cnt2 #cnt_wrap').addClass('movetop');
                         }
                         else if (destination.index === 2) {
-                            $('#cnt3 h3, #book_list, .link_btn').addClass('movetop');
+                            $('#cnt3 h3, #cnt3 #book_list, #cnt3 .link_btn').addClass('movetop');
                         }
                         else if (destination.index === 3) {
-                            $('#cnt4 .left_box, .right_box').addClass('movetop');
+                            $('#cnt4 .left_box, #cnt4 .right_box').addClass('movetop');
                             $('#cnt4 .right_box ul').addClass('verticalscroll');
                         }
                         else if (destination.index === 4) {
                             $('#cnt5 .left_box').addClass('movetop');
                         }
                         else if (destination.index === 5) {
-                            $('#cnt6 h3, ul, .link_btn').addClass('movetop');
+                            $('#cnt6 h3, #cnt6 ul, #cnt6 .link_btn').addClass('movetop');
                         }
                     }
                 });
