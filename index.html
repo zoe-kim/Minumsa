@@ -50,13 +50,13 @@
                             $('#cnt1').siblings().find('.movetop').removeClass('movetop');
                         }
                         else if (destination.index === 2) {
-                            $('#cnt3').siblings().find('.movetop').removeClass('movetop').find('.verticalscroll').removeClass('verticalscroll');
+                            $('#cnt3').siblings().find('.movetop, .verticalscroll').removeClass('movetop verticalscroll');
                         }
                         else if (destination.index === 3) {
                             $('#cnt4').siblings().find('.movetop').removeClass('movetop');
                         }
                         else if (destination.index === 4) {
-                            $('#cnt5').siblings().find('.movetop').removeClass('movetop').find('.verticalscroll').removeClass('verticalscroll');
+                            $('#cnt5').siblings().find('.movetop, .verticalscroll').removeClass('movetop verticalscroll');
                         }
                         else if (destination.index === 5) {
                             $('#cnt6').siblings().find('.movetop').removeClass('movetop');
@@ -391,89 +391,81 @@
                 </div>
             </section>
             <section class="section" id="cnt5">
-                <div class="wide_section">
-                    <div id="cnt_wrap">
-                        <h2 class="blind">문학상</h2>
-                        <div class="left_box">
-                            <div class="left_box_wrap">
-                                <p>오늘의 작가상이</p>
-                                <h3>
-                                    젊은 작가에게는 <strong>따뜻한 격려</strong>가, <br>
-                                    오늘의 독자에게는 <strong>겸허한 안내자</strong>가 <br>
-                                    될 것이라 기대합니다.
-                                </h3>
-                                <a href="#" class="link_btn transparent">문학상 바로가기</a>
-                            </div>
-                        </div>
-                        <div class="video_bg">
-                            <video poster="images/main/cnt5_video_poster.png" autoplay muted playsinline preload="auto" loop data-autoplay>
-                                <source src="video/cnt5_video_bg.mp4" type="video/mp4">
-                            </video>
-                        </div>
+                <h2 class="blind">문학상</h2>
+                <div class="left_box">
+                    <div class="left_box_wrap">
+                        <p>오늘의 작가상이</p>
+                        <h3>
+                            젊은 작가에게는 <strong>따뜻한 격려</strong>가, <br>
+                            오늘의 독자에게는 <strong>겸허한 안내자</strong>가 <br>
+                            될 것이라 기대합니다.
+                        </h3>
+                        <a href="#" class="link_btn transparent">문학상 바로가기</a>
                     </div>
                 </div>
+                <video class="video_bg" poster="images/main/cnt5_video_poster.png" data-autoplay muted playsinline preload="auto" loop>
+                    <source src="video/cnt5_video_bg.mp4" type="video/mp4">
+                </video>
             </section>
             <section class="section" id="cnt6">
-                <div class="wide_section">
-                    <div id="cnt_wrap">
-                        <h2 class="blind">민음사 관련 소식 및 이벤트</h2>
-                        <div class="notice_box">
-                            <h3>
-                                민음사의 <br>
-                                <strong>새로운 소식</strong>을 확인하세요
-                            </h3>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb_box">
-                                            <div class="dim_thumbnail"></div>
-                                            <img src="images/main/cnt6_img01.png" alt="">
-                                        </div>
-                                        <div class="txt_box">
-                                            <p>‘길 잃은 세대’를 대표하는 작가 - 『디 에센셜 헤밍웨이』 에세이를 단 한 권에 만나다!</p>
-                                            <span>2021.06.24</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb_box">
-                                            <div class="dim_thumbnail"></div>
-                                            <img src="images/main/cnt6_img02.png" alt="">
-                                        </div>
-                                        <div class="txt_box">
-                                            <p>2021 상반기 온라인 패밀리데이 (6/24 오전 10시 OPEN)</p>
-                                            <span>2021.06.20</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb_box">
-                                            <div class="dim_thumbnail"></div>
-                                            <img src="images/main/cnt6_img03.png" alt="">
-                                        </div>
-                                        <div class="txt_box">
-                                            <p>책과 향 - 1회 : 위로의 감각 - 글쓰기로 향을 말한다면 (6/15 오후 3시 OPEN)</p>
-                                            <span>2021.06.08</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="thumb_box">
-                                            <div class="dim_thumbnail"></div>
-                                            <img src="images/main/cnt6_img04.png" alt="">
-                                        </div>
-                                        <div class="txt_box">
-                                            <p>가즈오 이시구로 리커버 개정판 - 북램프 증정 이벤트</p>
-                                            <span>2021.06.03</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#" class="link_btn">소식 더보기</a>
-                        </div>
+                <div id="cnt_wrap">
+                    <h2 class="blind">민음사 관련 소식 및 이벤트</h2>
+                    <div class="notice_box">
+                        <h3>
+                            민음사의 <br>
+                            <strong>새로운 소식</strong>을 확인하세요
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="thumb_box">
+                                        <div class="dim_thumbnail"></div>
+                                        <img src="images/main/cnt6_img01.png" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <p>‘길 잃은 세대’를 대표하는 작가 - 『디 에센셜 헤밍웨이』 에세이를 단 한 권에 만나다!</p>
+                                        <span>2021.06.24</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="thumb_box">
+                                        <div class="dim_thumbnail"></div>
+                                        <img src="images/main/cnt6_img02.png" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <p>2021 상반기 온라인 패밀리데이 (6/24 오전 10시 OPEN)</p>
+                                        <span>2021.06.20</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="thumb_box">
+                                        <div class="dim_thumbnail"></div>
+                                        <img src="images/main/cnt6_img03.png" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <p>책과 향 - 1회 : 위로의 감각 - 글쓰기로 향을 말한다면 (6/15 오후 3시 OPEN)</p>
+                                        <span>2021.06.08</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="thumb_box">
+                                        <div class="dim_thumbnail"></div>
+                                        <img src="images/main/cnt6_img04.png" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <p>가즈오 이시구로 리커버 개정판 - 북램프 증정 이벤트</p>
+                                        <span>2021.06.03</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="link_btn">소식 더보기</a>
                     </div>
                 </div>
             </section>

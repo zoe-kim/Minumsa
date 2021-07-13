@@ -312,54 +312,43 @@
     #cnt4 #cnt_wrap .right_box .second {
       margin: -160px 0 0 0; }
 
-#cnt5 #cnt_wrap .left_box {
+#cnt5 {
   position: relative;
-  margin: 0 auto;
-  max-width: 1440px;
-  opacity: 0;
-  height: 860px;
-  overflow: hidden;
-  z-index: 2; }
-  #cnt5 #cnt_wrap .left_box .left_box_wrap {
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
+  overflow: hidden; }
+  #cnt5 .left_box {
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 100%;
+    opacity: 0; }
+    #cnt5 .left_box .left_box_wrap {
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+      top: calc(50% + 45px);
+      left: 90px;
+      width: 100%;
+      color: #F9F9F9;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); }
+      #cnt5 .left_box .left_box_wrap p {
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: -0.3px;
+        margin-bottom: 36px;
+        font-weight: 700; }
+      #cnt5 .left_box .left_box_wrap h3 {
+        font-size: 42px;
+        line-height: 60px;
+        letter-spacing: -1px;
+        margin-bottom: 48px; }
+  #cnt5 .video_bg {
     position: absolute;
-    top: 50%;
-    left: 90px;
-    color: #F9F9F9;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); }
-    #cnt5 #cnt_wrap .left_box .left_box_wrap p {
-      font-size: 18px;
-      line-height: 20px;
-      letter-spacing: -0.3px;
-      margin-bottom: 36px;
-      font-weight: 700; }
-    #cnt5 #cnt_wrap .left_box .left_box_wrap h3 {
-      font-size: 42px;
-      line-height: 60px;
-      letter-spacing: -1px;
-      margin-bottom: 48px; }
-#cnt5 #cnt_wrap .video_bg {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  transform: translateX(-50%); }
-  #cnt5 #cnt_wrap .video_bg video {
-    min-width: 100%;
-    min-height: 100%;
-    position: relative;
     top: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
-    object-fit: cover; }
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; }
 
 #cnt6 #cnt_wrap {
   padding: 90px 90px 120px 90px;
@@ -370,7 +359,7 @@
     font-size: 42px;
     line-height: 60px;
     letter-spacing: -1px;
-    margin-top: 90px;
+    margin-top: 45px;
     margin-bottom: 48px;
     color: #aaa;
     text-align: left;
