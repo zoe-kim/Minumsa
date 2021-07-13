@@ -45,21 +45,29 @@
                 $('#fullpage').fullpage({
                     scrollingSpeed: 800,
                     afterLoad: function (origin, destination, direction) {
-                        // PC - 애니메이션 사라질 때(페이지 도착 후에 천천히)
+                        // PC - 애니메이션 (페이지 도착 후에 천천히)
                         if (destination.index === 0) {
-                            $('#cnt1').siblings().find('.movetop').removeClass('movetop');
+                            $('#cnt1').siblings().find('.movetop, .greenbox').removeClass('movetop greenbox');
+                        }
+                        else if (destination.index === 1) {
+                            $('#cnt2').siblings().find('.greenbox').removeClass('greenbox');
+                            $('#cnt2 strong').addClass('greenbox'); // 초록 배경 생성
                         }
                         else if (destination.index === 2) {
-                            $('#cnt3').siblings().find('.movetop, .verticalscroll').removeClass('movetop verticalscroll');
+                            $('#cnt3').siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('movetop verticalscroll greenbox');
+                            $('#cnt3 strong').addClass('greenbox'); // 초록 배경 생성
                         }
                         else if (destination.index === 3) {
-                            $('#cnt4').siblings().find('.movetop').removeClass('movetop');
+                            $('#cnt4').siblings().find('.movetop, .greenbox').removeClass('movetop greenbox');
+                            $('#cnt4 strong').addClass('greenbox'); // 초록 배경 생성
                         }
                         else if (destination.index === 4) {
-                            $('#cnt5').siblings().find('.movetop, .verticalscroll').removeClass('movetop verticalscroll');
+                            $('#cnt5').siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('movetop verticalscroll greenbox');
+                            $('#cnt5 strong').addClass('greenbox'); // 초록 배경 생성
                         }
                         else if (destination.index === 5) {
-                            $('#cnt6').siblings().find('.movetop').removeClass('movetop');
+                            $('#cnt6').siblings().find('.movetop, .greenbox').removeClass('movetop greenbox');
+                            $('#cnt6 strong').addClass('greenbox'); // 초록 배경 생성
                         }
 
                     },
@@ -77,7 +85,7 @@
                             $('#pc_head').addClass('on active');
                         }
                         
-                        // PC - 애니메이션 등장할 때(페이지 도착 전에 빨리)
+                        // PC - 애니메이션 (페이지 도착 전에 빨리)
                         if (destination.index === 1) {
                             $('#cnt2 #cnt_wrap').addClass('movetop');
                         }
@@ -365,8 +373,8 @@
                         <div class="left_box">
                             <p>민음사는</p>
                             <h3>
-                                <strong>새로운 문학과 <br>
-                                참된 지성의 세계</strong>를 <br>
+                                <strong>새로운 문학과</strong> <br>
+                                <strong>참된 지성의 세계</strong>를 <br>
                                 끝없이 탐색합니다.
                             </h3>
                             <a href="#" class="link_btn">멤버십 바로가기</a>

@@ -64,7 +64,13 @@
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
-        strong{color: $black;}
+        strong{
+          position: relative;color: $black;
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+        }
+        strong.greenbox{
+          &::before{width: 100%;}
+        }
       }
     }
   }
@@ -76,7 +82,13 @@
       max-width: 1440px;margin: 0 auto;padding: 202px 90px 120px;text-align: center;
       h3{
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;text-align: left;opacity: 0;
-        strong{color: $black;}
+        strong{
+          position: relative;color: $black;
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+        }
+        strong.greenbox{
+          &::before{width: 100%;}
+        }
       }
       #book_list{
         @include flex;
@@ -119,7 +131,13 @@
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
-        strong{color: $black;}
+        strong{
+          position: relative;color: $black;
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+        }
+        strong.greenbox{
+          &::before{width: 100%;}
+        }
       }
     }
     .right_box{
@@ -150,7 +168,16 @@
         //@include translateY-50;
         //position: absolute;top: 50%;left: 90px;color: $white;text-shadow: 1px 1px 4px rgba(0,0,0,.2);
         p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
-        h3{font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;}
+        h3{
+          font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;
+          strong{
+            position: relative;
+            &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+          }
+          strong.greenbox{
+            &::before{width: 100%;}
+          }
+        }
       }
     }
     .video_bg{
@@ -164,7 +191,13 @@
     .notice_box{
       h3{
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-top: 45px;margin-bottom: 48px;color:$gray;text-align: left;opacity: 0;
-        strong{color: $black;}
+        strong{
+          position: relative;color: $black;
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+        }
+        strong.greenbox{
+          &::before{width: 100%;}
+        }
       }
       ul{
         @include flex;
