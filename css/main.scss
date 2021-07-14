@@ -12,7 +12,6 @@
     &.slide2{background-image: url("../images/main/cnt1_img02.jpeg");}
     &.slide3{background-image: url("../images/main/cnt1_img03.jpeg");}
   }  
-  .m_img{display: none;}
   .cnt_box{
     @include translateY-50;
     position: absolute;top: 50%;left: 150px;text-shadow: 1px 1px 4px rgba(0,0,0,.2);
@@ -66,7 +65,7 @@
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
         strong{
           position: relative;color: $black;
-          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);opacity: 0.5;}
         }
         strong.greenbox{
           &::before{width: 100%;}
@@ -84,7 +83,7 @@
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;text-align: left;opacity: 0;
         strong{
           position: relative;color: $black;
-          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);opacity: 0.5;}
         }
         strong.greenbox{
           &::before{width: 100%;}
@@ -133,7 +132,7 @@
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
         strong{
           position: relative;color: $black;
-          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);opacity: 0.5;}
         }
         strong.greenbox{
           &::before{width: 100%;}
@@ -172,7 +171,7 @@
           font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;
           strong{
             position: relative;
-            &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+            &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);opacity: 0.5;}
           }
           strong.greenbox{
             &::before{width: 100%;}
@@ -193,7 +192,7 @@
         font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-top: 45px;margin-bottom: 48px;color:$gray;text-align: left;opacity: 0;
         strong{
           position: relative;color: $black;
-          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);}
+          &::before{content: "";position: absolute;bottom: 0;left: 0;width: 0%;height: 40%;background: $green;z-index: -1;@include transition(all .5s);opacity: 0.5;}
         }
         strong.greenbox{
           &::before{width: 100%;}
@@ -238,14 +237,34 @@
     .cnt_box{left: 90px;}
     .controller{left: 90px;}
   }
+  #cnt3{
+    position: relative;
+    .wide_section{
+      @include translateY-50;
+      position: absolute;top: calc(50% + 45px);left: 0;
+      #cnt_wrap{
+        padding: 0 90px;
+        #book_list{
+          a{
+            .hover_book{
+              .pc_txt_box{
+                span{@include multiEllipsis(4, 100px);}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #cnt6{
+    #cnt_wrap{padding: 0 90px;}
+  }
 }
 
 // 태블릿 (1152px)
 @media screen and (max-width: 1152px) {
   #cnt1{
     .swiper-container{height: 90vh;}
-    .swiper-slide{background: none;}  
-    .m_img{display: block;width: 100%;}
   }
   #cnt4{
     .wide_section{
@@ -300,11 +319,16 @@
 // 모바일 (690px)
 @media screen and (max-width: 690px) {
   #cnt1{
+    .swiper-container{height: 80vh;}
+    .swiper-slide{
+      &.slide1{background-image: url("../images/main/m_cnt1_img01.png");}
+      &.slide2{background-image: url("../images/main/m_cnt1_img02.png");}
+      &.slide3{background-image: url("../images/main/m_cnt1_img03.png");}
+    }  
     .cnt_box{
       left: 24px;
       h3{font-size: 32px;margin-bottom: 24px;line-height: 1.5;}
     }
-    .swiper-container{height: 80vh;}
     .controller{
       left: 24px;width: 160px;height: 36px;bottom: 24px;
       .swiper-button-prev, .swiper-button-next{width: 36px;height: 36px;}
@@ -354,12 +378,11 @@
       -webkit-transform: translateY(0);
       transform: translateY(0);
   }
-
   100% {
-      -moz-transform: translateY(-990px);
-      -ms-transform: translateY(-990px);
-      -webkit-transform: translateY(-990px);
-      transform: translateY(-990px)
+      -moz-transform: translateY(-1280px);
+      -ms-transform: translateY(-1280px);
+      -webkit-transform: translateY(-1280px);
+      transform: translateY(-1280px)
   }
 }
 @keyframes horizontalscroll {

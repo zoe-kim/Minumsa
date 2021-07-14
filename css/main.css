@@ -19,8 +19,6 @@
       background-image: url("../images/main/cnt1_img02.jpeg"); }
     #cnt1 .swiper-slide.slide3 {
       background-image: url("../images/main/cnt1_img03.jpeg"); }
-  #cnt1 .m_img {
-    display: none; }
   #cnt1 .cnt_box {
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -147,7 +145,8 @@
           background: #189066;
           z-index: -1;
           -webkit-transition: all 0.5s;
-          transition: all 0.5s; }
+          transition: all 0.5s;
+          opacity: 0.5; }
       #cnt2 .wide_section #cnt_wrap h3 strong.greenbox::before {
         width: 100%; }
 
@@ -179,7 +178,8 @@
           background: #189066;
           z-index: -1;
           -webkit-transition: all 0.5s;
-          transition: all 0.5s; }
+          transition: all 0.5s;
+          opacity: 0.5; }
       #cnt3 .wide_section #cnt_wrap h3 strong.greenbox::before {
         width: 100%; }
     #cnt3 .wide_section #cnt_wrap #book_list {
@@ -305,7 +305,8 @@
           background: #189066;
           z-index: -1;
           -webkit-transition: all 0.5s;
-          transition: all 0.5s; }
+          transition: all 0.5s;
+          opacity: 0.5; }
       #cnt4 #cnt_wrap .left_box h3 strong.greenbox::before {
         width: 100%; }
   #cnt4 #cnt_wrap .right_box {
@@ -395,7 +396,8 @@
             background: #189066;
             z-index: -1;
             -webkit-transition: all 0.5s;
-            transition: all 0.5s; }
+            transition: all 0.5s;
+            opacity: 0.5; }
         #cnt5 .left_box .left_box_wrap h3 strong.greenbox::before {
           width: 100%; }
   #cnt5 .video_bg {
@@ -434,7 +436,8 @@
         background: #189066;
         z-index: -1;
         -webkit-transition: all 0.5s;
-        transition: all 0.5s; }
+        transition: all 0.5s;
+        opacity: 0.5; }
     #cnt6 #cnt_wrap .notice_box h3 strong.greenbox::before {
       width: 100%; }
   #cnt6 #cnt_wrap .notice_box ul {
@@ -512,15 +515,33 @@
   #cnt1 .cnt_box {
     left: 90px; }
   #cnt1 .controller {
-    left: 90px; } }
+    left: 90px; }
+
+  #cnt3 {
+    position: relative; }
+    #cnt3 .wide_section {
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+      top: calc(50% + 45px);
+      left: 0; }
+      #cnt3 .wide_section #cnt_wrap {
+        padding: 0 90px; }
+        #cnt3 .wide_section #cnt_wrap #book_list a .hover_book .pc_txt_box span {
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          white-space: normal;
+          max-height: 100px;
+          text-overflow: ellipsis;
+          overflow: hidden; }
+
+  #cnt6 #cnt_wrap {
+    padding: 0 90px; } }
 @media screen and (max-width: 1152px) {
   #cnt1 .swiper-container {
     height: 90vh; }
-  #cnt1 .swiper-slide {
-    background: none; }
-  #cnt1 .m_img {
-    display: block;
-    width: 100%; }
 
   #cnt4 .wide_section #cnt_wrap {
     height: 860px; }
@@ -553,14 +574,20 @@
       margin: 20px 0 12px;
       min-height: 24px; } }
 @media screen and (max-width: 690px) {
+  #cnt1 .swiper-container {
+    height: 80vh; }
+  #cnt1 .swiper-slide.slide1 {
+    background-image: url("../images/main/m_cnt1_img01.png"); }
+  #cnt1 .swiper-slide.slide2 {
+    background-image: url("../images/main/m_cnt1_img02.png"); }
+  #cnt1 .swiper-slide.slide3 {
+    background-image: url("../images/main/m_cnt1_img03.png"); }
   #cnt1 .cnt_box {
     left: 24px; }
     #cnt1 .cnt_box h3 {
       font-size: 32px;
       margin-bottom: 24px;
       line-height: 1.5; }
-  #cnt1 .swiper-container {
-    height: 80vh; }
   #cnt1 .controller {
     left: 24px;
     width: 160px;
@@ -639,10 +666,10 @@
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   100% {
-    -moz-transform: translateY(-990px);
-    -ms-transform: translateY(-990px);
-    -webkit-transform: translateY(-990px);
-    transform: translateY(-990px); } }
+    -moz-transform: translateY(-1280px);
+    -ms-transform: translateY(-1280px);
+    -webkit-transform: translateY(-1280px);
+    transform: translateY(-1280px); } }
 @keyframes horizontalscroll {
   0% {
     transform: translateX(0); }
