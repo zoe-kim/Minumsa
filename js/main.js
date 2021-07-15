@@ -2,7 +2,7 @@ $(document).ready(function () {
   // Swiper
   const swiper = new Swiper('#cnt1 .swiper-container', {
     direction: 'horizontal',  // 수평 방향으로 슬라이드
-    speed: 1500,  // 슬라이드 속도 (기본 300)
+    speed: 1200,  // 슬라이드 속도 (기본 300)
     loop: true,  // 무한 반복
     pagination: {
       el: '.swiper-pagination',
@@ -13,7 +13,7 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-      delay: 3000,  // 자동 실행 시간(3초)
+      delay: 5000,  // 자동 실행 시간(5초)
       disableOnInteraction: false,  // 스와이프 후에 자동실행 비활성화를 차단(자동실행 유지)
     },
     a11y: {

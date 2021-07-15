@@ -10,10 +10,12 @@ $(document).ready(function() {
     }
   });
 
-  // 태블릿, 모바일에서 스크롤 내릴 시 헤더가 .on & top버튼 등장
+  // 태블릿, 모바일에서 스크롤 내릴 시
   $(window).on('scroll', function () {
-    const scrollY = $(this).scrollTop();
-    if (scrollY > 0) {
+    const scrollY = $(this).scrollTop() + $(this).height()*2/3; // 전체 창의 2/3 정도 추가
+
+    // #m_head.on, top버튼 등장
+    if (scrollY > $(this).height()*2/3) {
       $('#m_head').addClass('on');
       $('.top_btn').fadeIn();
     }
@@ -21,6 +23,13 @@ $(document).ready(function() {
       $('#m_head').removeClass('on');
       $('.top_btn').fadeOut();
     }
+
+    // 태블릿, 모바일 - 애니메이션 (스크롤바의 수직이동거리와 컨텐츠 위치가 가까워질 경우만 .on 추가)
+/*     $('.movetop, .verticalscroll, .greenbox').each(function () {
+      if (scrollY > $(this).offset().top) $(this).addClass('on');
+      else $(this).removeClass('on');
+    });
+ */
   });
 
   // .menu_wrap 열고 닫기
