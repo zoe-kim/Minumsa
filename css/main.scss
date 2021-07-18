@@ -12,8 +12,8 @@
 }
 .movetop{opacity: 0;}
 .movetop.on{@include animation(movetop 1.2s ease-out .5s forwards);}
-.verticalscroll.on{@include animation(verticalscroll 20s linear infinite);}
-.horizontalscroll.on{@include animation(horizontalscroll 80s linear infinite);}
+.verticalscroll.on{@include animation(verticalscroll 30s linear infinite);}
+.horizontalscroll.on{@include animation(horizontalscroll 30s linear infinite);}
 
 /* motion keyframes */
 @keyframes movetop {
@@ -40,10 +40,10 @@
       transform: translateY(0);
   }
   100% {
-      -moz-transform: translateY(-1280px);
-      -ms-transform: translateY(-1280px);
-      -webkit-transform: translateY(-1280px);
-      transform: translateY(-1280px)
+      -moz-transform: translateY(-2000px);
+      -ms-transform: translateY(-2000px);
+      -webkit-transform: translateY(-2000px);
+      transform: translateY(-2000px)
   }
 }
 @keyframes horizontalscroll {
@@ -54,10 +54,10 @@
     transform: translateX(0);
   }
   100% {
-      -moz-transform: translateX(-1280px);
-      -ms-transform: translateX(-1280px);
-      -webkit-transform: translateX(-1280px);
-      transform: translateX(-1280px);
+      -moz-transform: translateX(-1200px);
+      -ms-transform: translateX(-1200px);
+      -webkit-transform: translateX(-1200px);
+      transform: translateX(-1200px);
   }
 }
 @keyframes arrowMove {
@@ -200,9 +200,9 @@
       @include justify-content(flex-end);
       width: 50%;overflow: hidden;
       ul{
-        display: inline-block;margin-right: 6%;width: 43%;height: calc(352px * 5);vertical-align: top;
+        display: inline-block;margin-right: 6%;width: 43%;height: calc(352px * 15);vertical-align: top;
         li{
-          position: relative;margin-top: 32px;width: 150px;height: 150px;border-radius: 24px;overflow: hidden;
+          position: relative;margin-top: 32px;width: 100%;border-radius: 24px;overflow: hidden;
           img{width: 100%;}
           span{position: absolute;font-size: 18px;font-weight: 700;line-height: 18px;color: $white;top: 50%;left: 0;@include translateY-50; width: 100%;text-align: center;letter-spacing: 0;text-shadow: 1px 1px 4px rgba(0,0,0,.6);}
         }
@@ -218,9 +218,6 @@
       .left_box_wrap{
         @include translateY-50;
         position: absolute;top: calc(50% + 45px);left: 90px;width: 100%;color: $white;text-shadow: 1px 1px 4px rgba(0,0,0,.2);
-        //position: relative;margin: 0 auto;max-width: 1440px;opacity: 0;height: 860px;overflow: hidden;z-index: 2;
-        //@include translateY-50;
-        //position: absolute;top: 50%;left: 90px;color: $white;text-shadow: 1px 1px 4px rgba(0,0,0,.2);
         p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
         h3{
           font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;
@@ -230,7 +227,6 @@
     }
     .video_bg{
       position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;z-index:-1;
-      //width: 100%;height: 100%;overflow: hidden;position: absolute;top: 0;left: 50%;@include translateX-50;min-width: 100%;min-height: 100%;position: relative;top: 0;left: 50%;@include translateX-50;object-fit: cover;
     }
 }
 #cnt6{
@@ -247,8 +243,8 @@
         @include animation-delay(.8s);
         margin-bottom: 48px;
         li{
-           margin: 0;width: calc(25% - 24px);margin-left: 32px;
-           &:first-child{margin-left: 0;}
+          margin: 0;width: calc(25% - 24px);margin-left: 32px;
+          &:first-child{margin-left: 0;}
           a{
             display: block;text-align: left;
             .thumb_box{
@@ -309,12 +305,19 @@
   #cnt1{
     .swiper-container{height: 90vh;}
   }
+  #cnt2{
+    .wide_section{
+      #cnt_wrap{
+        h3{font-size: 36px;line-height: 50px;}
+      }
+    }
+  }
   #cnt3{
     .wide_section{
       position: static;top: unset;left: unset;display: unset;
       #cnt_wrap{
-        padding: 142px 90px 152px;
-        h3{margin-bottom: 0;}
+        padding: 120px 90px 80px;
+        h3{margin-bottom: 0;font-size: 36px;line-height: 50px;}
         #book_list{display: none;}
         #m_book_list{
           visibility: visible;height: 100%;overflow: visible;margin-bottom: 48px;
@@ -346,46 +349,46 @@
   }
   #cnt4{
     #cnt_wrap{
-      display: block;padding: 0;
+      display: block;padding: 0;height: auto;
       .left_box{display: none;}
       .m_left_box{
-        display: block;padding: 142px 90px 48px;width: 100%;
+        display: block;padding: 120px 90px 48px;width: 100%;
         p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
         h3{
-          font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
+          font-size: 36px;line-height: 50px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
           strong{position: relative;color: $black;}
         }  
       }
       .right_box{
-        display: block;
-        margin-bottom: 76px;width: 100%;
+        display: inline-block;margin-bottom: 80px;width: 100%;
         ul{
           @include flex;
-          width: calc(204px * 5);height: auto;
+          width: calc(212px * 15);height: auto;
           li{
-            margin-top: 0;margin-right: 12px;width: 150px;
+            margin-top: 0;margin-right: 12px;width: 200px;height: 200px;
             span{font-size: 14px;line-height: 1.2;}
           }
         }
-        .second{margin: 0 0 0 -84px;}
+        .second{margin: 0 0 0 -84px;margin-top: 12px;}
       }
     }
   }
-  #cnt5{display: none;
-    width: 100%;
-    #cnt_wrap{
+  #cnt5{
+    height: 860px;
       .left_box{
-        h3{
-          font-size: 38px;
+        .left_box_wrap{
+          top: 50%;
+          h3{font-size: 36px;line-height: 50px;}
         }
       }
-    }
   }
-  #cnt6{display: none;
+  #cnt6{
     #cnt_wrap{
+      padding: 120px 90px 80px;
       .notice_box{
-        h3{font-size: 38px;line-height: 1.5;}
+        h3{margin-top: 0;font-size: 36px;line-height: 50px;}
         ul{
+          margin-bottom: 80px;
           li{
             width: calc(50% - 16px);margin-left: 32px;margin-bottom: 46px;
             &:first-child, &:nth-child(3){margin: 0;}

@@ -24,14 +24,14 @@
   animation: movetop 1.2s ease-out 0.5s forwards; }
 
 .verticalscroll.on {
-  -webkit-animation: verticalscroll 20s linear infinite;
-  -moz-animation: verticalscroll 20s linear infinite;
-  animation: verticalscroll 20s linear infinite; }
+  -webkit-animation: verticalscroll 30s linear infinite;
+  -moz-animation: verticalscroll 30s linear infinite;
+  animation: verticalscroll 30s linear infinite; }
 
 .horizontalscroll.on {
-  -webkit-animation: horizontalscroll 80s linear infinite;
-  -moz-animation: horizontalscroll 80s linear infinite;
-  animation: horizontalscroll 80s linear infinite; }
+  -webkit-animation: horizontalscroll 30s linear infinite;
+  -moz-animation: horizontalscroll 30s linear infinite;
+  animation: horizontalscroll 30s linear infinite; }
 
 /* motion keyframes */
 @keyframes movetop {
@@ -54,10 +54,10 @@
     -webkit-transform: translateY(0);
     transform: translateY(0); }
   100% {
-    -moz-transform: translateY(-1280px);
-    -ms-transform: translateY(-1280px);
-    -webkit-transform: translateY(-1280px);
-    transform: translateY(-1280px); } }
+    -moz-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px); } }
 @keyframes horizontalscroll {
   0% {
     -moz-transform: translateX(0);
@@ -65,10 +65,10 @@
     -webkit-transform: translateX(0);
     transform: translateX(0); }
   100% {
-    -moz-transform: translateX(-1280px);
-    -ms-transform: translateX(-1280px);
-    -webkit-transform: translateX(-1280px);
-    transform: translateX(-1280px); } }
+    -moz-transform: translateX(-1200px);
+    -ms-transform: translateX(-1200px);
+    -webkit-transform: translateX(-1200px);
+    transform: translateX(-1200px); } }
 @keyframes arrowMove {
   0%, 100% {
     -moz-transform: translateY(0);
@@ -363,13 +363,12 @@
       display: inline-block;
       margin-right: 6%;
       width: 43%;
-      height: calc(352px * 5);
+      height: calc(352px * 15);
       vertical-align: top; }
       #cnt4 #cnt_wrap .right_box ul li {
         position: relative;
         margin-top: 32px;
-        width: 150px;
-        height: 150px;
+        width: 100%;
         border-radius: 24px;
         overflow: hidden; }
         #cnt4 #cnt_wrap .right_box ul li img {
@@ -548,15 +547,21 @@
   #cnt1 .swiper-container {
     height: 90vh; }
 
+  #cnt2 .wide_section #cnt_wrap h3 {
+    font-size: 36px;
+    line-height: 50px; }
+
   #cnt3 .wide_section {
     position: static;
     top: unset;
     left: unset;
     display: unset; }
     #cnt3 .wide_section #cnt_wrap {
-      padding: 142px 90px 152px; }
+      padding: 120px 90px 80px; }
       #cnt3 .wide_section #cnt_wrap h3 {
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        font-size: 36px;
+        line-height: 50px; }
       #cnt3 .wide_section #cnt_wrap #book_list {
         display: none; }
       #cnt3 .wide_section #cnt_wrap #m_book_list {
@@ -635,12 +640,13 @@
 
   #cnt4 #cnt_wrap {
     display: block;
-    padding: 0; }
+    padding: 0;
+    height: auto; }
     #cnt4 #cnt_wrap .left_box {
       display: none; }
     #cnt4 #cnt_wrap .m_left_box {
       display: block;
-      padding: 142px 90px 48px;
+      padding: 120px 90px 48px;
       width: 100%; }
       #cnt4 #cnt_wrap .m_left_box p {
         font-size: 18px;
@@ -649,8 +655,8 @@
         margin-bottom: 36px;
         font-weight: 700; }
       #cnt4 #cnt_wrap .m_left_box h3 {
-        font-size: 42px;
-        line-height: 60px;
+        font-size: 36px;
+        line-height: 50px;
         letter-spacing: -1px;
         margin-bottom: 48px;
         color: #aaa; }
@@ -658,8 +664,8 @@
           position: relative;
           color: #1E1E1E; }
     #cnt4 #cnt_wrap .right_box {
-      display: block;
-      margin-bottom: 76px;
+      display: inline-block;
+      margin-bottom: 80px;
       width: 100%; }
       #cnt4 #cnt_wrap .right_box ul {
         display: -webkit-box;
@@ -667,40 +673,47 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        width: calc(204px * 5);
+        width: calc(212px * 15);
         height: auto; }
         #cnt4 #cnt_wrap .right_box ul li {
           margin-top: 0;
           margin-right: 12px;
-          width: 150px; }
+          width: 200px;
+          height: 200px; }
           #cnt4 #cnt_wrap .right_box ul li span {
             font-size: 14px;
             line-height: 1.2; }
       #cnt4 #cnt_wrap .right_box .second {
-        margin: 0 0 0 -84px; }
+        margin: 0 0 0 -84px;
+        margin-top: 12px; }
 
   #cnt5 {
-    display: none;
-    width: 100%; }
-    #cnt5 #cnt_wrap .left_box h3 {
-      font-size: 38px; }
+    height: 860px; }
+    #cnt5 .left_box .left_box_wrap {
+      top: 50%; }
+      #cnt5 .left_box .left_box_wrap h3 {
+        font-size: 36px;
+        line-height: 50px; }
 
-  #cnt6 {
-    display: none; }
+  #cnt6 #cnt_wrap {
+    padding: 120px 90px 80px; }
     #cnt6 #cnt_wrap .notice_box h3 {
-      font-size: 38px;
-      line-height: 1.5; }
-    #cnt6 #cnt_wrap .notice_box ul li {
-      width: calc(50% - 16px);
-      margin-left: 32px;
-      margin-bottom: 46px; }
-      #cnt6 #cnt_wrap .notice_box ul li:first-child, #cnt6 #cnt_wrap .notice_box ul li:nth-child(3) {
-        margin: 0; }
-      #cnt6 #cnt_wrap .notice_box ul li:nth-child(4) {
-        margin-bottom: 0; }
-      #cnt6 #cnt_wrap .notice_box ul li a .txt_box p {
-        margin: 20px 0 12px;
-        min-height: 24px; } }
+      margin-top: 0;
+      font-size: 36px;
+      line-height: 50px; }
+    #cnt6 #cnt_wrap .notice_box ul {
+      margin-bottom: 80px; }
+      #cnt6 #cnt_wrap .notice_box ul li {
+        width: calc(50% - 16px);
+        margin-left: 32px;
+        margin-bottom: 46px; }
+        #cnt6 #cnt_wrap .notice_box ul li:first-child, #cnt6 #cnt_wrap .notice_box ul li:nth-child(3) {
+          margin: 0; }
+        #cnt6 #cnt_wrap .notice_box ul li:nth-child(4) {
+          margin-bottom: 0; }
+        #cnt6 #cnt_wrap .notice_box ul li a .txt_box p {
+          margin: 20px 0 12px;
+          min-height: 24px; } }
 @media screen and (max-width: 690px) {
   #cnt1 .swiper-container {
     height: 80vh; }
