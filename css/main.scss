@@ -431,27 +431,76 @@
       #cnt_wrap{
         padding: 48px 24px 36px;
         p{font-size: 14px;margin-bottom: 20px;}
-        h3{font-size: 24px;line-height: 1.3;margin-bottom: 24px;}
+        h3{font-size: 24px;line-height: 1.5;margin-bottom: 24px;}
       }
     }
   }
   #cnt3{
+    .wide_section{
+      #cnt_wrap{
+        padding: 48px 24px 60px;
+        h3{font-size: 24px;line-height: 1.5;margin-bottom: 8px;}
+        #m_book_list{
+          margin-bottom: 24px;
+          li{
+            padding: 16px 0;
+            a{width: 168px;height: 243px;border-radius: 12px;margin-right: 24px;}
+          }
+          .m_txt_box{
+            font-size: 16px;width: calc(100% - 192px);
+            strong{font-size: 18px;line-height: 1.5;padding: 8px 0;}
+            p{line-height: 1.5;line-height: 1.5;}
+            span{line-height: 1.5;@include multiEllipsis(5, 150px);}
+          }
+        }  
+      }
+    }
+  }
+  #cnt4{
     #cnt_wrap{
-      #book_list{display: none;}
-      #m_book_list{
-        visibility: visible;height: 100%;overflow: visible;margin-bottom: 24px;
-        a{
-          @include flex;
-          padding: 24px 0;border-bottom: 1px solid #eee;
-          img{width: 20%;margin-right: 36px;}
+      .m_left_box{
+        padding: 48px 24px 40px;
+        p{font-size: 14px;margin-bottom: 20px;}
+        h3{font-size: 24px;line-height: 1.5;margin-bottom: 24px;}  
+      }
+      .right_box{
+        margin-bottom: 76px;
+        ul{
+          width: calc(162px * 15);
+          li{width: 150px;height: 150px;}
         }
-        .m_txt_box{
-          text-align: left;
-          strong{display: block;font-size: 24px;padding-bottom: 24px;}
-          p{padding-bottom: 24px;line-height: 28px;color: $gray;font-size: 18px;}
-          span{display: block;line-height: 28px;color: $gray;font-size: 18px;}
+      }
+    }
+  }
+  #cnt5{
+    height: 70vh;
+      .left_box{
+        .left_box_wrap{
+          left: 24px;
+          p{font-size: 14px;margin-bottom: 20px;}
+          h3{font-size: 24px;line-height: 1.5;margin-bottom: 24px;}    
         }
-      }  
+      }
+  }
+  #cnt6{
+    #cnt_wrap{
+      padding: 48px 24px 60px;
+      .notice_box{
+        h3{font-size: 24px;line-height: 1.5;margin-bottom: 24px;}
+        ul{
+          margin-bottom: 24px;
+          li{
+            width: calc(50% - 8px);margin-left: 16px;margin-bottom: 24px;
+            a{
+              .thumb_box{border-radius: 12px;}
+              .txt_box{
+                p{font-size: 16px;line-height: 20px;margin: 12px 0 8px;@include multiEllipsis(2, 40px);}
+                span{font-size: 14px;}
+              }
+            }
+          }
+        }
+      }
     }
   }
   .slide_link_btn{padding: 0 45px 0 26px;font-size: 14px;}
