@@ -79,7 +79,7 @@
 #fullpage{position: relative;width: 100%;height: 100%;}
 #cnt1{
   position: relative;
-  .swiper-container{margin: 0 auto;overflow: hidden;width: 100%;height: 100vh;color: $white;}
+  .swiper-container{margin: 0 auto;overflow: hidden;width: 100vw;height: 100vh;color: $white;}
   .swiper-slide{
     background: no-repeat center / cover;
     &.slide1{background-image: url("../images/main/cnt1_img01.jpeg");}
@@ -408,7 +408,6 @@
 // 모바일 (690px)
 @media screen and (max-width: 690px) {
   #cnt1{
-    .swiper-container{height: 80vh;}
     .swiper-slide{
       &.slide1{background-image: url("../images/main/m_cnt1_img01.png");}
       &.slide2{background-image: url("../images/main/m_cnt1_img02.png");}

@@ -90,7 +90,7 @@
   #cnt1 .swiper-container {
     margin: 0 auto;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     color: #F9F9F9; }
   #cnt1 .swiper-slide {
@@ -715,8 +715,6 @@
           margin: 20px 0 12px;
           min-height: 24px; } }
 @media screen and (max-width: 690px) {
-  #cnt1 .swiper-container {
-    height: 80vh; }
   #cnt1 .swiper-slide.slide1 {
     background-image: url("../images/main/m_cnt1_img01.png"); }
   #cnt1 .swiper-slide.slide2 {
