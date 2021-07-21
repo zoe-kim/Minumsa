@@ -1,7 +1,7 @@
 /* common class */
 .greenbox::before {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
   content: "";
   position: absolute;
   bottom: 0;
@@ -90,7 +90,7 @@
   #cnt1 .swiper-container {
     margin: 0 auto;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     color: #F9F9F9; }
   #cnt1 .swiper-slide {
@@ -597,7 +597,8 @@
               position: absolute;
               left: 0;
               top: 50%;
-              width: 100%; }
+              width: 100%;
+              height: 100%; }
         #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box {
           display: -webkit-box;
           display: -moz-box;
@@ -715,8 +716,6 @@
           margin: 20px 0 12px;
           min-height: 24px; } }
 @media screen and (max-width: 690px) {
-  #cnt1 .swiper-container {
-    height: 80vh; }
   #cnt1 .swiper-slide.slide1 {
     background-image: url("../images/main/m_cnt1_img01.png"); }
   #cnt1 .swiper-slide.slide2 {
@@ -760,26 +759,27 @@
     #cnt3 .wide_section #cnt_wrap h3 {
       font-size: 24px;
       line-height: 1.5;
-      margin-bottom: 8px; }
+      margin-bottom: 4.6376811594vw; }
     #cnt3 .wide_section #cnt_wrap #m_book_list {
       margin-bottom: 24px; }
       #cnt3 .wide_section #cnt_wrap #m_book_list li {
-        padding: 16px 0; }
+        padding: 2.3188405797vw 0; }
         #cnt3 .wide_section #cnt_wrap #m_book_list li a {
-          width: 168px;
-          height: 243px;
+          width: 24.347826087vw;
+          height: 35.2173913043vw;
           border-radius: 12px;
-          margin-right: 24px; }
+          margin-right: 3.4782608696vw; }
       #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box {
-        font-size: 16px;
-        width: calc(100% - 192px); }
+        font-size: 2.3188405797vw;
+        width: calc(100% - 27.8260869565vw); }
         #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box strong {
-          font-size: 18px;
+          font-size: 2.6086956522vw;
           line-height: 1.5;
-          padding: 8px 0; }
+          padding: 1.1594202899vw 0; }
         #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box p {
           line-height: 1.5;
-          line-height: 1.5; }
+          line-height: 1.5;
+          padding: 1.7391304348vw 0; }
         #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box span {
           line-height: 1.5;
           display: -webkit-box;
@@ -808,7 +808,7 @@
         height: 150px; }
 
   #cnt5 {
-    height: 70vh; }
+    height: 100vh; }
     #cnt5 .left_box .left_box_wrap {
       left: 24px; }
       #cnt5 .left_box .left_box_wrap p {
@@ -824,7 +824,7 @@
     #cnt6 #cnt_wrap .notice_box h3 {
       font-size: 24px;
       line-height: 1.5;
-      margin-bottom: 24px; }
+      margin-bottom: 6.9565217391vw; }
     #cnt6 #cnt_wrap .notice_box ul {
       margin-bottom: 24px; }
       #cnt6 #cnt_wrap .notice_box ul li {

@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+@function vw-calc690($px) {
+  $vwSize: $px / (690 / 100);
+  @return #{$vwSize}vw;
+}
