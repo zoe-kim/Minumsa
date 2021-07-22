@@ -25,8 +25,8 @@ $(document).ready(function() {
     }
     
     // #cnt4의 .verticalscroll을 .horizontalscroll로 변경
-    if ($(this).width() <= 1152) $('#cnt4').find('.verticalscroll').removeClass('.verticalscroll').addClass('horizontalscroll');
-    else $('#cnt4').find('.horizontalscroll').removeClass('.horizontalscroll').addClass('verticalscroll');  // pc 사이즈로 변경시 다시 바뀌도록
+    if ($(this).width() <= 1152) $('#cnt4').find('.verticalscroll').removeClass('verticalscroll').addClass('horizontalscroll');
+    else $('#cnt4').find('.horizontalscroll').removeClass('horizontalscroll').addClass('verticalscroll');  // pc 사이즈로 변경시 다시 바뀌도록
 
     // .movetop 애니메이션 실행
     $('#cnt2, #cnt3, #cnt4, #cnt5, #cnt6').each(function () {
@@ -98,7 +98,7 @@ $(document).ready(function() {
   $(".top_btn").on("click", function() {
     if ($(window).width() > 1152) fullpage_api.moveTo(1);  // pc
     else $('html, body').stop().animate({scrollTop: 0}, 800);  // 태블릿, 모바일
-    $('.logo a').focus(); // 접근성을 위해 문서의 처음으로 포커스 강제 이동
+    $('#cnt1').focus(); // 접근성을 위해 본문의 처음으로 포커스 강제 이동
   })
 
 

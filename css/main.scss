@@ -438,17 +438,17 @@
     .wide_section{
       #cnt_wrap{
         padding: 48px 24px 60px;
-        h3{font-size: 24px;line-height: 1.5;margin-bottom: vw-calc690(32);}
+        h3{font-size: 24px;line-height: 1.5;margin-bottom: 32px;}
         #m_book_list{
           margin-bottom: 24px;
           li{
-            padding: vw-calc690(16) 0;
-            a{width: vw-calc690(168);height: vw-calc690(243);border-radius: 12px;margin-right: vw-calc690(24);}
+            padding: 16px 0;
+            a{width: 168px;height: 243px;border-radius: 12px;margin-right: 24px;}
           }
           .m_txt_box{
-            font-size: vw-calc690(16);width: calc(100% - #{vw-calc690(192)});
-            strong{font-size: vw-calc690(18);line-height: 1.5;padding: vw-calc690(8) 0;}
-            p{line-height: 1.5;line-height: 1.5;padding: vw-calc690(12) 0;}
+            font-size: 16px;width: calc(100% - 192px);
+            strong{font-size: 18px;line-height: 1.5;padding: 8px 0;}
+            p{line-height: 1.5;line-height: 1.5;padding: 12px 0;}
             span{line-height: 1.5;@include multiEllipsis(5, 150px);}
           }
         }  
@@ -472,7 +472,7 @@
     }
   }
   #cnt5{
-    height: 100vh;
+    height: 90vh;
       .left_box{
         .left_box_wrap{
           left: 24px;
@@ -485,7 +485,7 @@
     #cnt_wrap{
       padding: 48px 24px 60px;
       .notice_box{
-        h3{font-size: 24px;line-height: 1.5;margin-bottom: vw-calc690(48);}
+        h3{font-size: 24px;line-height: 1.5;margin-bottom: 48px;}
         ul{
           margin-bottom: 24px;
           li{
