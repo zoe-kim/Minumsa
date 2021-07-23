@@ -430,5 +430,65 @@ body {
     bottom: 24px;
     width: 48px;
     height: 48px; } }
+@media screen and (max-width: 384px) {
+  .header .heder_wrap {
+    height: 19.2708333333vw;
+    padding: 0 6.25vw; }
+    .header .heder_wrap .logo a {
+      width: 16.6666666667vw;
+      height: 7.8125vw; }
+  .header .m_nav .search {
+    width: 6.25vw;
+    height: 6.25vw;
+    margin-right: 6.25vw; }
+
+  #m_head {
+    height: 19.2708333333vw; }
+    #m_head .menu_open {
+      width: 6.25vw;
+      height: 6.25vw; }
+    #m_head .menu_wrap {
+      padding: 0 6.25vw; }
+      #m_head .menu_wrap > a {
+        margin: 5.7291666667vw 0px;
+        width: 16.6666666667vw; }
+        #m_head .menu_wrap > a img {
+          width: 16.6666666667vw;
+          height: 7.8125vw; }
+      #m_head .menu_wrap .menu ul li a {
+        padding: 6.25vw 0;
+        font-size: 4.6875vw; }
+      #m_head .menu_wrap .menu_close {
+        top: 5.7291666667vw;
+        right: 6.25vw; }
+        #m_head .menu_wrap .menu_close img {
+          width: 7.8125vw;
+          height: 7.8125vw; }
+
+  #m_foot {
+    padding: 9.1145833333vw 6.25vw; }
+    #m_foot img {
+      height: 4.6875vw;
+      margin-bottom: 4.1666666667vw; }
+    #m_foot .copyright_txt {
+      line-height: 5.2083333333vw; }
+      #m_foot .copyright_txt address {
+        margin-bottom: 1.0416666667vw;
+        font-size: 3.125vw; }
+      #m_foot .copyright_txt p {
+        font-size: 3.6458333333vw;
+        margin-bottom: 5.2083333333vw; }
+    #m_foot .btm_link {
+      font-size: 3.6458333333vw; }
+      #m_foot .btm_link .link_txt a {
+        margin-right: 2.0833333333vw; }
+      #m_foot .btm_link .link_social a {
+        margin-left: 2.0833333333vw; }
+
+  .top_btn {
+    right: 6.25vw;
+    bottom: 6.25vw;
+    width: 12.5vw;
+    height: 12.5vw; } }
 
 /*# sourceMappingURL=common.css.map */

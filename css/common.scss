@@ -235,3 +235,56 @@ body{
     #m_foot{padding: 35px 24px;}
     .top_btn{right: 24px;bottom: 24px;width: 48px;height: 48px;}
 }
+
+// 작은 모바일 (384px)
+@media screen and (max-width: 384px) {
+    .header{
+        .heder_wrap{
+            height: vw-calc384(74);padding: 0 vw-calc384(24);
+            .logo a{width: vw-calc384(64);height: vw-calc384(30);}
+        }
+        .m_nav{
+            .search{width: vw-calc384(24);height: vw-calc384(24);margin-right: vw-calc384(24);}
+        }
+    }
+    #m_head{
+        height: vw-calc384(74);
+        .menu_open{width: vw-calc384(24);height: vw-calc384(24);}
+        .menu_wrap{
+            padding: 0 vw-calc384(24);
+            > a{
+                margin: vw-calc384(22) 0px;width: vw-calc384(64);
+                img{width: vw-calc384(64);height: vw-calc384(30);}
+            }
+            .menu{
+                ul li{
+                    a {padding: vw-calc384(24) 0;font-size: vw-calc384(18);}
+                }
+            }
+            .menu_close{
+                top: vw-calc384(22);right: vw-calc384(24);
+                img{width: vw-calc384(30); height: vw-calc384(30);}
+            }
+        }
+    }
+    #m_foot{
+        padding: vw-calc384(35) vw-calc384(24);
+        img{height: vw-calc384(18);margin-bottom: vw-calc384(16);}
+        .copyright_txt{
+            line-height: vw-calc384(20);
+            address{margin-bottom: vw-calc384(4);font-size: vw-calc384(12);}
+            p{font-size: vw-calc384(14);margin-bottom: vw-calc384(20);}
+        }
+        .btm_link{
+            font-size: vw-calc384(14);
+            .link_txt{
+                a{margin-right: vw-calc384(8);}
+            }
+            .link_social{
+                a{margin-left: vw-calc384(8);}
+            }
+        }
+
+    }
+    .top_btn{right: vw-calc384(24);bottom: vw-calc384(24);width: vw-calc384(48);height: vw-calc384(48);}
+}
