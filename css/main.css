@@ -16,7 +16,10 @@
   width: 100%; }
 
 .movetop {
-  opacity: 0; }
+  opacity: 0;
+  transform: translateY(40px);
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s; }
 
 .movetop.on {
   -webkit-animation: movetop 1.2s ease-out 0.5s forwards;
@@ -32,6 +35,12 @@
   -webkit-animation: horizontalscroll 30s linear infinite;
   -moz-animation: horizontalscroll 30s linear infinite;
   animation: horizontalscroll 30s linear infinite; }
+
+.movetop.active {
+  -webkit-transition: all 1.2s ease-out 0.5s;
+  transition: all 1.2s ease-out 0.5s;
+  opacity: 1;
+  transform: translateY(0); }
 
 /* motion keyframes */
 @keyframes movetop {
@@ -195,46 +204,46 @@
 
 #cnt2 .wide_section {
   width: 100%; }
-  #cnt2 .wide_section #cnt_wrap {
+  #cnt2 .wide_section .cnt_wrap {
     max-width: 1440px;
     margin: 0 auto;
     padding: 142px 90px 152px;
     width: 100%;
     text-align: center; }
-    #cnt2 .wide_section #cnt_wrap p {
+    #cnt2 .wide_section .cnt_wrap p {
       font-size: 18px;
       line-height: 20px;
       letter-spacing: -0.3px;
       margin-bottom: 36px;
       font-weight: 700; }
-    #cnt2 .wide_section #cnt_wrap h3 {
+    #cnt2 .wide_section .cnt_wrap h3 {
       font-size: 42px;
       line-height: 60px;
       letter-spacing: -1px;
       margin-bottom: 48px;
       color: #aaa; }
-      #cnt2 .wide_section #cnt_wrap h3 strong {
+      #cnt2 .wide_section .cnt_wrap h3 strong {
         position: relative;
         color: #1E1E1E; }
 
 #cnt3 {
   background: #f9f9f9; }
-  #cnt3 #cnt_wrap {
+  #cnt3 .cnt_wrap {
     max-width: 1440px;
     margin: 0 auto;
     padding: 202px 90px 120px;
     text-align: center; }
-    #cnt3 #cnt_wrap h3 {
+    #cnt3 .cnt_wrap h3 {
       font-size: 42px;
       line-height: 60px;
       letter-spacing: -1px;
       margin-bottom: 48px;
       color: #aaa;
       text-align: left; }
-      #cnt3 #cnt_wrap h3 strong {
+      #cnt3 .cnt_wrap h3 strong {
         position: relative;
         color: #1E1E1E; }
-    #cnt3 #cnt_wrap #book_list {
+    #cnt3 .cnt_wrap #book_list {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -246,15 +255,15 @@
       -moz-animation-delay: 0.8s;
       animation-delay: 0.8s;
       margin-bottom: 48px; }
-      #cnt3 #cnt_wrap #book_list li {
+      #cnt3 .cnt_wrap #book_list li {
         width: 18%;
         border-radius: 24px;
         overflow: hidden;
         box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09); }
-      #cnt3 #cnt_wrap #book_list a {
+      #cnt3 .cnt_wrap #book_list a {
         position: relative;
         display: block; }
-        #cnt3 #cnt_wrap #book_list a::before {
+        #cnt3 .cnt_wrap #book_list a::before {
           -webkit-transition: all 0.3s;
           transition: all 0.3s;
           content: "";
@@ -265,7 +274,7 @@
           height: 100%;
           background: rgba(0, 0, 0, 0.7);
           opacity: 0; }
-        #cnt3 #cnt_wrap #book_list a .hover_book {
+        #cnt3 .cnt_wrap #book_list a .hover_book {
           position: absolute;
           bottom: 0;
           left: 0;
@@ -278,19 +287,19 @@
           font-size: 16px;
           padding: 32px 24px 0 24px;
           border-radius: 24px; }
-          #cnt3 #cnt_wrap #book_list a .hover_book .pc_txt_box strong {
+          #cnt3 .cnt_wrap #book_list a .hover_book .pc_txt_box strong {
             font-size: 20px;
             display: block;
             padding-bottom: 20px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #cnt3 #cnt_wrap #book_list a .hover_book .pc_txt_box p {
+          #cnt3 .cnt_wrap #book_list a .hover_book .pc_txt_box p {
             line-height: 24px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #cnt3 #cnt_wrap #book_list a .hover_book .pc_txt_box span {
+          #cnt3 .cnt_wrap #book_list a .hover_book .pc_txt_box span {
             display: block;
             line-height: 25px;
             margin-top: 10px;
@@ -301,20 +310,20 @@
             max-height: 150px;
             text-overflow: ellipsis;
             overflow: hidden; }
-        #cnt3 #cnt_wrap #book_list a img {
+        #cnt3 .cnt_wrap #book_list a img {
           width: 100%; }
-      #cnt3 #cnt_wrap #book_list a.on::before {
+      #cnt3 .cnt_wrap #book_list a.on::before {
         opacity: 1; }
-    #cnt3 #cnt_wrap #m_book_list {
+    #cnt3 .cnt_wrap #m_book_list {
       visibility: hidden;
       height: 0;
       overflow: hidden; }
-    #cnt3 #cnt_wrap .link_btn {
+    #cnt3 .cnt_wrap .link_btn {
       -webkit-animation-delay: 1.2s;
       -moz-animation-delay: 1.2s;
       animation-delay: 1.2s; }
 
-#cnt4 #cnt_wrap {
+#cnt4 .cnt_wrap {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -326,27 +335,27 @@
   margin: 0 auto;
   max-width: 1440px;
   height: 100vh; }
-  #cnt4 #cnt_wrap .left_box {
+  #cnt4 .cnt_wrap .left_box {
     margin: auto 0;
     width: 50%; }
-    #cnt4 #cnt_wrap .left_box p {
+    #cnt4 .cnt_wrap .left_box p {
       font-size: 18px;
       line-height: 20px;
       letter-spacing: -0.3px;
       margin-bottom: 36px;
       font-weight: 700; }
-    #cnt4 #cnt_wrap .left_box h3 {
+    #cnt4 .cnt_wrap .left_box h3 {
       font-size: 42px;
       line-height: 60px;
       letter-spacing: -1px;
       margin-bottom: 48px;
       color: #aaa; }
-      #cnt4 #cnt_wrap .left_box h3 strong {
+      #cnt4 .cnt_wrap .left_box h3 strong {
         position: relative;
         color: #1E1E1E; }
-  #cnt4 #cnt_wrap .m_left_box {
+  #cnt4 .cnt_wrap .m_left_box {
     display: none; }
-  #cnt4 #cnt_wrap .right_box {
+  #cnt4 .cnt_wrap .right_box {
     -webkit-animation-delay: 0.8s;
     -moz-animation-delay: 0.8s;
     animation-delay: 0.8s;
@@ -359,21 +368,21 @@
     justify-content: flex-end;
     width: 50%;
     overflow: hidden; }
-    #cnt4 #cnt_wrap .right_box ul {
+    #cnt4 .cnt_wrap .right_box ul {
       display: inline-block;
       margin-right: 6%;
       width: 43%;
       height: calc(352px * 15);
       vertical-align: top; }
-      #cnt4 #cnt_wrap .right_box ul li {
+      #cnt4 .cnt_wrap .right_box ul li {
         position: relative;
         margin-top: 32px;
         width: 100%;
         border-radius: 24px;
         overflow: hidden; }
-        #cnt4 #cnt_wrap .right_box ul li img {
+        #cnt4 .cnt_wrap .right_box ul li img {
           width: 100%; }
-        #cnt4 #cnt_wrap .right_box ul li span {
+        #cnt4 .cnt_wrap .right_box ul li span {
           position: absolute;
           font-size: 18px;
           font-weight: 700;
@@ -388,7 +397,7 @@
           text-align: center;
           letter-spacing: 0;
           text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); }
-    #cnt4 #cnt_wrap .right_box .second {
+    #cnt4 .cnt_wrap .right_box .second {
       margin: -160px 0 0 0; }
 
 #cnt5 {
@@ -430,12 +439,12 @@
     object-fit: cover;
     z-index: -1; }
 
-#cnt6 #cnt_wrap {
+#cnt6 .cnt_wrap {
   padding: 90px 90px 120px 90px;
   margin: 0 auto;
   max-width: 1440px;
   text-align: center; }
-  #cnt6 #cnt_wrap .notice_box h3 {
+  #cnt6 .cnt_wrap .notice_box h3 {
     font-size: 42px;
     line-height: 60px;
     letter-spacing: -1px;
@@ -443,10 +452,10 @@
     margin-bottom: 48px;
     color: #aaa;
     text-align: left; }
-    #cnt6 #cnt_wrap .notice_box h3 strong {
+    #cnt6 .cnt_wrap .notice_box h3 strong {
       position: relative;
       color: #1E1E1E; }
-  #cnt6 #cnt_wrap .notice_box ul {
+  #cnt6 .cnt_wrap .notice_box ul {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -458,23 +467,23 @@
     -moz-animation-delay: 0.8s;
     animation-delay: 0.8s;
     margin-bottom: 48px; }
-    #cnt6 #cnt_wrap .notice_box ul li {
+    #cnt6 .cnt_wrap .notice_box ul li {
       margin: 0;
       width: calc(25% - 24px);
       margin-left: 32px; }
-      #cnt6 #cnt_wrap .notice_box ul li:first-child {
+      #cnt6 .cnt_wrap .notice_box ul li:first-child {
         margin-left: 0; }
-      #cnt6 #cnt_wrap .notice_box ul li a {
+      #cnt6 .cnt_wrap .notice_box ul li a {
         display: block;
         text-align: left; }
-        #cnt6 #cnt_wrap .notice_box ul li a .thumb_box {
+        #cnt6 .cnt_wrap .notice_box ul li a .thumb_box {
           position: relative;
           width: 100%;
           height: 100%;
           border-radius: 24px;
           overflow: hidden;
           box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09); }
-          #cnt6 #cnt_wrap .notice_box ul li a .thumb_box::before {
+          #cnt6 .cnt_wrap .notice_box ul li a .thumb_box::before {
             -webkit-transition: all 0.3s;
             transition: all 0.3s;
             content: "";
@@ -485,7 +494,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.4);
             opacity: 0; }
-        #cnt6 #cnt_wrap .notice_box ul li a .txt_box p {
+        #cnt6 .cnt_wrap .notice_box ul li a .txt_box p {
           font-size: 18px;
           line-height: 24px;
           margin: 20px 0;
@@ -498,19 +507,19 @@
           max-height: 48px;
           text-overflow: ellipsis;
           overflow: hidden; }
-        #cnt6 #cnt_wrap .notice_box ul li a .txt_box span {
+        #cnt6 .cnt_wrap .notice_box ul li a .txt_box span {
           display: block;
           font-size: 16px;
           line-height: 1;
           color: #aaa;
           letter-spacing: 0; }
-        #cnt6 #cnt_wrap .notice_box ul li a:hover, #cnt6 #cnt_wrap .notice_box ul li a:focus {
+        #cnt6 .cnt_wrap .notice_box ul li a:hover, #cnt6 .cnt_wrap .notice_box ul li a:focus {
           color: #189066;
           -webkit-transition: all 0.3s;
           transition: all 0.3s; }
-          #cnt6 #cnt_wrap .notice_box ul li a:hover .thumb_box::before, #cnt6 #cnt_wrap .notice_box ul li a:focus .thumb_box::before {
+          #cnt6 .cnt_wrap .notice_box ul li a:hover .thumb_box::before, #cnt6 .cnt_wrap .notice_box ul li a:focus .thumb_box::before {
             opacity: 1; }
-  #cnt6 #cnt_wrap .notice_box .link_btn {
+  #cnt6 .cnt_wrap .notice_box .link_btn {
     -webkit-animation-delay: 1.2s;
     -moz-animation-delay: 1.2s;
     animation-delay: 1.2s; }
@@ -530,9 +539,9 @@
       position: absolute;
       top: calc(50% + 45px);
       left: 0; }
-      #cnt3 .wide_section #cnt_wrap {
+      #cnt3 .wide_section .cnt_wrap {
         padding: 0 90px; }
-        #cnt3 .wide_section #cnt_wrap #book_list a .hover_book .pc_txt_box span {
+        #cnt3 .wide_section .cnt_wrap #book_list a .hover_book .pc_txt_box span {
           display: -webkit-box;
           -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
@@ -541,13 +550,13 @@
           text-overflow: ellipsis;
           overflow: hidden; }
 
-  #cnt6 #cnt_wrap {
+  #cnt6 .cnt_wrap {
     padding: 0 90px; } }
 @media screen and (max-width: 1152px) {
   #cnt1 .swiper-container {
     height: 90vh; }
 
-  #cnt2 .wide_section #cnt_wrap h3 {
+  #cnt2 .wide_section .cnt_wrap h3 {
     font-size: 36px;
     line-height: 50px; }
 
@@ -556,20 +565,20 @@
     top: unset;
     left: unset;
     display: unset; }
-    #cnt3 .wide_section #cnt_wrap {
+    #cnt3 .wide_section .cnt_wrap {
       padding: 120px 90px 80px; }
-      #cnt3 .wide_section #cnt_wrap h3 {
+      #cnt3 .wide_section .cnt_wrap h3 {
         margin-bottom: 0;
         font-size: 36px;
         line-height: 50px; }
-      #cnt3 .wide_section #cnt_wrap #book_list {
+      #cnt3 .wide_section .cnt_wrap #book_list {
         display: none; }
-      #cnt3 .wide_section #cnt_wrap #m_book_list {
+      #cnt3 .wide_section .cnt_wrap #m_book_list {
         visibility: visible;
         height: 100%;
         overflow: visible;
         margin-bottom: 48px; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list li {
+        #cnt3 .wide_section .cnt_wrap #m_book_list li {
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
@@ -581,7 +590,7 @@
           justify-content: space-between;
           padding: 48px 0;
           border-bottom: 1px solid #eee; }
-          #cnt3 .wide_section #cnt_wrap #m_book_list li a {
+          #cnt3 .wide_section .cnt_wrap #m_book_list li a {
             position: relative;
             display: block;
             width: 200px;
@@ -590,7 +599,7 @@
             border-radius: 24px;
             box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
             margin-right: 48px; }
-            #cnt3 .wide_section #cnt_wrap #m_book_list li a img {
+            #cnt3 .wide_section .cnt_wrap #m_book_list li a img {
               -webkit-transform: translateY(-50%);
               -moz-transform: translateY(-50%);
               transform: translateY(-50%);
@@ -599,7 +608,7 @@
               top: 50%;
               width: 100%;
               height: 100%; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box {
+        #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box {
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
@@ -614,7 +623,7 @@
           color: #aaa;
           font-size: 18px;
           width: calc(100% - 248px); }
-          #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box strong {
+          #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box strong {
             display: block;
             font-size: 24px;
             color: #1E1E1E;
@@ -622,13 +631,13 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box p {
+          #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box p {
             line-height: 36px;
             padding: 12px 0;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis; }
-          #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box span {
+          #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box span {
             display: block;
             line-height: 36px;
             display: -webkit-box;
@@ -639,36 +648,36 @@
             text-overflow: ellipsis;
             overflow: hidden; }
 
-  #cnt4 #cnt_wrap {
+  #cnt4 .cnt_wrap {
     display: block;
     padding: 0;
     height: auto; }
-    #cnt4 #cnt_wrap .left_box {
+    #cnt4 .cnt_wrap .left_box {
       display: none; }
-    #cnt4 #cnt_wrap .m_left_box {
+    #cnt4 .cnt_wrap .m_left_box {
       display: block;
       padding: 120px 90px 48px;
       width: 100%; }
-      #cnt4 #cnt_wrap .m_left_box p {
+      #cnt4 .cnt_wrap .m_left_box p {
         font-size: 18px;
         line-height: 20px;
         letter-spacing: -0.3px;
         margin-bottom: 36px;
         font-weight: 700; }
-      #cnt4 #cnt_wrap .m_left_box h3 {
+      #cnt4 .cnt_wrap .m_left_box h3 {
         font-size: 36px;
         line-height: 50px;
         letter-spacing: -1px;
         margin-bottom: 48px;
         color: #aaa; }
-        #cnt4 #cnt_wrap .m_left_box h3 strong {
+        #cnt4 .cnt_wrap .m_left_box h3 strong {
           position: relative;
           color: #1E1E1E; }
-    #cnt4 #cnt_wrap .right_box {
+    #cnt4 .cnt_wrap .right_box {
       display: inline-block;
       margin-bottom: 80px;
       width: 100%; }
-      #cnt4 #cnt_wrap .right_box ul {
+      #cnt4 .cnt_wrap .right_box ul {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -676,15 +685,15 @@
         display: flex;
         width: calc(212px * 15);
         height: auto; }
-        #cnt4 #cnt_wrap .right_box ul li {
+        #cnt4 .cnt_wrap .right_box ul li {
           margin-top: 0;
           margin-right: 12px;
           width: 200px;
           height: 200px; }
-          #cnt4 #cnt_wrap .right_box ul li span {
+          #cnt4 .cnt_wrap .right_box ul li span {
             font-size: 14px;
             line-height: 1.2; }
-      #cnt4 #cnt_wrap .right_box .second {
+      #cnt4 .cnt_wrap .right_box .second {
         margin: 0 0 0 -84px;
         margin-top: 12px; }
 
@@ -696,23 +705,23 @@
         font-size: 36px;
         line-height: 50px; }
 
-  #cnt6 #cnt_wrap {
+  #cnt6 .cnt_wrap {
     padding: 120px 90px 80px; }
-    #cnt6 #cnt_wrap .notice_box h3 {
+    #cnt6 .cnt_wrap .notice_box h3 {
       margin-top: 0;
       font-size: 36px;
       line-height: 50px; }
-    #cnt6 #cnt_wrap .notice_box ul {
+    #cnt6 .cnt_wrap .notice_box ul {
       margin-bottom: 80px; }
-      #cnt6 #cnt_wrap .notice_box ul li {
+      #cnt6 .cnt_wrap .notice_box ul li {
         width: calc(50% - 16px);
         margin-left: 32px;
         margin-bottom: 46px; }
-        #cnt6 #cnt_wrap .notice_box ul li:first-child, #cnt6 #cnt_wrap .notice_box ul li:nth-child(3) {
+        #cnt6 .cnt_wrap .notice_box ul li:first-child, #cnt6 .cnt_wrap .notice_box ul li:nth-child(3) {
           margin: 0; }
-        #cnt6 #cnt_wrap .notice_box ul li:nth-child(4) {
+        #cnt6 .cnt_wrap .notice_box ul li:nth-child(4) {
           margin-bottom: 0; }
-        #cnt6 #cnt_wrap .notice_box ul li a .txt_box p {
+        #cnt6 .cnt_wrap .notice_box ul li a .txt_box p {
           margin: 20px 0 12px;
           min-height: 24px; } }
 @media screen and (max-width: 690px) {
@@ -746,42 +755,42 @@
   #cnt1 .btm_btn {
     display: none; }
 
-  #cnt2 .wide_section #cnt_wrap {
+  #cnt2 .wide_section .cnt_wrap {
     padding: 48px 24px 36px; }
-    #cnt2 .wide_section #cnt_wrap p {
+    #cnt2 .wide_section .cnt_wrap p {
       font-size: 14px;
       margin-bottom: 20px; }
-    #cnt2 .wide_section #cnt_wrap h3 {
+    #cnt2 .wide_section .cnt_wrap h3 {
       font-size: 24px;
       line-height: 1.5;
       margin-bottom: 24px; }
 
-  #cnt3 .wide_section #cnt_wrap {
+  #cnt3 .wide_section .cnt_wrap {
     padding: 48px 24px 60px; }
-    #cnt3 .wide_section #cnt_wrap h3 {
+    #cnt3 .wide_section .cnt_wrap h3 {
       font-size: 24px;
       line-height: 1.5;
       margin-bottom: 32px; }
-    #cnt3 .wide_section #cnt_wrap #m_book_list {
+    #cnt3 .wide_section .cnt_wrap #m_book_list {
       margin-bottom: 24px; }
-      #cnt3 .wide_section #cnt_wrap #m_book_list li {
+      #cnt3 .wide_section .cnt_wrap #m_book_list li {
         padding: 16px 0; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list li a {
+        #cnt3 .wide_section .cnt_wrap #m_book_list li a {
           width: 168px;
           height: 243px;
           border-radius: 12px;
           margin-right: 24px; }
-      #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box {
+      #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box {
         font-size: 16px;
         width: calc(100% - 192px); }
-        #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box strong {
+        #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box strong {
           font-size: 18px;
           line-height: 1.5;
           padding: 8px 0; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box p {
+        #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box p {
           line-height: 1.5;
           padding: 12px 0; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box span {
+        #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box span {
           line-height: 1.5;
           display: -webkit-box;
           -webkit-line-clamp: 5;
@@ -791,20 +800,20 @@
           text-overflow: ellipsis;
           overflow: hidden; }
 
-  #cnt4 #cnt_wrap .m_left_box {
+  #cnt4 .cnt_wrap .m_left_box {
     padding: 48px 24px 40px; }
-    #cnt4 #cnt_wrap .m_left_box p {
+    #cnt4 .cnt_wrap .m_left_box p {
       font-size: 14px;
       margin-bottom: 20px; }
-    #cnt4 #cnt_wrap .m_left_box h3 {
+    #cnt4 .cnt_wrap .m_left_box h3 {
       font-size: 24px;
       line-height: 1.5;
       margin-bottom: 24px; }
-  #cnt4 #cnt_wrap .right_box {
+  #cnt4 .cnt_wrap .right_box {
     margin-bottom: 76px; }
-    #cnt4 #cnt_wrap .right_box ul {
+    #cnt4 .cnt_wrap .right_box ul {
       width: calc(162px * 15); }
-      #cnt4 #cnt_wrap .right_box ul li {
+      #cnt4 .cnt_wrap .right_box ul li {
         width: 150px;
         height: 150px; }
 
@@ -820,21 +829,21 @@
         line-height: 1.5;
         margin-bottom: 24px; }
 
-  #cnt6 #cnt_wrap {
+  #cnt6 .cnt_wrap {
     padding: 48px 24px 60px; }
-    #cnt6 #cnt_wrap .notice_box h3 {
+    #cnt6 .cnt_wrap .notice_box h3 {
       font-size: 24px;
       line-height: 1.5;
       margin-bottom: 48px; }
-    #cnt6 #cnt_wrap .notice_box ul {
+    #cnt6 .cnt_wrap .notice_box ul {
       margin-bottom: 24px; }
-      #cnt6 #cnt_wrap .notice_box ul li {
+      #cnt6 .cnt_wrap .notice_box ul li {
         width: calc(50% - 8px);
         margin-left: 16px;
         margin-bottom: 24px; }
-        #cnt6 #cnt_wrap .notice_box ul li a .thumb_box {
+        #cnt6 .cnt_wrap .notice_box ul li a .thumb_box {
           border-radius: 12px; }
-        #cnt6 #cnt_wrap .notice_box ul li a .txt_box p {
+        #cnt6 .cnt_wrap .notice_box ul li a .txt_box p {
           font-size: 16px;
           line-height: 20px;
           margin: 12px 0 8px;
@@ -845,7 +854,7 @@
           max-height: 40px;
           text-overflow: ellipsis;
           overflow: hidden; }
-        #cnt6 #cnt_wrap .notice_box ul li a .txt_box span {
+        #cnt6 .cnt_wrap .notice_box ul li a .txt_box span {
           font-size: 14px; }
 
   .slide_link_btn {
@@ -880,38 +889,38 @@
       padding: 2.6041666667vw;
       font-size: 4.1666666667vw; }
 
-  #cnt2 .wide_section #cnt_wrap {
+  #cnt2 .wide_section .cnt_wrap {
     padding: 12.5vw 6.25vw 9.375vw; }
-    #cnt2 .wide_section #cnt_wrap p {
+    #cnt2 .wide_section .cnt_wrap p {
       font-size: 3.6458333333vw;
       margin-bottom: 5.2083333333vw; }
-    #cnt2 .wide_section #cnt_wrap h3 {
+    #cnt2 .wide_section .cnt_wrap h3 {
       font-size: 6.25vw;
       margin-bottom: 6.25vw; }
 
-  #cnt3 .wide_section #cnt_wrap {
+  #cnt3 .wide_section .cnt_wrap {
     padding: 12.5vw 6.25vw 15.625vw; }
-    #cnt3 .wide_section #cnt_wrap h3 {
+    #cnt3 .wide_section .cnt_wrap h3 {
       font-size: 6.25vw;
       margin-bottom: 8.3333333333vw; }
-    #cnt3 .wide_section #cnt_wrap #m_book_list {
+    #cnt3 .wide_section .cnt_wrap #m_book_list {
       margin-bottom: 6.25vw; }
-      #cnt3 .wide_section #cnt_wrap #m_book_list li {
+      #cnt3 .wide_section .cnt_wrap #m_book_list li {
         padding: 4.1666666667vw 0; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list li a {
+        #cnt3 .wide_section .cnt_wrap #m_book_list li a {
           width: 43.75vw;
           height: 63.28125vw;
           border-radius: 3.125vw;
           margin-right: 6.25vw; }
-      #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box {
+      #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box {
         font-size: 4.1666666667vw;
         width: calc(100% - 50vw); }
-        #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box strong {
+        #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box strong {
           font-size: 4.6875vw;
           padding: 8px 0; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box p {
+        #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box p {
           padding: 3.125vw 0; }
-        #cnt3 .wide_section #cnt_wrap #m_book_list .m_txt_box span {
+        #cnt3 .wide_section .cnt_wrap #m_book_list .m_txt_box span {
           display: -webkit-box;
           -webkit-line-clamp: 5;
           -webkit-box-orient: vertical;
@@ -920,23 +929,23 @@
           text-overflow: ellipsis;
           overflow: hidden; }
 
-  #cnt4 #cnt_wrap .m_left_box {
+  #cnt4 .cnt_wrap .m_left_box {
     padding: 12.5vw 6.25vw 10.4166666667vw; }
-    #cnt4 #cnt_wrap .m_left_box p {
+    #cnt4 .cnt_wrap .m_left_box p {
       font-size: 3.6458333333vw;
       margin-bottom: 5.2083333333vw; }
-    #cnt4 #cnt_wrap .m_left_box h3 {
+    #cnt4 .cnt_wrap .m_left_box h3 {
       font-size: 6.25vw;
       margin-bottom: 6.25vw; }
-  #cnt4 #cnt_wrap .right_box {
+  #cnt4 .cnt_wrap .right_box {
     margin-bottom: 19.7916666667vw; }
-    #cnt4 #cnt_wrap .right_box ul {
+    #cnt4 .cnt_wrap .right_box ul {
       width: calc(42.1875vw * 15); }
-      #cnt4 #cnt_wrap .right_box ul li {
+      #cnt4 .cnt_wrap .right_box ul li {
         width: 39.0625vw;
         height: 39.0625vw;
         border-radius: 6.25vw; }
-        #cnt4 #cnt_wrap .right_box ul li span {
+        #cnt4 .cnt_wrap .right_box ul li span {
           font-size: 3.6458333333vw; }
 
   #cnt5 .left_box .left_box_wrap {
@@ -948,20 +957,20 @@
       font-size: 6.25vw;
       margin-bottom: 6.25vw; }
 
-  #cnt6 #cnt_wrap {
+  #cnt6 .cnt_wrap {
     padding: 12.5vw 6.25vw 15.625vw; }
-    #cnt6 #cnt_wrap .notice_box h3 {
+    #cnt6 .cnt_wrap .notice_box h3 {
       font-size: 6.25vw;
       margin-bottom: 12.5vw; }
-    #cnt6 #cnt_wrap .notice_box ul {
+    #cnt6 .cnt_wrap .notice_box ul {
       margin-bottom: 6.25vw; }
-      #cnt6 #cnt_wrap .notice_box ul li {
+      #cnt6 .cnt_wrap .notice_box ul li {
         width: calc(50% - 2.0833333333vw);
         margin-left: 4.1666666667vw;
         margin-bottom: 6.25vw; }
-        #cnt6 #cnt_wrap .notice_box ul li a .thumb_box {
+        #cnt6 .cnt_wrap .notice_box ul li a .thumb_box {
           border-radius: 3.125vw; }
-        #cnt6 #cnt_wrap .notice_box ul li a .txt_box p {
+        #cnt6 .cnt_wrap .notice_box ul li a .txt_box p {
           font-size: 4.1666666667vw;
           line-height: 5.2083333333vw;
           margin: 3.125vw 0 2.0833333333vw;
@@ -972,7 +981,7 @@
           max-height: 10.4166666667vw;
           text-overflow: ellipsis;
           overflow: hidden; }
-        #cnt6 #cnt_wrap .notice_box ul li a .txt_box span {
+        #cnt6 .cnt_wrap .notice_box ul li a .txt_box span {
           font-size: 3.6458333333vw; }
 
   .slide_link_btn {

@@ -30,8 +30,8 @@ $(document).ready(function() {
 
     // .movetop 애니메이션 실행
     $('#cnt2, #cnt3, #cnt4, #cnt5, #cnt6').each(function () {
-      if (scrollY > $(this).offset().top) $(this).find('.movetop').addClass('on');
-      else $(this).find('.movetop').removeClass('on');
+      if (scrollY > $(this).offset().top) $(this).find('.movetop').addClass('active');
+      else $(this).find('.movetop').removeClass('active');
     });    
 
     // .horizontalscroll 애니메이션 실행

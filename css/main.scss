@@ -10,10 +10,12 @@
 .greenbox.on{
   &::before{width: 100%;}
 }
-.movetop{opacity: 0;}
+.movetop{opacity: 0;transform: translateY(40px);@include transition(all 1.2s);}
 .movetop.on{@include animation(movetop 1.2s ease-out .5s forwards);}
 .verticalscroll.on{@include animation(verticalscroll 30s linear infinite);}
 .horizontalscroll.on{@include animation(horizontalscroll 30s linear infinite);}
+
+.movetop.active{@include transition(all 1.2s ease-out .5s);opacity: 1;transform: translateY(0);}
 
 /* motion keyframes */
 @keyframes movetop {
@@ -132,7 +134,7 @@
 #cnt2{
   .wide_section{
     width: 100%;
-    #cnt_wrap{
+    .cnt_wrap{
       max-width: 1440px;margin: 0 auto;padding: 142px 90px 152px;width: 100%;text-align: center;
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
@@ -144,7 +146,7 @@
 }
 #cnt3{
   background: #f9f9f9;
-  #cnt_wrap{
+  .cnt_wrap{
     max-width: 1440px;margin: 0 auto;padding: 202px 90px 120px;text-align: center;
     h3{
       font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;text-align: left;
@@ -181,7 +183,7 @@
   }
 }
 #cnt4{
-  #cnt_wrap{
+  .cnt_wrap{
     @include flex;
     @include justify-content(space-between);
     padding: 0 90px;margin: 0 auto;max-width: 1440px;height: 100vh;
@@ -230,7 +232,7 @@
     }
 }
 #cnt6{
-  #cnt_wrap{
+  .cnt_wrap{
     padding: 90px 90px 120px 90px;margin: 0 auto;max-width: 1440px;text-align: center;
     .notice_box{
       h3{
@@ -281,7 +283,7 @@
     .wide_section{
       @include translateY-50;
       position: absolute;top: calc(50% + 45px);left: 0;
-      #cnt_wrap{
+      .cnt_wrap{
         padding: 0 90px;
         #book_list{
           a{
@@ -296,7 +298,7 @@
     }
   }
   #cnt6{
-    #cnt_wrap{padding: 0 90px;}
+    .cnt_wrap{padding: 0 90px;}
   }
 }
 
@@ -307,7 +309,7 @@
   }
   #cnt2{
     .wide_section{
-      #cnt_wrap{
+      .cnt_wrap{
         h3{font-size: 36px;line-height: 50px;}
       }
     }
@@ -315,7 +317,7 @@
   #cnt3{
     .wide_section{
       position: static;top: unset;left: unset;display: unset;
-      #cnt_wrap{
+      .cnt_wrap{
         padding: 120px 90px 80px;
         h3{margin-bottom: 0;font-size: 36px;line-height: 50px;}
         #book_list{display: none;}
@@ -348,7 +350,7 @@
     }
   }
   #cnt4{
-    #cnt_wrap{
+    .cnt_wrap{
       display: block;padding: 0;height: auto;
       .left_box{display: none;}
       .m_left_box{
@@ -383,7 +385,7 @@
       }
   }
   #cnt6{
-    #cnt_wrap{
+    .cnt_wrap{
       padding: 120px 90px 80px;
       .notice_box{
         h3{margin-top: 0;font-size: 36px;line-height: 50px;}
@@ -428,7 +430,7 @@
   }
   #cnt2{
     .wide_section{
-      #cnt_wrap{
+      .cnt_wrap{
         padding: 48px 24px 36px;
         p{font-size: 14px;margin-bottom: 20px;}
         h3{font-size: 24px;line-height: 1.5;margin-bottom: 24px;}
@@ -437,7 +439,7 @@
   }
   #cnt3{
     .wide_section{
-      #cnt_wrap{
+      .cnt_wrap{
         padding: 48px 24px 60px;
         h3{font-size: 24px;line-height: 1.5;margin-bottom: 32px;}
         #m_book_list{
@@ -457,7 +459,7 @@
     }
   }
   #cnt4{
-    #cnt_wrap{
+    .cnt_wrap{
       .m_left_box{
         padding: 48px 24px 40px;
         p{font-size: 14px;margin-bottom: 20px;}
@@ -483,7 +485,7 @@
       }
   }
   #cnt6{
-    #cnt_wrap{
+    .cnt_wrap{
       padding: 48px 24px 60px;
       .notice_box{
         h3{font-size: 24px;line-height: 1.5;margin-bottom: 48px;}
@@ -523,7 +525,7 @@
   }
   #cnt2{
     .wide_section{
-      #cnt_wrap{
+      .cnt_wrap{
         padding: vw-calc384(48) vw-calc384(24) vw-calc384(36);
         p{font-size: vw-calc384(14);margin-bottom: vw-calc384(20);}
         h3{font-size: vw-calc384(24);margin-bottom: vw-calc384(24);}
@@ -532,7 +534,7 @@
   }
   #cnt3{
     .wide_section{
-      #cnt_wrap{
+      .cnt_wrap{
         padding: vw-calc384(48) vw-calc384(24) vw-calc384(60);
         h3{font-size: vw-calc384(24);margin-bottom: vw-calc384(32);}
         #m_book_list{
@@ -552,7 +554,7 @@
     }
   }
   #cnt4{
-    #cnt_wrap{
+    .cnt_wrap{
       .m_left_box{
         padding: vw-calc384(48) vw-calc384(24) vw-calc384(40);
         p{font-size: vw-calc384(14);margin-bottom: vw-calc384(20);}
@@ -580,7 +582,7 @@
       }
   }
   #cnt6{
-    #cnt_wrap{
+    .cnt_wrap{
       padding: vw-calc384(48) vw-calc384(24) vw-calc384(60);
       .notice_box{
         h3{font-size: vw-calc384(24);margin-bottom: vw-calc384(48);}
