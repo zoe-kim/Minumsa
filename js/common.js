@@ -28,24 +28,20 @@ $(document).ready(function() {
     if ($(this).width() <= 1152) $('#cnt4').find('.verticalscroll').removeClass('verticalscroll').addClass('horizontalscroll');
     else $('#cnt4').find('.horizontalscroll').removeClass('horizontalscroll').addClass('verticalscroll');  // pc 사이즈로 변경시 다시 바뀌도록
 
-    // .movetop 애니메이션 실행
-    $('#cnt2, #cnt3, #cnt4, #cnt5, #cnt6').each(function () {
+    // .movetop과 .greenbox 애니메이션
+    $('section.section').not('#cnt1').each(function () {
+      // .movetop 애니메이션 실행
       if (scrollY > $(this).offset().top) $(this).find('.movetop').addClass('active');
       else $(this).find('.movetop').removeClass('active');
-    });    
+      // .greenbox 애니메이션 실행
+      const scrollY2 = $(window).scrollTop() + $(window).height()*1/3;
+      if (scrollY2 > $(this).offset().top) $(this).find('.greenbox').addClass('on');
+      else $(this).find('.greenbox').removeClass('on');
+    });
 
     // .horizontalscroll 애니메이션 실행
     if (scrollY > $('#cnt4').offset().top) $('#cnt4 .horizontalscroll').addClass('on');
     else $('#cnt4 .horizontalscroll').removeClass('on');
-
-    // .greenbox 애니메이션 실행
-    $('#cnt2, #cnt3, #cnt4, #cnt5, #cnt6').each(function () {
-      const scrollY = $(window).scrollTop() + $(window).height()*1/3;
-
-      if (scrollY > $(this).offset().top) $(this).find('.greenbox').addClass('on');
-      else $(this).find('.greenbox').removeClass('on');
-    });    
-
   });
 
   // .menu_wrap 열고 닫기

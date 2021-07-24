@@ -42,8 +42,7 @@ $(document).ready(function () {
   })
 
   // #cnt3 #book_list li a에 마우스와 포커스가 진입하거나 빠져 나갈 때
-  const $listEle = $('#book_list li a');
-  $listEle.on({
+  $('#book_list li a').on({
     'mouseenter focus': function () {
       $(this).addClass('on').children('.hover_book').stop().slideDown();
     },
