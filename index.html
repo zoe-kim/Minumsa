@@ -46,30 +46,15 @@
                     scrollingSpeed: 800,
                     afterLoad: function (origin, destination, direction) {
                         // PC - 애니메이션 (페이지 도착 후에 천천히)
-                        if (destination.index === 0) {
-                            $('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 모든 애니메이션 초기화
+                        for (let i = 0; i < 6; i++) {
+                            if (destination.index === i) {
+                                $('.greenbox').addClass('on'); // 모든 .greenbox 실행
+                                $('#cnt' + (i +1)).siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 나를 제외한 모든 애니메이션 제거
+                                if (destination.index === 0) {
+                                    $('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 모든 애니메이션 초기화
+                                }
+                            }
                         }
-                        else if (destination.index === 1) {
-                            $('.greenbox').addClass('on'); // 모든 .greenbox 실행
-                            $('#cnt2').siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 나를 제외한 모든 애니메이션 제거
-                        }
-                        else if (destination.index === 2) {
-                            $('.greenbox').addClass('on');
-                            $('#cnt3').siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on');
-                        }
-                        else if (destination.index === 3) {
-                            $('.greenbox').addClass('on');
-                            $('#cnt4').siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on');
-                        }
-                        else if (destination.index === 4) {
-                            $('.greenbox').addClass('on');
-                            $('#cnt5').siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on');
-                        }
-                        else if (destination.index === 5) {
-                            $('.greenbox').addClass('on');
-                            $('#cnt6').siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on');
-                        }
-
                     },
                     onLeave: function (origin, destination, direction) {
                         // 헤더 & top 버튼
@@ -86,20 +71,12 @@
                         }
                         
                         // PC - 애니메이션 (페이지 도착 전에 빨리)
-                        if (destination.index === 1) {
-                            $('.movetop').addClass('on'); // 모든 .movetop 실행
-                        }
-                        else if (destination.index === 2) {
-                            $('.movetop').addClass('on');
-                        }
-                        else if (destination.index === 3) {
-                            $('.movetop, .verticalscroll').addClass('on'); // 모든 .movetop, .verticalscroll 실행
-                        }
-                        else if (destination.index === 4) {
-                            $('.movetop').addClass('on');
-                        }
-                        else if (destination.index === 5) {
-                            $('.movetop').addClass('on');
+                        for (let i = 1; i < 6; i++) {
+                            if (destination.index === 3) {
+                                $('.movetop, .verticalscroll').addClass('on'); // 모든 .movetop, .verticalscroll 실행
+                            } else if (destination.index === i) {
+                                $('.movetop').addClass('on'); // 모든 .movetop 실행
+                            }
                         }
                     }
                 });

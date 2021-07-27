@@ -12,10 +12,10 @@
 }
 .movetop{opacity: 0;transform: translateY(40px);@include transition(all 1.2s);}
 .movetop.on{@include animation(movetop 1.2s ease-out .5s forwards);}
+.movetop.active{@include transition(all 1.2s ease-out .5s);opacity: 1;transform: translateY(0);}
+
 .verticalscroll.on{@include animation(verticalscroll 30s linear infinite);}
 .horizontalscroll.on{@include animation(horizontalscroll 30s linear infinite);}
-
-.movetop.active{@include transition(all 1.2s ease-out .5s);opacity: 1;transform: translateY(0);}
 
 /* motion keyframes */
 @keyframes movetop {
