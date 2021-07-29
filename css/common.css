@@ -228,7 +228,7 @@ body {
 
 #m_head {
   visibility: hidden;
-  height: 0;
+  max-height: 0;
   overflow: hidden; }
 
 #pc_foot {
@@ -316,7 +316,7 @@ body {
 
   #m_head {
     visibility: visible;
-    height: 74px;
+    max-height: 74px;
     overflow: visible; }
     #m_head .menu_open {
       width: 24px;
@@ -443,7 +443,7 @@ body {
     margin-right: 6.25vw; }
 
   #m_head {
-    height: 19.2708333333vw; }
+    max-height: 19.2708333333vw; }
     #m_head .menu_open {
       width: 6.25vw;
       height: 6.25vw; }

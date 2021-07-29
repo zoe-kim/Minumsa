@@ -26,6 +26,12 @@
   -moz-animation: movetop 1.2s ease-out 0.5s forwards;
   animation: movetop 1.2s ease-out 0.5s forwards; }
 
+.movetop.active {
+  -webkit-transition: all 1.2s ease-out 0.5s;
+  transition: all 1.2s ease-out 0.5s;
+  opacity: 1;
+  transform: translateY(0); }
+
 .verticalscroll.on {
   -webkit-animation: verticalscroll 30s linear infinite;
   -moz-animation: verticalscroll 30s linear infinite;
@@ -35,12 +41,6 @@
   -webkit-animation: horizontalscroll 30s linear infinite;
   -moz-animation: horizontalscroll 30s linear infinite;
   animation: horizontalscroll 30s linear infinite; }
-
-.movetop.active {
-  -webkit-transition: all 1.2s ease-out 0.5s;
-  transition: all 1.2s ease-out 0.5s;
-  opacity: 1;
-  transform: translateY(0); }
 
 /* motion keyframes */
 @keyframes movetop {

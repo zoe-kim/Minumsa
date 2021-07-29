@@ -110,7 +110,7 @@ body{
         }
     }
 }
-#m_head{visibility: hidden;height: 0;overflow: hidden;} // ios에서 display: none 오류 때문에
+#m_head{visibility: hidden;max-height: 0;overflow: hidden;} // ios에서 display: none이 display: block으로 바뀔 경우 생기는 오류 때문에, 모바일 요소는 전부 visibility, max-height, overflow로 제어!!
 
 #pc_foot{
     background: #f9f9f9;padding: 50px 150px;
@@ -170,7 +170,7 @@ body{
         }
     }
     #m_head{
-        visibility: visible;height: 74px;overflow: visible;
+        visibility: visible;max-height: 74px;overflow: visible;
         .menu_open{width: 24px;height: 24px;background: url("../images/common/mGnb_open_btn_w.png") no-repeat center / cover;}
         .menu_dim{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: $black;opacity: 0;}
         .menu_wrap{
@@ -248,7 +248,7 @@ body{
         }
     }
     #m_head{
-        height: vw-calc384(74);
+        max-height: vw-calc384(74);
         .menu_open{width: vw-calc384(24);height: vw-calc384(24);}
         .menu_wrap{
             padding: 0 vw-calc384(24);
