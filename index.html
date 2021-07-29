@@ -15,74 +15,6 @@
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/fullpage.min.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            // resize, scroll, mousemove 이벤트는 누적되는 실행문으로, 성능이 느려질수 있어서 지정한 시간이 지날때 한번씩만 동작할수 있게 하여 성능을 향상시킨다.
-            let timer = 0;
-            $(window).on('resize', function () {
-                clearTimeout(timer);
-                timer = setTimeout(function () {
-                    // 1152px 초과인 경우, fullpage 호출(pc인 경우)
-                    if ($(this).width() > 1152) {
-                        createFullpage();
-                    } else {
-                        // fullpage가 동작중인 경우만 제거
-                        if ($('#fullpage').hasClass('fullpage-wrapper')) {
-                            fullpage_api.destroy('all'); // 적용된 fullpage를 제거할 경우 사용
-                        }
-                    }
-                }, 100);
-            });
-            $(window).trigger('resize');
-
-            function createFullpage() {
-                $('#fullpage').fullpage({
-                    scrollingSpeed: 800,
-                    afterLoad: function (origin, destination, direction) {
-                        // PC - 애니메이션 (페이지 도착 후에 천천히)
-                        for (let i = 0; i < 6; i++) {
-                            if (destination.index === i) {
-                                $('.greenbox').addClass('on'); // 모든 .greenbox 실행
-                                $('#cnt' + (i +1)).siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 나를 제외한 모든 애니메이션 제거
-                                if (destination.index === 0) {
-                                    $('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 모든 애니메이션 초기화
-                                }
-                            }
-                        }
-                    },
-                    onLeave: function (origin, destination, direction) {
-                        // 헤더 & top 버튼
-                        if (origin.index === 0 && destination.index === 1 && direction === 'down') {
-                            $('.top_btn').fadeIn();
-                            $('#pc_head').addClass('on active');
-                        }
-                        else if (destination.index === 0 && direction === 'up') {
-                            $('#pc_head').removeClass('on active');
-                            $('.top_btn').fadeOut();
-                        }
-                        else {
-                            $('#pc_head').addClass('on active');
-                        }
-                        
-                        // PC - 애니메이션 (페이지 도착 전에 빨리)
-                        for (let i = 1; i < 6; i++) {
-                            if (destination.index === 3) {
-                                $('.movetop, .verticalscroll').addClass('on'); // 모든 .movetop, .verticalscroll 실행
-                            } else if (destination.index === i) {
-                                $('.movetop').addClass('on'); // 모든 .movetop 실행
-                            }
-                        }
-                    }
-                });
-            }
-        });
-    </script>
 </head>
 
 <body>
@@ -527,6 +459,73 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // resize, scroll, mousemove 이벤트는 누적되는 실행문으로, 성능이 느려질수 있어서 지정한 시간이 지날때 한번씩만 동작할수 있게 하여 성능을 향상시킨다.
+            let timer = 0;
+            $(window).on('resize', function () {
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    // 1152px 초과인 경우, fullpage 호출(pc인 경우)
+                    if ($(this).width() > 1152) {
+                        createFullpage();
+                    } else {
+                        // fullpage가 동작중인 경우만 제거
+                        if ($('#fullpage').hasClass('fullpage-wrapper')) {
+                            fullpage_api.destroy('all'); // 적용된 fullpage를 제거할 경우 사용
+                        }
+                    }
+                }, 100);
+            });
+            $(window).trigger('resize');
+
+            function createFullpage() {
+                $('#fullpage').fullpage({
+                    scrollingSpeed: 800,
+                    afterLoad: function (origin, destination, direction) {
+                        // PC - 애니메이션 (페이지 도착 후에 천천히)
+                        for (let i = 0; i < 6; i++) {
+                            if (destination.index === i) {
+                                $('.greenbox').addClass('on'); // 모든 .greenbox 실행
+                                $('#cnt' + (i +1)).siblings().find('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 나를 제외한 모든 애니메이션 제거
+                                if (destination.index === 0) {
+                                    $('.movetop, .verticalscroll, .greenbox').removeClass('on'); // 모든 애니메이션 초기화
+                                }
+                            }
+                        }
+                    },
+                    onLeave: function (origin, destination, direction) {
+                        // 헤더 & top 버튼
+                        if (origin.index === 0 && destination.index === 1 && direction === 'down') {
+                            $('.top_btn').fadeIn();
+                            $('#pc_head').addClass('on active');
+                        }
+                        else if (destination.index === 0 && direction === 'up') {
+                            $('#pc_head').removeClass('on active');
+                            $('.top_btn').fadeOut();
+                        }
+                        else {
+                            $('#pc_head').addClass('on active');
+                        }
+                        
+                        // PC - 애니메이션 (페이지 도착 전에 빨리)
+                        for (let i = 1; i < 6; i++) {
+                            if (destination.index === 3) {
+                                $('.movetop, .verticalscroll').addClass('on'); // 모든 .movetop, .verticalscroll 실행
+                            } else if (destination.index === i) {
+                                $('.movetop').addClass('on'); // 모든 .movetop 실행
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
