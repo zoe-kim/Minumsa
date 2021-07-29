@@ -1,4 +1,19 @@
 @charset "UTF-8";
+@font-face {
+  font-family: NotoSansKR;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.otf") format("opentype"); }
+@font-face {
+  font-family: NotoSansKR;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.otf") format("opentype"); }
+@font-face {
+  font-family: NotoSansKR;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.otf") format("opentype"); }
 body, h1, h2, h3, h4, p, ul, button {
   margin: 0;
   padding: 0; }
@@ -92,7 +107,7 @@ header, nav, section, footer {
     border-color: #189066; }
 
 body {
-  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-family: "NotoSansKR", "맑은 고딕", "Malgun Gothic", sans-serif;
   font-size: 16px;
   color: #1E1E1E;
   line-height: 1;
