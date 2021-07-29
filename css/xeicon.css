@@ -5,14 +5,12 @@
 
 @font-face {
     font-family: 'xeicon';
-    src:url('../fonts/xeicon.eot?v=2.2.0');
-    src:url('../fonts/xeicon.eot?#iefix&v=2.2.0') format('embedded-opentype'),
-        url('../fonts/xeicon.woff2?v=2.2.0') format('woff2'),
-        url('../fonts/xeicon.woff?v=2.2.0') format('woff'),
-        url('../fonts/xeicon.ttf?v=2.2.0') format('truetype'),
-        url('../fonts/xeicon.svg?v=2.2.0#xeicon') format('svg');
+    src: url('../fonts/xeicon.woff2?v=2.2.0') format('woff2'),
+         url('../fonts/xeicon.woff?v=2.2.0') format('woff'),
+         url('../fonts/xeicon.ttf?v=2.2.0') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 i {
