@@ -53,7 +53,7 @@ header, nav, section, footer{display: block;}
     @include transition(all 0.3s);
     display: inline-block;text-align: center;width: auto;height: 54px;line-height: 54px;border-radius: 100px;font-weight: 700;font-size: 15px;padding: 0 40px;background: $black;color: $white !important;
     &.transparent{border: 1px solid $white;background: transparent;}
-    &:hover, &:focus{background: $green;border-color: $green;}
+    &:hover, &:focus{@include transition(all 0.3s);background: $green;border-color: $green;}
 }
 
 // body

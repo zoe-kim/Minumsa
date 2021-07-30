@@ -11,7 +11,7 @@
   &::before{width: 100%;}
 }
 .movetop{opacity: 0;transform: translateY(40px);@include transition(all 1.2s);}
-.movetop.on{@include animation(movetop 1.2s ease-out .5s forwards);}
+.movetop.on{@include animation(movetop 1.2s ease-out .5s forwards);@include transition(background .3s);}
 .movetop.active{@include transition(all 1.2s ease-out .5s);opacity: 1;transform: translateY(0);}
 
 .verticalscroll.on{@include animation(verticalscroll 30s linear infinite);}
@@ -376,7 +376,7 @@
     }
   }
   #cnt5{
-    height: 860px;
+    height: 90vh;
       .left_box{
         .left_box_wrap{
           top: 50%;
@@ -475,7 +475,6 @@
     }
   }
   #cnt5{
-    height: 90vh;
       .left_box{
         .left_box_wrap{
           left: 24px;
