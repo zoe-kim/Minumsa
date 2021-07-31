@@ -119,7 +119,7 @@ body{
             }
         }
         .link_social{
-            color: $gray2;
+            color: $gray4;
             a{
                 margin-left: 24px;
                 &:hover, &:focus{color: $green;@include transition(all 0.3s);}
@@ -200,7 +200,7 @@ body{
                 a{margin-right: 8px;}
             }
             .link_social{
-                color: $gray2;
+                color: $gray4;
                 a{margin-left: 8px;}
             }
         }    
