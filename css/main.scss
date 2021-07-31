@@ -138,7 +138,7 @@
       max-width: 1440px;margin: 0 auto;padding: 142px 90px 152px;width: 100%;text-align: center;
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
-        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
+        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray1;
         strong{position: relative;color: $black;}
       }
     }
@@ -149,7 +149,7 @@
   .cnt_wrap{
     max-width: 1440px;margin: 0 auto;padding: 202px 90px 120px;text-align: center;
     h3{
-      font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;text-align: left;
+      font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray2;text-align: left;
       strong{position: relative;color: $black;}
     }
     #book_list{
@@ -191,7 +191,7 @@
       margin: auto 0; width: 50%;
       p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
       h3{
-        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
+        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-bottom: 48px;color:$gray1;
         strong{position: relative;color: $black;}
       }
     }
@@ -236,7 +236,7 @@
     padding: 90px 90px 120px 90px;margin: 0 auto;max-width: 1440px;text-align: center;
     .notice_box{
       h3{
-        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-top: 45px;margin-bottom: 48px;color:$gray;text-align: left;
+        font-size: 42px;line-height: 60px;letter-spacing: -1px;margin-top: 45px;margin-bottom: 48px;color:$gray1;text-align: left;
         strong{position: relative;color: $black;}
       }
       ul{
@@ -258,7 +258,7 @@
             }
             .txt_box{
               p{font-size: 18px;line-height: 24px;margin: 20px 0;letter-spacing: -0.3px;font-weight: 700;@include multiEllipsis(2, 48px);}
-              span{display: block;font-size: 16px;line-height: 1;color: $gray;letter-spacing: 0;}
+              span{display: block;font-size: 16px;line-height: 1;color: $gray3;letter-spacing: 0;}
             }
             &:hover, &:focus{
               color: $green;@include transition(all 0.3s);
@@ -340,7 +340,7 @@
             @include flex;
             @include flex-direction;
             @include justify-content(space-between);
-            text-align: left;color: $gray;font-size: 18px;width: calc(100% - 248px);
+            text-align: left;color: $gray1;font-size: 18px;width: calc(100% - 248px);
             strong{display: block;font-size: 24px;color: $black;padding: 12px 0;@include ellipsis;}
             p{line-height: 36px;padding: 12px 0;@include ellipsis;}
             span{display: block;line-height: 36px;@include multiEllipsis(4, 144px);}
@@ -357,7 +357,7 @@
         display: block;padding: 120px 90px 48px;width: 100%;
         p{font-size: 18px;line-height: 20px;letter-spacing: -0.3px;margin-bottom: 36px;font-weight: 700;}
         h3{
-          font-size: 36px;line-height: 50px;letter-spacing: -1px;margin-bottom: 48px;color:$gray;
+          font-size: 36px;line-height: 50px;letter-spacing: -1px;margin-bottom: 48px;color:$gray1;
           strong{position: relative;color: $black;}
         }  
       }

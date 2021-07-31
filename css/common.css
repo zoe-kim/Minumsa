@@ -59,7 +59,7 @@ button {
   cursor: pointer;
 }
 
-header, nav, section, footer {
+header, nav, main, section, footer {
   display: block;
 }
 
@@ -255,7 +255,7 @@ body * {
 }
 
 .header.on .heder_wrap .pc_nav a {
-  color: #aaa;
+  color: #949494;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -285,7 +285,7 @@ body * {
 #pc_foot .copyright_txt {
   font-weight: 500;
   line-height: 20px;
-  color: #aaa;
+  color: #737373;
 }
 
 #pc_foot .copyright_txt address {
@@ -307,7 +307,7 @@ body * {
 }
 
 #pc_foot .btm_link .link_txt {
-  color: #999;
+  color: #737373;
 }
 
 #pc_foot .btm_link .link_txt a {
@@ -321,7 +321,7 @@ body * {
 }
 
 #pc_foot .btm_link .link_social {
-  color: #ccc;
+  color: #909090;
 }
 
 #pc_foot .btm_link .link_social a {
@@ -431,7 +431,7 @@ body * {
     padding: 24px 0;
     font-size: 18px;
     font-weight: 700;
-    color: #aaa;
+    color: #949494;
     border-bottom: 1px solid #eee;
     line-height: 1.3;
   }
@@ -476,7 +476,7 @@ body * {
   #m_foot .copyright_txt {
     font-weight: 500;
     line-height: 20px;
-    color: #aaa;
+    color: #737373;
   }
   #m_foot .copyright_txt address {
     margin-bottom: 4px;
@@ -494,13 +494,13 @@ body * {
     font-weight: 700;
   }
   #m_foot .btm_link .link_txt {
-    color: #999;
+    color: #737373;
   }
   #m_foot .btm_link .link_txt a {
     margin-right: 8px;
   }
   #m_foot .btm_link .link_social {
-    color: #ccc;
+    color: #909090;
   }
   #m_foot .btm_link .link_social a {
     margin-left: 8px;
