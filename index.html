@@ -472,7 +472,8 @@
                 clearTimeout(timer);
                 timer = setTimeout(function () {
                     // 1152px 초과인 경우, fullpage 호출(pc인 경우)
-                    if ($(this).width() > 1152) {
+                    // 브라우저 윈도우의 뷰포트 너비로, 수직 스크롤바가 존재한다면 포함한다.
+                    if (window.innerWidth > 1152) {
                         createFullpage();
                     } else {
                         // fullpage가 동작중인 경우만 제거

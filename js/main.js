@@ -37,7 +37,7 @@ $(document).ready(function () {
 
   // .btm_btn 클릭 시 #cnt2로 이동
   $(".btm_btn").on("click", function() {
-    if ($(window).width() > 1152) fullpage_api.moveTo(2);  // pc
+    if (window.innerWidth > 1152) fullpage_api.moveTo(2);  // pc
     else $('html, body').stop().animate({scrollTop: $('#cnt2').offset().top}, 600);  // 태블릿, 모바일
   })
 
