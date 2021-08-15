@@ -58,7 +58,7 @@ header, nav, main, section, footer{display: block;}
 
 // body
 body{
-    font-family: "NotoSansKR", "맑은 고딕", "Malgun Gothic", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;letter-spacing: -0.035em;
+    font-family: "NotoSansKR", "맑은 고딕", "Malgun Gothic", sans-serif;font-size: 16px;color: $black;line-height: 1;font-weight: 400;word-break: keep-all;letter-spacing: -0.035em;
     *{box-sizing: border-box;}
 }
 
@@ -122,6 +122,7 @@ body{
             color: $gray4;
             a{
                 margin-left: 24px;
+                &:first-child{margin-left: 0;}
                 &:hover, &:focus{color: $green;@include transition(all 0.3s);}
             }
         }

@@ -142,6 +142,7 @@ body {
   color: #1E1E1E;
   line-height: 1;
   font-weight: 400;
+  word-break: keep-all;
   letter-spacing: -0.035em;
 }
 
@@ -326,6 +327,10 @@ body * {
 
 #pc_foot .btm_link .link_social a {
   margin-left: 24px;
+}
+
+#pc_foot .btm_link .link_social a:first-child {
+  margin-left: 0;
 }
 
 #pc_foot .btm_link .link_social a:hover, #pc_foot .btm_link .link_social a:focus {
