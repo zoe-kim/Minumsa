@@ -74,7 +74,7 @@ body{
     .heder_wrap{
         @include flex;@include justify-content(space-between);@include align-items;
         width: 100%;height: 90px;padding: 0 150px;
-        .logo a{display: block;width: 64px;height: 30px;background: url("../images/common/header_logo_w.png") no-repeat center / cover;}
+        .logo a{display: block;width: 64px;height: 30px;background: url("../images/common/logo_w.png") no-repeat center / cover;}
         .pc_nav{
             @include flex;@include align-items;
             ul{
@@ -91,7 +91,7 @@ body{
 .header.on{
     background: #fff;@include transition(all 0.3s);
     .heder_wrap{
-        .logo a{background-image: url("../images/common/header_logo.png");@include transition(all 0.3s);}
+        .logo a{background-image: url("../images/common/logo.png");@include transition(all 0.3s);}
         .pc_nav{
             a{color: $gray1;@include transition(all 0.3s);}
             .search{background-image: url("../images/common/search_btn.png");@include transition(all 0.3s);}
@@ -101,10 +101,10 @@ body{
 #m_head{visibility: hidden;max-height: 0;overflow: hidden;} // ios에서 display: none이 display: block으로 바뀔 경우 생기는 오류 때문에, 모바일 요소는 전부 visibility, max-height, overflow로 제어!!
 
 #pc_foot{
-    background: #f9f9f9;padding: 50px 150px;
+    padding: 50px 150px;background: $green;color: $white;
     img{height: 18px;margin-bottom: 30px;}
     .copyright_txt{
-        font-weight: 500;line-height: 20px;color: $gray4;
+        font-weight: 500;line-height: 20px;
         address{margin-bottom: 6px;font-size: 12px;}
         p{margin-bottom: 20px;font-size: 14px;}
     }
@@ -112,18 +112,12 @@ body{
         @include flex;
         font-size: 14px;font-weight: 700;
         .link_txt{
-            color: $gray4;
-            a{
-                margin-right: 24px;
-                &:hover, &:focus{color: $green;@include transition(all 0.3s);}
-            }
+            a{margin-right: 24px;}
         }
         .link_social{
-            color: $gray4;
             a{
                 margin-left: 24px;
                 &:first-child{margin-left: 0;}
-                &:hover, &:focus{color: $green;@include transition(all 0.3s);}
             }
         }
     }
@@ -186,10 +180,10 @@ body{
     }
     #pc_foot{display: none;}
     #m_foot{
-        visibility: visible;height: 100%;overflow: visible;background: #f9f9f9;padding: 35px 90px;
+        visibility: visible;height: 100%;overflow: visible;padding: 35px 90px;background: $green;color: $white;
         img{height: 18px;margin-bottom: 16px;}
         .copyright_txt{
-            font-weight: 500;line-height: 20px;color: $gray4;
+            font-weight: 500;line-height: 20px;
             address{margin-bottom: 4px;font-size: 12px;}
             p{font-size: 14px;margin-bottom: 20px;}
         }
@@ -197,11 +191,9 @@ body{
             @include flex;
             font-size: 14px;font-weight: 700;
             .link_txt{
-                color: $gray4;
                 a{margin-right: 8px;}
             }
             .link_social{
-                color: $gray4;
                 a{margin-left: 8px;}
             }
         }    

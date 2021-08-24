@@ -199,7 +199,7 @@ body * {
   display: block;
   width: 64px;
   height: 30px;
-  background: url("../images/common/header_logo_w.png") no-repeat center/cover;
+  background: url("../images/common/logo_w.png") no-repeat center/cover;
 }
 
 .header .heder_wrap .pc_nav {
@@ -250,7 +250,7 @@ body * {
 }
 
 .header.on .heder_wrap .logo a {
-  background-image: url("../images/common/header_logo.png");
+  background-image: url("../images/common/logo.png");
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -274,8 +274,9 @@ body * {
 }
 
 #pc_foot {
-  background: #f9f9f9;
   padding: 50px 150px;
+  background: #189066;
+  color: #F9F9F9;
 }
 
 #pc_foot img {
@@ -286,7 +287,6 @@ body * {
 #pc_foot .copyright_txt {
   font-weight: 500;
   line-height: 20px;
-  color: #737373;
 }
 
 #pc_foot .copyright_txt address {
@@ -307,22 +307,8 @@ body * {
   font-weight: 700;
 }
 
-#pc_foot .btm_link .link_txt {
-  color: #737373;
-}
-
 #pc_foot .btm_link .link_txt a {
   margin-right: 24px;
-}
-
-#pc_foot .btm_link .link_txt a:hover, #pc_foot .btm_link .link_txt a:focus {
-  color: #189066;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#pc_foot .btm_link .link_social {
-  color: #737373;
 }
 
 #pc_foot .btm_link .link_social a {
@@ -331,12 +317,6 @@ body * {
 
 #pc_foot .btm_link .link_social a:first-child {
   margin-left: 0;
-}
-
-#pc_foot .btm_link .link_social a:hover, #pc_foot .btm_link .link_social a:focus {
-  color: #189066;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 #m_foot {
@@ -471,8 +451,9 @@ body * {
     visibility: visible;
     height: 100%;
     overflow: visible;
-    background: #f9f9f9;
     padding: 35px 90px;
+    background: #189066;
+    color: #F9F9F9;
   }
   #m_foot img {
     height: 18px;
@@ -481,7 +462,6 @@ body * {
   #m_foot .copyright_txt {
     font-weight: 500;
     line-height: 20px;
-    color: #737373;
   }
   #m_foot .copyright_txt address {
     margin-bottom: 4px;
@@ -498,14 +478,8 @@ body * {
     font-size: 14px;
     font-weight: 700;
   }
-  #m_foot .btm_link .link_txt {
-    color: #737373;
-  }
   #m_foot .btm_link .link_txt a {
     margin-right: 8px;
-  }
-  #m_foot .btm_link .link_social {
-    color: #737373;
   }
   #m_foot .btm_link .link_social a {
     margin-left: 8px;
